@@ -1,0 +1,36 @@
+{
+  "digit": 9,
+  "seed": 42,
+  "studyCoeff": 0.01,
+  "correctCoeff": 0.5,
+  "train_size": 54004,
+  "validation_size": 5996,
+  "test_size": 10000,
+  "best_validation_accuracy": 0.957638425617078,
+  "test": {
+    "accuracy": 0.9608,
+    "recall": 0.7611496531219029,
+    "specificity": 0.9832054276498721,
+    "precision": 0.8356909684439608,
+    "balanced_accuracy": 0.8721775403858875,
+    "tp": 768,
+    "fn": 241,
+    "fp": 151,
+    "tn": 8840
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "mistakes": 3528,
+      "accuracy": 0.957638425617078,
+      "recall": 0.7306397306397306,
+      "specificity": 0.9825990373935579,
+      "precision": 0.821969696969697,
+      "balanced_accuracy": 0.8566193840166443,
+      "tp": 434,
+      "fn": 160,
+      "fp": 94,
+      "tn": 5308
+    }
+  ]
+}
