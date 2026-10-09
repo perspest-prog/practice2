@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "queries": 20,
+  "configurations": 6,
+  "checked_results": 120,
+  "checks": "entity spans/non-overlap and replacement source/proposed ranges",
+  "source_sha256": {
+    "ner.py": "482760516ea3332979bdcc762db29ccbf7ed1a4cdb780302305de7e9b5ada63a",
+    "pipeline.py": "3c59ea23d31749338e64779b94a5e31c5f92eb41a67362f0181ab977d877076c",
+    "spelling.py": "71c6603c438908ca644f59fd4e090fca116d8946bd640e2c078b668537fb44fc",
+    "text_utils.py": "c7551aa50684b467b6a9edc23c4a70820d5eb4281b22dd161d2ad88b2a110ad9",
+    "demo_ner.py": "2f378a17b4be82e0b9e65e05b249caef863b1b1a0c7927365ba609f56f5d0b25",
+    "data/queries/queries_dev.json": "3853e5f23bcbacb324347182e979dc2caf599b6be4cdd66fe38becf1f3779324",
+    "data/dictionaries/word_dictionary.json": "6877075b2eb7f07b0cda6bf50c74d0b5883020b77851205101d27ce3436023df",
+    "data/dictionaries/word_details.json": "ea08b02b59487ab29e4927d32ce80db1ea21eeb80f9a402238e5260697e06167",
+    "data/dictionaries/entity_dictionary.json": "71c3e682d37da7e52f946c2860a41487273250aaaa1428c0159a5c6eefd67e6f",
+    "models/manifest.json": "83a63b1997a70f7b79ab135b844b1f4d92a8bbdcb912b40ac3dacfccdd4a8530"
+  },
+  "python": "3.14.7",
+  "model": {
+    "name": "slovnet_ner_news_v1",
+    "embedding": "navec_news_v1_1B_250K_300d_100q",
+    "source": "https://github.com/natasha/slovnet",
+    "sha256": {
+      "slovnet_ner_news_v1.tar": "16c3343a6572ddf0e2b2fc1923113de15a7f5ca5bde90e780dd590418665603e",
+      "navec_news_v1_1B_250K_300d_100q.tar": "f07270833d78523edc5781538d67038e95b43975e4a7ae757c693b687f9cbfca"
+    },
+    "packages": {
+      "slovnet": "0.6.0",
+      "navec": "0.10.0",
+      "numpy": "2.5.3",
+      "razdel": "0.5.0"
+    },
+    "label_mapping": {
+      "PER": "PERSON",
+      "ORG": "ORG",
+      "LOC": "LOC"
+    },
+    "ignored_labels": "Any label not in PER/ORG/LOC is ignored; O is not an entity.",
+    "execution": "Offline CPU inference, pretrained weights unchanged"
+  },
+  "test_used": false,
+  "evaluation_run": false
+}

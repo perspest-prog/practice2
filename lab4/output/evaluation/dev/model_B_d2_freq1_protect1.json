@@ -1,0 +1,3856 @@
+{
+  "config": {
+    "recognizer": "model",
+    "order": "B",
+    "threshold": 2,
+    "use_frequencies": true,
+    "protection": true
+  },
+  "recognizer_metadata": {
+    "name": "slovnet_ner_news_v1",
+    "embedding": "navec_news_v1_1B_250K_300d_100q",
+    "source": "https://github.com/natasha/slovnet",
+    "sha256": {
+      "slovnet_ner_news_v1.tar": "16c3343a6572ddf0e2b2fc1923113de15a7f5ca5bde90e780dd590418665603e",
+      "navec_news_v1_1B_250K_300d_100q.tar": "f07270833d78523edc5781538d67038e95b43975e4a7ae757c693b687f9cbfca"
+    },
+    "packages": {
+      "slovnet": "0.6.0",
+      "navec": "0.10.0",
+      "numpy": "2.5.3",
+      "razdel": "0.5.0"
+    },
+    "label_mapping": {
+      "PER": "PERSON",
+      "ORG": "ORG",
+      "LOC": "LOC"
+    },
+    "ignored_labels": "Any label not in PER/ORG/LOC is ignored; O is not an entity.",
+    "execution": "Offline CPU inference, pretrained weights unchanged"
+  },
+  "results": [
+    {
+      "id": "dev_01",
+      "original_text": "Биография Михаила Ломоносова.",
+      "proposed_text": "Биография Михаила Ломоносова.",
+      "changes": [],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 9,
+          "original": "Биография",
+          "proposed": "Биография",
+          "proposed_start": 0,
+          "proposed_end": 9,
+          "status": "no_candidates",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 10,
+          "end": 17,
+          "original": "Михаила",
+          "proposed": "Михаила",
+          "proposed_start": 10,
+          "proposed_end": 17,
+          "status": "protected",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 18,
+          "end": 28,
+          "original": "Ломоносова",
+          "proposed": "Ломоносова",
+          "proposed_start": 18,
+          "proposed_end": 28,
+          "status": "protected",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [
+        [
+          10,
+          28
+        ]
+      ],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 2,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": true,
+        "recognizer": {
+          "name": "slovnet_ner_news_v1",
+          "embedding": "navec_news_v1_1B_250K_300d_100q",
+          "source": "https://github.com/natasha/slovnet",
+          "sha256": {
+            "slovnet_ner_news_v1.tar": "16c3343a6572ddf0e2b2fc1923113de15a7f5ca5bde90e780dd590418665603e",
+            "navec_news_v1_1B_250K_300d_100q.tar": "f07270833d78523edc5781538d67038e95b43975e4a7ae757c693b687f9cbfca"
+          },
+          "packages": {
+            "slovnet": "0.6.0",
+            "navec": "0.10.0",
+            "numpy": "2.5.3",
+            "razdel": "0.5.0"
+          },
+          "label_mapping": {
+            "PER": "PERSON",
+            "ORG": "ORG",
+            "LOC": "LOC"
+          },
+          "ignored_labels": "Any label not in PER/ORG/LOC is ignored; O is not an entity.",
+          "execution": "Offline CPU inference, pretrained weights unchanged"
+        }
+      },
+      "initial_entities": [
+        {
+          "start": 10,
+          "end": 28,
+          "text": "Михаила Ломоносова",
+          "type": "PERSON",
+          "model_label": "PER",
+          "method": "pretrained_model"
+        }
+      ],
+      "initial_entity_positions": "original_text",
+      "entities": [
+        {
+          "start": 10,
+          "end": 28,
+          "text": "Михаила Ломоносова",
+          "type": "PERSON",
+          "model_label": "PER",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_02",
+      "original_text": "Где находится Московский государственный университет?",
+      "proposed_text": "Где находятся Московский государственный университет?",
+      "changes": [
+        {
+          "start": 4,
+          "end": 13,
+          "old": "находится",
+          "new": "находятся",
+          "proposed_start": 4,
+          "proposed_end": 13,
+          "distance": 1,
+          "candidates": [
+            {
+              "key": "находятся",
+              "text": "находятся",
+              "distance": 1,
+              "frequency": 4,
+              "case_rule": "lowercase"
+            },
+            {
+              "key": "находился",
+              "text": "находился",
+              "distance": 1,
+              "frequency": 2,
+              "case_rule": "lowercase"
+            }
+          ],
+          "alternatives": [
+            {
+              "key": "находился",
+              "text": "находился",
+              "distance": 1,
+              "frequency": 2,
+              "case_rule": "lowercase"
+            }
+          ],
+          "candidate_count": 2,
+          "ambiguous": true,
+          "case_rule": "lowercase"
+        }
+      ],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 3,
+          "original": "Где",
+          "proposed": "Где",
+          "proposed_start": 0,
+          "proposed_end": 3,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 4,
+          "end": 13,
+          "original": "находится",
+          "proposed": "находятся",
+          "proposed_start": 4,
+          "proposed_end": 13,
+          "status": "replaced",
+          "candidates": [
+            {
+              "key": "находятся",
+              "text": "находятся",
+              "distance": 1,
+              "frequency": 4,
+              "case_rule": "lowercase"
+            },
+            {
+              "key": "находился",
+              "text": "находился",
+              "distance": 1,
+              "frequency": 2,
+              "case_rule": "lowercase"
+            }
+          ],
+          "candidate_count": 2,
+          "ambiguous": true
+        },
+        {
+          "start": 14,
+          "end": 24,
+          "original": "Московский",
+          "proposed": "Московский",
+          "proposed_start": 14,
+          "proposed_end": 24,
+          "status": "protected",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 25,
+          "end": 40,
+          "original": "государственный",
+          "proposed": "государственный",
+          "proposed_start": 25,
+          "proposed_end": 40,
+          "status": "protected",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 41,
+          "end": 52,
+          "original": "университет",
+          "proposed": "университет",
+          "proposed_start": 41,
+          "proposed_end": 52,
+          "status": "protected",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [
+        [
+          14,
+          52
+        ]
+      ],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 2,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": true,
+        "recognizer": {
+          "name": "slovnet_ner_news_v1",
+          "embedding": "navec_news_v1_1B_250K_300d_100q",
+          "source": "https://github.com/natasha/slovnet",
+          "sha256": {
+            "slovnet_ner_news_v1.tar": "16c3343a6572ddf0e2b2fc1923113de15a7f5ca5bde90e780dd590418665603e",
+            "navec_news_v1_1B_250K_300d_100q.tar": "f07270833d78523edc5781538d67038e95b43975e4a7ae757c693b687f9cbfca"
+          },
+          "packages": {
+            "slovnet": "0.6.0",
+            "navec": "0.10.0",
+            "numpy": "2.5.3",
+            "razdel": "0.5.0"
+          },
+          "label_mapping": {
+            "PER": "PERSON",
+            "ORG": "ORG",
+            "LOC": "LOC"
+          },
+          "ignored_labels": "Any label not in PER/ORG/LOC is ignored; O is not an entity.",
+          "execution": "Offline CPU inference, pretrained weights unchanged"
+        }
+      },
+      "initial_entities": [
+        {
+          "start": 14,
+          "end": 52,
+          "text": "Московский государственный университет",
+          "type": "ORG",
+          "model_label": "ORG",
+          "method": "pretrained_model"
+        }
+      ],
+      "initial_entity_positions": "original_text",
+      "entities": [
+        {
+          "start": 14,
+          "end": 52,
+          "text": "Московский государственный университет",
+          "type": "ORG",
+          "model_label": "ORG",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_03",
+      "original_text": "История Нижнего Новгорода.",
+      "proposed_text": "История Нижнего Новгорода.",
+      "changes": [],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 7,
+          "original": "История",
+          "proposed": "История",
+          "proposed_start": 0,
+          "proposed_end": 7,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 8,
+          "end": 15,
+          "original": "Нижнего",
+          "proposed": "Нижнего",
+          "proposed_start": 8,
+          "proposed_end": 15,
+          "status": "protected",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 16,
+          "end": 25,
+          "original": "Новгорода",
+          "proposed": "Новгорода",
+          "proposed_start": 16,
+          "proposed_end": 25,
+          "status": "protected",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [
+        [
+          8,
+          25
+        ]
+      ],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 2,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": true,
+        "recognizer": {
+          "name": "slovnet_ner_news_v1",
+          "embedding": "navec_news_v1_1B_250K_300d_100q",
+          "source": "https://github.com/natasha/slovnet",
+          "sha256": {
+            "slovnet_ner_news_v1.tar": "16c3343a6572ddf0e2b2fc1923113de15a7f5ca5bde90e780dd590418665603e",
+            "navec_news_v1_1B_250K_300d_100q.tar": "f07270833d78523edc5781538d67038e95b43975e4a7ae757c693b687f9cbfca"
+          },
+          "packages": {
+            "slovnet": "0.6.0",
+            "navec": "0.10.0",
+            "numpy": "2.5.3",
+            "razdel": "0.5.0"
+          },
+          "label_mapping": {
+            "PER": "PERSON",
+            "ORG": "ORG",
+            "LOC": "LOC"
+          },
+          "ignored_labels": "Any label not in PER/ORG/LOC is ignored; O is not an entity.",
+          "execution": "Offline CPU inference, pretrained weights unchanged"
+        }
+      },
+      "initial_entities": [
+        {
+          "start": 8,
+          "end": 25,
+          "text": "Нижнего Новгорода",
+          "type": "LOC",
+          "model_label": "LOC",
+          "method": "pretrained_model"
+        }
+      ],
+      "initial_entity_positions": "original_text",
+      "entities": [
+        {
+          "start": 8,
+          "end": 25,
+          "text": "Нижнего Новгорода",
+          "type": "LOC",
+          "model_label": "LOC",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_04",
+      "original_text": "Связь Юрия Гагарина с Москвой.",
+      "proposed_text": "Связи Юрия Гагарина с Москвой.",
+      "changes": [
+        {
+          "start": 0,
+          "end": 5,
+          "old": "Связь",
+          "new": "Связи",
+          "proposed_start": 0,
+          "proposed_end": 5,
+          "distance": 1,
+          "candidates": [
+            {
+              "key": "связи",
+              "text": "Связи",
+              "distance": 1,
+              "frequency": 2,
+              "case_rule": "titlecase"
+            },
+            {
+              "key": "связан",
+              "text": "Связан",
+              "distance": 2,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            }
+          ],
+          "alternatives": [
+            {
+              "key": "связан",
+              "text": "Связан",
+              "distance": 2,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            }
+          ],
+          "candidate_count": 2,
+          "ambiguous": true,
+          "case_rule": "titlecase"
+        }
+      ],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 5,
+          "original": "Связь",
+          "proposed": "Связи",
+          "proposed_start": 0,
+          "proposed_end": 5,
+          "status": "replaced",
+          "candidates": [
+            {
+              "key": "связи",
+              "text": "Связи",
+              "distance": 1,
+              "frequency": 2,
+              "case_rule": "titlecase"
+            },
+            {
+              "key": "связан",
+              "text": "Связан",
+              "distance": 2,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            }
+          ],
+          "candidate_count": 2,
+          "ambiguous": true
+        },
+        {
+          "start": 6,
+          "end": 10,
+          "original": "Юрия",
+          "proposed": "Юрия",
+          "proposed_start": 6,
+          "proposed_end": 10,
+          "status": "protected",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 11,
+          "end": 19,
+          "original": "Гагарина",
+          "proposed": "Гагарина",
+          "proposed_start": 11,
+          "proposed_end": 19,
+          "status": "protected",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 20,
+          "end": 21,
+          "original": "с",
+          "proposed": "с",
+          "proposed_start": 20,
+          "proposed_end": 21,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 22,
+          "end": 29,
+          "original": "Москвой",
+          "proposed": "Москвой",
+          "proposed_start": 22,
+          "proposed_end": 29,
+          "status": "protected",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [
+        [
+          6,
+          19
+        ],
+        [
+          22,
+          29
+        ]
+      ],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 2,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": true,
+        "recognizer": {
+          "name": "slovnet_ner_news_v1",
+          "embedding": "navec_news_v1_1B_250K_300d_100q",
+          "source": "https://github.com/natasha/slovnet",
+          "sha256": {
+            "slovnet_ner_news_v1.tar": "16c3343a6572ddf0e2b2fc1923113de15a7f5ca5bde90e780dd590418665603e",
+            "navec_news_v1_1B_250K_300d_100q.tar": "f07270833d78523edc5781538d67038e95b43975e4a7ae757c693b687f9cbfca"
+          },
+          "packages": {
+            "slovnet": "0.6.0",
+            "navec": "0.10.0",
+            "numpy": "2.5.3",
+            "razdel": "0.5.0"
+          },
+          "label_mapping": {
+            "PER": "PERSON",
+            "ORG": "ORG",
+            "LOC": "LOC"
+          },
+          "ignored_labels": "Any label not in PER/ORG/LOC is ignored; O is not an entity.",
+          "execution": "Offline CPU inference, pretrained weights unchanged"
+        }
+      },
+      "initial_entities": [
+        {
+          "start": 6,
+          "end": 19,
+          "text": "Юрия Гагарина",
+          "type": "PERSON",
+          "model_label": "PER",
+          "method": "pretrained_model"
+        },
+        {
+          "start": 22,
+          "end": 29,
+          "text": "Москвой",
+          "type": "LOC",
+          "model_label": "LOC",
+          "method": "pretrained_model"
+        }
+      ],
+      "initial_entity_positions": "original_text",
+      "entities": [
+        {
+          "start": 22,
+          "end": 29,
+          "text": "Москвой",
+          "type": "LOC",
+          "model_label": "LOC",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_05",
+      "original_text": "Как устроено высшее образование?",
+      "proposed_text": "Как устроено высшее образование?",
+      "changes": [],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 3,
+          "original": "Как",
+          "proposed": "Как",
+          "proposed_start": 0,
+          "proposed_end": 3,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 4,
+          "end": 12,
+          "original": "устроено",
+          "proposed": "устроено",
+          "proposed_start": 4,
+          "proposed_end": 12,
+          "status": "no_candidates",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 13,
+          "end": 19,
+          "original": "высшее",
+          "proposed": "высшее",
+          "proposed_start": 13,
+          "proposed_end": 19,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 20,
+          "end": 31,
+          "original": "образование",
+          "proposed": "образование",
+          "proposed_start": 20,
+          "proposed_end": 31,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 2,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": true,
+        "recognizer": {
+          "name": "slovnet_ner_news_v1",
+          "embedding": "navec_news_v1_1B_250K_300d_100q",
+          "source": "https://github.com/natasha/slovnet",
+          "sha256": {
+            "slovnet_ner_news_v1.tar": "16c3343a6572ddf0e2b2fc1923113de15a7f5ca5bde90e780dd590418665603e",
+            "navec_news_v1_1B_250K_300d_100q.tar": "f07270833d78523edc5781538d67038e95b43975e4a7ae757c693b687f9cbfca"
+          },
+          "packages": {
+            "slovnet": "0.6.0",
+            "navec": "0.10.0",
+            "numpy": "2.5.3",
+            "razdel": "0.5.0"
+          },
+          "label_mapping": {
+            "PER": "PERSON",
+            "ORG": "ORG",
+            "LOC": "LOC"
+          },
+          "ignored_labels": "Any label not in PER/ORG/LOC is ignored; O is not an entity.",
+          "execution": "Offline CPU inference, pretrained weights unchanged"
+        }
+      },
+      "initial_entities": [],
+      "initial_entity_positions": "original_text",
+      "entities": [],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_06",
+      "original_text": "Биогрфия Дмитрия Менделеева.",
+      "proposed_text": "Биогрфия Дмитрия Менделеева.",
+      "changes": [],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 8,
+          "original": "Биогрфия",
+          "proposed": "Биогрфия",
+          "proposed_start": 0,
+          "proposed_end": 8,
+          "status": "protected",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 9,
+          "end": 16,
+          "original": "Дмитрия",
+          "proposed": "Дмитрия",
+          "proposed_start": 9,
+          "proposed_end": 16,
+          "status": "protected",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 17,
+          "end": 27,
+          "original": "Менделеева",
+          "proposed": "Менделеева",
+          "proposed_start": 17,
+          "proposed_end": 27,
+          "status": "protected",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [
+        [
+          0,
+          8
+        ],
+        [
+          9,
+          27
+        ]
+      ],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 2,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": true,
+        "recognizer": {
+          "name": "slovnet_ner_news_v1",
+          "embedding": "navec_news_v1_1B_250K_300d_100q",
+          "source": "https://github.com/natasha/slovnet",
+          "sha256": {
+            "slovnet_ner_news_v1.tar": "16c3343a6572ddf0e2b2fc1923113de15a7f5ca5bde90e780dd590418665603e",
+            "navec_news_v1_1B_250K_300d_100q.tar": "f07270833d78523edc5781538d67038e95b43975e4a7ae757c693b687f9cbfca"
+          },
+          "packages": {
+            "slovnet": "0.6.0",
+            "navec": "0.10.0",
+            "numpy": "2.5.3",
+            "razdel": "0.5.0"
+          },
+          "label_mapping": {
+            "PER": "PERSON",
+            "ORG": "ORG",
+            "LOC": "LOC"
+          },
+          "ignored_labels": "Any label not in PER/ORG/LOC is ignored; O is not an entity.",
+          "execution": "Offline CPU inference, pretrained weights unchanged"
+        }
+      },
+      "initial_entities": [
+        {
+          "start": 0,
+          "end": 8,
+          "text": "Биогрфия",
+          "type": "LOC",
+          "model_label": "LOC",
+          "method": "pretrained_model"
+        },
+        {
+          "start": 9,
+          "end": 27,
+          "text": "Дмитрия Менделеева",
+          "type": "PERSON",
+          "model_label": "PER",
+          "method": "pretrained_model"
+        }
+      ],
+      "initial_entity_positions": "original_text",
+      "entities": [
+        {
+          "start": 0,
+          "end": 8,
+          "text": "Биогрфия",
+          "type": "LOC",
+          "model_label": "LOC",
+          "method": "pretrained_model"
+        },
+        {
+          "start": 9,
+          "end": 27,
+          "text": "Дмитрия Менделеева",
+          "type": "PERSON",
+          "model_label": "PER",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_07",
+      "original_text": "Исторрия Российской академии наук.",
+      "proposed_text": "История Российской академии наук.",
+      "changes": [
+        {
+          "start": 0,
+          "end": 8,
+          "old": "Исторрия",
+          "new": "История",
+          "proposed_start": 0,
+          "proposed_end": 7,
+          "distance": 1,
+          "candidates": [
+            {
+              "key": "история",
+              "text": "История",
+              "distance": 1,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            },
+            {
+              "key": "историк",
+              "text": "Историк",
+              "distance": 2,
+              "frequency": 2,
+              "case_rule": "titlecase"
+            },
+            {
+              "key": "истории",
+              "text": "Истории",
+              "distance": 2,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            }
+          ],
+          "alternatives": [
+            {
+              "key": "историк",
+              "text": "Историк",
+              "distance": 2,
+              "frequency": 2,
+              "case_rule": "titlecase"
+            },
+            {
+              "key": "истории",
+              "text": "Истории",
+              "distance": 2,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            }
+          ],
+          "candidate_count": 4,
+          "ambiguous": true,
+          "case_rule": "titlecase"
+        }
+      ],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 8,
+          "original": "Исторрия",
+          "proposed": "История",
+          "proposed_start": 0,
+          "proposed_end": 7,
+          "status": "replaced",
+          "candidates": [
+            {
+              "key": "история",
+              "text": "История",
+              "distance": 1,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            },
+            {
+              "key": "историк",
+              "text": "Историк",
+              "distance": 2,
+              "frequency": 2,
+              "case_rule": "titlecase"
+            },
+            {
+              "key": "истории",
+              "text": "Истории",
+              "distance": 2,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            }
+          ],
+          "candidate_count": 4,
+          "ambiguous": true
+        },
+        {
+          "start": 9,
+          "end": 19,
+          "original": "Российской",
+          "proposed": "Российской",
+          "proposed_start": 8,
+          "proposed_end": 18,
+          "status": "protected",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 20,
+          "end": 28,
+          "original": "академии",
+          "proposed": "академии",
+          "proposed_start": 19,
+          "proposed_end": 27,
+          "status": "protected",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 29,
+          "end": 33,
+          "original": "наук",
+          "proposed": "наук",
+          "proposed_start": 28,
+          "proposed_end": 32,
+          "status": "protected",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [
+        [
+          9,
+          33
+        ]
+      ],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 2,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": true,
+        "recognizer": {
+          "name": "slovnet_ner_news_v1",
+          "embedding": "navec_news_v1_1B_250K_300d_100q",
+          "source": "https://github.com/natasha/slovnet",
+          "sha256": {
+            "slovnet_ner_news_v1.tar": "16c3343a6572ddf0e2b2fc1923113de15a7f5ca5bde90e780dd590418665603e",
+            "navec_news_v1_1B_250K_300d_100q.tar": "f07270833d78523edc5781538d67038e95b43975e4a7ae757c693b687f9cbfca"
+          },
+          "packages": {
+            "slovnet": "0.6.0",
+            "navec": "0.10.0",
+            "numpy": "2.5.3",
+            "razdel": "0.5.0"
+          },
+          "label_mapping": {
+            "PER": "PERSON",
+            "ORG": "ORG",
+            "LOC": "LOC"
+          },
+          "ignored_labels": "Any label not in PER/ORG/LOC is ignored; O is not an entity.",
+          "execution": "Offline CPU inference, pretrained weights unchanged"
+        }
+      },
+      "initial_entities": [
+        {
+          "start": 9,
+          "end": 33,
+          "text": "Российской академии наук",
+          "type": "ORG",
+          "model_label": "ORG",
+          "method": "pretrained_model"
+        }
+      ],
+      "initial_entity_positions": "original_text",
+      "entities": [
+        {
+          "start": 8,
+          "end": 32,
+          "text": "Российской академии наук",
+          "type": "ORG",
+          "model_label": "ORG",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_08",
+      "original_text": "Научные открвтия Сергея Королёва.",
+      "proposed_text": "Научные открытия Сергея Королёва.",
+      "changes": [
+        {
+          "start": 8,
+          "end": 16,
+          "old": "открвтия",
+          "new": "открытия",
+          "proposed_start": 8,
+          "proposed_end": 16,
+          "distance": 1,
+          "candidates": [
+            {
+              "key": "открытия",
+              "text": "открытия",
+              "distance": 1,
+              "frequency": 2,
+              "case_rule": "lowercase"
+            },
+            {
+              "key": "открытий",
+              "text": "открытий",
+              "distance": 2,
+              "frequency": 2,
+              "case_rule": "lowercase"
+            }
+          ],
+          "alternatives": [
+            {
+              "key": "открытий",
+              "text": "открытий",
+              "distance": 2,
+              "frequency": 2,
+              "case_rule": "lowercase"
+            }
+          ],
+          "candidate_count": 2,
+          "ambiguous": true,
+          "case_rule": "lowercase"
+        }
+      ],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 7,
+          "original": "Научные",
+          "proposed": "Научные",
+          "proposed_start": 0,
+          "proposed_end": 7,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 8,
+          "end": 16,
+          "original": "открвтия",
+          "proposed": "открытия",
+          "proposed_start": 8,
+          "proposed_end": 16,
+          "status": "replaced",
+          "candidates": [
+            {
+              "key": "открытия",
+              "text": "открытия",
+              "distance": 1,
+              "frequency": 2,
+              "case_rule": "lowercase"
+            },
+            {
+              "key": "открытий",
+              "text": "открытий",
+              "distance": 2,
+              "frequency": 2,
+              "case_rule": "lowercase"
+            }
+          ],
+          "candidate_count": 2,
+          "ambiguous": true
+        },
+        {
+          "start": 17,
+          "end": 23,
+          "original": "Сергея",
+          "proposed": "Сергея",
+          "proposed_start": 17,
+          "proposed_end": 23,
+          "status": "protected",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 24,
+          "end": 32,
+          "original": "Королёва",
+          "proposed": "Королёва",
+          "proposed_start": 24,
+          "proposed_end": 32,
+          "status": "protected",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [
+        [
+          17,
+          32
+        ]
+      ],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 2,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": true,
+        "recognizer": {
+          "name": "slovnet_ner_news_v1",
+          "embedding": "navec_news_v1_1B_250K_300d_100q",
+          "source": "https://github.com/natasha/slovnet",
+          "sha256": {
+            "slovnet_ner_news_v1.tar": "16c3343a6572ddf0e2b2fc1923113de15a7f5ca5bde90e780dd590418665603e",
+            "navec_news_v1_1B_250K_300d_100q.tar": "f07270833d78523edc5781538d67038e95b43975e4a7ae757c693b687f9cbfca"
+          },
+          "packages": {
+            "slovnet": "0.6.0",
+            "navec": "0.10.0",
+            "numpy": "2.5.3",
+            "razdel": "0.5.0"
+          },
+          "label_mapping": {
+            "PER": "PERSON",
+            "ORG": "ORG",
+            "LOC": "LOC"
+          },
+          "ignored_labels": "Any label not in PER/ORG/LOC is ignored; O is not an entity.",
+          "execution": "Offline CPU inference, pretrained weights unchanged"
+        }
+      },
+      "initial_entities": [
+        {
+          "start": 17,
+          "end": 32,
+          "text": "Сергея Королёва",
+          "type": "PERSON",
+          "model_label": "PER",
+          "method": "pretrained_model"
+        }
+      ],
+      "initial_entity_positions": "original_text",
+      "entities": [
+        {
+          "start": 17,
+          "end": 32,
+          "text": "Сергея Королёва",
+          "type": "PERSON",
+          "model_label": "PER",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_09",
+      "original_text": "Где учлися Николай Лобачевский?",
+      "proposed_text": "Где учлися Николай Лобачевский?",
+      "changes": [],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 3,
+          "original": "Где",
+          "proposed": "Где",
+          "proposed_start": 0,
+          "proposed_end": 3,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 4,
+          "end": 10,
+          "original": "учлися",
+          "proposed": "учлися",
+          "proposed_start": 4,
+          "proposed_end": 10,
+          "status": "no_candidates",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 11,
+          "end": 18,
+          "original": "Николай",
+          "proposed": "Николай",
+          "proposed_start": 11,
+          "proposed_end": 18,
+          "status": "protected",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 19,
+          "end": 30,
+          "original": "Лобачевский",
+          "proposed": "Лобачевский",
+          "proposed_start": 19,
+          "proposed_end": 30,
+          "status": "protected",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [
+        [
+          11,
+          30
+        ]
+      ],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 2,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": true,
+        "recognizer": {
+          "name": "slovnet_ner_news_v1",
+          "embedding": "navec_news_v1_1B_250K_300d_100q",
+          "source": "https://github.com/natasha/slovnet",
+          "sha256": {
+            "slovnet_ner_news_v1.tar": "16c3343a6572ddf0e2b2fc1923113de15a7f5ca5bde90e780dd590418665603e",
+            "navec_news_v1_1B_250K_300d_100q.tar": "f07270833d78523edc5781538d67038e95b43975e4a7ae757c693b687f9cbfca"
+          },
+          "packages": {
+            "slovnet": "0.6.0",
+            "navec": "0.10.0",
+            "numpy": "2.5.3",
+            "razdel": "0.5.0"
+          },
+          "label_mapping": {
+            "PER": "PERSON",
+            "ORG": "ORG",
+            "LOC": "LOC"
+          },
+          "ignored_labels": "Any label not in PER/ORG/LOC is ignored; O is not an entity.",
+          "execution": "Offline CPU inference, pretrained weights unchanged"
+        }
+      },
+      "initial_entities": [
+        {
+          "start": 11,
+          "end": 30,
+          "text": "Николай Лобачевский",
+          "type": "PERSON",
+          "model_label": "PER",
+          "method": "pretrained_model"
+        }
+      ],
+      "initial_entity_positions": "original_text",
+      "entities": [
+        {
+          "start": 11,
+          "end": 30,
+          "text": "Николай Лобачевский",
+          "type": "PERSON",
+          "model_label": "PER",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_10",
+      "original_text": "Расскажи об образовнии в Казани.",
+      "proposed_text": "Расскажи от образования в Казани.",
+      "changes": [
+        {
+          "start": 9,
+          "end": 11,
+          "old": "об",
+          "new": "от",
+          "proposed_start": 9,
+          "proposed_end": 11,
+          "distance": 1,
+          "candidates": [
+            {
+              "key": "от",
+              "text": "от",
+              "distance": 1,
+              "frequency": 9,
+              "case_rule": "lowercase"
+            },
+            {
+              "key": "о",
+              "text": "о",
+              "distance": 1,
+              "frequency": 7,
+              "case_rule": "lowercase"
+            },
+            {
+              "key": "он",
+              "text": "он",
+              "distance": 1,
+              "frequency": 7,
+              "case_rule": "lowercase"
+            }
+          ],
+          "alternatives": [
+            {
+              "key": "о",
+              "text": "о",
+              "distance": 1,
+              "frequency": 7,
+              "case_rule": "lowercase"
+            },
+            {
+              "key": "он",
+              "text": "он",
+              "distance": 1,
+              "frequency": 7,
+              "case_rule": "lowercase"
+            }
+          ],
+          "candidate_count": 54,
+          "ambiguous": true,
+          "case_rule": "lowercase"
+        },
+        {
+          "start": 12,
+          "end": 22,
+          "old": "образовнии",
+          "new": "образования",
+          "proposed_start": 12,
+          "proposed_end": 23,
+          "distance": 2,
+          "candidates": [
+            {
+              "key": "образования",
+              "text": "образования",
+              "distance": 2,
+              "frequency": 7,
+              "case_rule": "lowercase"
+            },
+            {
+              "key": "образование",
+              "text": "образование",
+              "distance": 2,
+              "frequency": 1,
+              "case_rule": "lowercase"
+            }
+          ],
+          "alternatives": [
+            {
+              "key": "образование",
+              "text": "образование",
+              "distance": 2,
+              "frequency": 1,
+              "case_rule": "lowercase"
+            }
+          ],
+          "candidate_count": 2,
+          "ambiguous": true,
+          "case_rule": "lowercase"
+        }
+      ],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 8,
+          "original": "Расскажи",
+          "proposed": "Расскажи",
+          "proposed_start": 0,
+          "proposed_end": 8,
+          "status": "no_candidates",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 9,
+          "end": 11,
+          "original": "об",
+          "proposed": "от",
+          "proposed_start": 9,
+          "proposed_end": 11,
+          "status": "replaced",
+          "candidates": [
+            {
+              "key": "от",
+              "text": "от",
+              "distance": 1,
+              "frequency": 9,
+              "case_rule": "lowercase"
+            },
+            {
+              "key": "о",
+              "text": "о",
+              "distance": 1,
+              "frequency": 7,
+              "case_rule": "lowercase"
+            },
+            {
+              "key": "он",
+              "text": "он",
+              "distance": 1,
+              "frequency": 7,
+              "case_rule": "lowercase"
+            }
+          ],
+          "candidate_count": 54,
+          "ambiguous": true
+        },
+        {
+          "start": 12,
+          "end": 22,
+          "original": "образовнии",
+          "proposed": "образования",
+          "proposed_start": 12,
+          "proposed_end": 23,
+          "status": "replaced",
+          "candidates": [
+            {
+              "key": "образования",
+              "text": "образования",
+              "distance": 2,
+              "frequency": 7,
+              "case_rule": "lowercase"
+            },
+            {
+              "key": "образование",
+              "text": "образование",
+              "distance": 2,
+              "frequency": 1,
+              "case_rule": "lowercase"
+            }
+          ],
+          "candidate_count": 2,
+          "ambiguous": true
+        },
+        {
+          "start": 23,
+          "end": 24,
+          "original": "в",
+          "proposed": "в",
+          "proposed_start": 24,
+          "proposed_end": 25,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 25,
+          "end": 31,
+          "original": "Казани",
+          "proposed": "Казани",
+          "proposed_start": 26,
+          "proposed_end": 32,
+          "status": "protected",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [
+        [
+          25,
+          31
+        ]
+      ],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 2,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": true,
+        "recognizer": {
+          "name": "slovnet_ner_news_v1",
+          "embedding": "navec_news_v1_1B_250K_300d_100q",
+          "source": "https://github.com/natasha/slovnet",
+          "sha256": {
+            "slovnet_ner_news_v1.tar": "16c3343a6572ddf0e2b2fc1923113de15a7f5ca5bde90e780dd590418665603e",
+            "navec_news_v1_1B_250K_300d_100q.tar": "f07270833d78523edc5781538d67038e95b43975e4a7ae757c693b687f9cbfca"
+          },
+          "packages": {
+            "slovnet": "0.6.0",
+            "navec": "0.10.0",
+            "numpy": "2.5.3",
+            "razdel": "0.5.0"
+          },
+          "label_mapping": {
+            "PER": "PERSON",
+            "ORG": "ORG",
+            "LOC": "LOC"
+          },
+          "ignored_labels": "Any label not in PER/ORG/LOC is ignored; O is not an entity.",
+          "execution": "Offline CPU inference, pretrained weights unchanged"
+        }
+      },
+      "initial_entities": [
+        {
+          "start": 25,
+          "end": 31,
+          "text": "Казани",
+          "type": "LOC",
+          "model_label": "LOC",
+          "method": "pretrained_model"
+        }
+      ],
+      "initial_entity_positions": "original_text",
+      "entities": [
+        {
+          "start": 26,
+          "end": 32,
+          "text": "Казани",
+          "type": "LOC",
+          "model_label": "LOC",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_11",
+      "original_text": "Наука в Маскве.",
+      "proposed_text": "Наук в Маскве.",
+      "changes": [
+        {
+          "start": 0,
+          "end": 5,
+          "old": "Наука",
+          "new": "Наук",
+          "proposed_start": 0,
+          "proposed_end": 4,
+          "distance": 1,
+          "candidates": [
+            {
+              "key": "наук",
+              "text": "Наук",
+              "distance": 1,
+              "frequency": 30,
+              "case_rule": "titlecase"
+            },
+            {
+              "key": "науки",
+              "text": "Науки",
+              "distance": 1,
+              "frequency": 4,
+              "case_rule": "titlecase"
+            },
+            {
+              "key": "науку",
+              "text": "Науку",
+              "distance": 1,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            }
+          ],
+          "alternatives": [
+            {
+              "key": "науки",
+              "text": "Науки",
+              "distance": 1,
+              "frequency": 4,
+              "case_rule": "titlecase"
+            },
+            {
+              "key": "науку",
+              "text": "Науку",
+              "distance": 1,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            }
+          ],
+          "candidate_count": 3,
+          "ambiguous": true,
+          "case_rule": "titlecase"
+        }
+      ],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 5,
+          "original": "Наука",
+          "proposed": "Наук",
+          "proposed_start": 0,
+          "proposed_end": 4,
+          "status": "replaced",
+          "candidates": [
+            {
+              "key": "наук",
+              "text": "Наук",
+              "distance": 1,
+              "frequency": 30,
+              "case_rule": "titlecase"
+            },
+            {
+              "key": "науки",
+              "text": "Науки",
+              "distance": 1,
+              "frequency": 4,
+              "case_rule": "titlecase"
+            },
+            {
+              "key": "науку",
+              "text": "Науку",
+              "distance": 1,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            }
+          ],
+          "candidate_count": 3,
+          "ambiguous": true
+        },
+        {
+          "start": 6,
+          "end": 7,
+          "original": "в",
+          "proposed": "в",
+          "proposed_start": 5,
+          "proposed_end": 6,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 8,
+          "end": 14,
+          "original": "Маскве",
+          "proposed": "Маскве",
+          "proposed_start": 7,
+          "proposed_end": 13,
+          "status": "protected",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [
+        [
+          8,
+          14
+        ]
+      ],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 2,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": true,
+        "recognizer": {
+          "name": "slovnet_ner_news_v1",
+          "embedding": "navec_news_v1_1B_250K_300d_100q",
+          "source": "https://github.com/natasha/slovnet",
+          "sha256": {
+            "slovnet_ner_news_v1.tar": "16c3343a6572ddf0e2b2fc1923113de15a7f5ca5bde90e780dd590418665603e",
+            "navec_news_v1_1B_250K_300d_100q.tar": "f07270833d78523edc5781538d67038e95b43975e4a7ae757c693b687f9cbfca"
+          },
+          "packages": {
+            "slovnet": "0.6.0",
+            "navec": "0.10.0",
+            "numpy": "2.5.3",
+            "razdel": "0.5.0"
+          },
+          "label_mapping": {
+            "PER": "PERSON",
+            "ORG": "ORG",
+            "LOC": "LOC"
+          },
+          "ignored_labels": "Any label not in PER/ORG/LOC is ignored; O is not an entity.",
+          "execution": "Offline CPU inference, pretrained weights unchanged"
+        }
+      },
+      "initial_entities": [
+        {
+          "start": 8,
+          "end": 14,
+          "text": "Маскве",
+          "type": "LOC",
+          "model_label": "LOC",
+          "method": "pretrained_model"
+        }
+      ],
+      "initial_entity_positions": "original_text",
+      "entities": [
+        {
+          "start": 7,
+          "end": 13,
+          "text": "Маскве",
+          "type": "LOC",
+          "model_label": "LOC",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_12",
+      "original_text": "Биография Пушкна.",
+      "proposed_text": "Биография Пушкна.",
+      "changes": [],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 9,
+          "original": "Биография",
+          "proposed": "Биография",
+          "proposed_start": 0,
+          "proposed_end": 9,
+          "status": "no_candidates",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 10,
+          "end": 16,
+          "original": "Пушкна",
+          "proposed": "Пушкна",
+          "proposed_start": 10,
+          "proposed_end": 16,
+          "status": "protected",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [
+        [
+          10,
+          16
+        ]
+      ],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 2,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": true,
+        "recognizer": {
+          "name": "slovnet_ner_news_v1",
+          "embedding": "navec_news_v1_1B_250K_300d_100q",
+          "source": "https://github.com/natasha/slovnet",
+          "sha256": {
+            "slovnet_ner_news_v1.tar": "16c3343a6572ddf0e2b2fc1923113de15a7f5ca5bde90e780dd590418665603e",
+            "navec_news_v1_1B_250K_300d_100q.tar": "f07270833d78523edc5781538d67038e95b43975e4a7ae757c693b687f9cbfca"
+          },
+          "packages": {
+            "slovnet": "0.6.0",
+            "navec": "0.10.0",
+            "numpy": "2.5.3",
+            "razdel": "0.5.0"
+          },
+          "label_mapping": {
+            "PER": "PERSON",
+            "ORG": "ORG",
+            "LOC": "LOC"
+          },
+          "ignored_labels": "Any label not in PER/ORG/LOC is ignored; O is not an entity.",
+          "execution": "Offline CPU inference, pretrained weights unchanged"
+        }
+      },
+      "initial_entities": [
+        {
+          "start": 10,
+          "end": 16,
+          "text": "Пушкна",
+          "type": "PERSON",
+          "model_label": "PER",
+          "method": "pretrained_model"
+        }
+      ],
+      "initial_entity_positions": "original_text",
+      "entities": [
+        {
+          "start": 10,
+          "end": 16,
+          "text": "Пушкна",
+          "type": "PERSON",
+          "model_label": "PER",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_13",
+      "original_text": "Где расположен МГГУ?",
+      "proposed_text": "Где расположен МГГУ?",
+      "changes": [],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 3,
+          "original": "Где",
+          "proposed": "Где",
+          "proposed_start": 0,
+          "proposed_end": 3,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 4,
+          "end": 14,
+          "original": "расположен",
+          "proposed": "расположен",
+          "proposed_start": 4,
+          "proposed_end": 14,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 15,
+          "end": 19,
+          "original": "МГГУ",
+          "proposed": "МГГУ",
+          "proposed_start": 15,
+          "proposed_end": 19,
+          "status": "protected",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [
+        [
+          15,
+          19
+        ]
+      ],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 2,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": true,
+        "recognizer": {
+          "name": "slovnet_ner_news_v1",
+          "embedding": "navec_news_v1_1B_250K_300d_100q",
+          "source": "https://github.com/natasha/slovnet",
+          "sha256": {
+            "slovnet_ner_news_v1.tar": "16c3343a6572ddf0e2b2fc1923113de15a7f5ca5bde90e780dd590418665603e",
+            "navec_news_v1_1B_250K_300d_100q.tar": "f07270833d78523edc5781538d67038e95b43975e4a7ae757c693b687f9cbfca"
+          },
+          "packages": {
+            "slovnet": "0.6.0",
+            "navec": "0.10.0",
+            "numpy": "2.5.3",
+            "razdel": "0.5.0"
+          },
+          "label_mapping": {
+            "PER": "PERSON",
+            "ORG": "ORG",
+            "LOC": "LOC"
+          },
+          "ignored_labels": "Any label not in PER/ORG/LOC is ignored; O is not an entity.",
+          "execution": "Offline CPU inference, pretrained weights unchanged"
+        }
+      },
+      "initial_entities": [
+        {
+          "start": 15,
+          "end": 19,
+          "text": "МГГУ",
+          "type": "ORG",
+          "model_label": "ORG",
+          "method": "pretrained_model"
+        }
+      ],
+      "initial_entity_positions": "original_text",
+      "entities": [
+        {
+          "start": 15,
+          "end": 19,
+          "text": "МГГУ",
+          "type": "ORG",
+          "model_label": "ORG",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_14",
+      "original_text": "Когда основан Нижний Новгроод?",
+      "proposed_text": "Года основан Нижний Новгроод?",
+      "changes": [
+        {
+          "start": 0,
+          "end": 5,
+          "old": "Когда",
+          "new": "Года",
+          "proposed_start": 0,
+          "proposed_end": 4,
+          "distance": 2,
+          "candidates": [
+            {
+              "key": "года",
+              "text": "Года",
+              "distance": 2,
+              "frequency": 38,
+              "case_rule": "titlecase"
+            },
+            {
+              "key": "конца",
+              "text": "Конца",
+              "distance": 2,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            },
+            {
+              "key": "рода",
+              "text": "Рода",
+              "distance": 2,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            }
+          ],
+          "alternatives": [
+            {
+              "key": "конца",
+              "text": "Конца",
+              "distance": 2,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            },
+            {
+              "key": "рода",
+              "text": "Рода",
+              "distance": 2,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            }
+          ],
+          "candidate_count": 3,
+          "ambiguous": true,
+          "case_rule": "titlecase"
+        }
+      ],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 5,
+          "original": "Когда",
+          "proposed": "Года",
+          "proposed_start": 0,
+          "proposed_end": 4,
+          "status": "replaced",
+          "candidates": [
+            {
+              "key": "года",
+              "text": "Года",
+              "distance": 2,
+              "frequency": 38,
+              "case_rule": "titlecase"
+            },
+            {
+              "key": "конца",
+              "text": "Конца",
+              "distance": 2,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            },
+            {
+              "key": "рода",
+              "text": "Рода",
+              "distance": 2,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            }
+          ],
+          "candidate_count": 3,
+          "ambiguous": true
+        },
+        {
+          "start": 6,
+          "end": 13,
+          "original": "основан",
+          "proposed": "основан",
+          "proposed_start": 5,
+          "proposed_end": 12,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 14,
+          "end": 20,
+          "original": "Нижний",
+          "proposed": "Нижний",
+          "proposed_start": 13,
+          "proposed_end": 19,
+          "status": "protected",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 21,
+          "end": 29,
+          "original": "Новгроод",
+          "proposed": "Новгроод",
+          "proposed_start": 20,
+          "proposed_end": 28,
+          "status": "protected",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [
+        [
+          14,
+          29
+        ]
+      ],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 2,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": true,
+        "recognizer": {
+          "name": "slovnet_ner_news_v1",
+          "embedding": "navec_news_v1_1B_250K_300d_100q",
+          "source": "https://github.com/natasha/slovnet",
+          "sha256": {
+            "slovnet_ner_news_v1.tar": "16c3343a6572ddf0e2b2fc1923113de15a7f5ca5bde90e780dd590418665603e",
+            "navec_news_v1_1B_250K_300d_100q.tar": "f07270833d78523edc5781538d67038e95b43975e4a7ae757c693b687f9cbfca"
+          },
+          "packages": {
+            "slovnet": "0.6.0",
+            "navec": "0.10.0",
+            "numpy": "2.5.3",
+            "razdel": "0.5.0"
+          },
+          "label_mapping": {
+            "PER": "PERSON",
+            "ORG": "ORG",
+            "LOC": "LOC"
+          },
+          "ignored_labels": "Any label not in PER/ORG/LOC is ignored; O is not an entity.",
+          "execution": "Offline CPU inference, pretrained weights unchanged"
+        }
+      },
+      "initial_entities": [
+        {
+          "start": 14,
+          "end": 29,
+          "text": "Нижний Новгроод",
+          "type": "LOC",
+          "model_label": "LOC",
+          "method": "pretrained_model"
+        }
+      ],
+      "initial_entity_positions": "original_text",
+      "entities": [
+        {
+          "start": 13,
+          "end": 28,
+          "text": "Нижний Новгроод",
+          "type": "LOC",
+          "model_label": "LOC",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_15",
+      "original_text": "Работы Ломоносва.",
+      "proposed_text": "Работу Ломоносва.",
+      "changes": [
+        {
+          "start": 0,
+          "end": 6,
+          "old": "Работы",
+          "new": "Работу",
+          "proposed_start": 0,
+          "proposed_end": 6,
+          "distance": 1,
+          "candidates": [
+            {
+              "key": "работу",
+              "text": "Работу",
+              "distance": 1,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            },
+            {
+              "key": "работал",
+              "text": "Работал",
+              "distance": 2,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            }
+          ],
+          "alternatives": [
+            {
+              "key": "работал",
+              "text": "Работал",
+              "distance": 2,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            }
+          ],
+          "candidate_count": 2,
+          "ambiguous": true,
+          "case_rule": "titlecase"
+        }
+      ],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 6,
+          "original": "Работы",
+          "proposed": "Работу",
+          "proposed_start": 0,
+          "proposed_end": 6,
+          "status": "replaced",
+          "candidates": [
+            {
+              "key": "работу",
+              "text": "Работу",
+              "distance": 1,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            },
+            {
+              "key": "работал",
+              "text": "Работал",
+              "distance": 2,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            }
+          ],
+          "candidate_count": 2,
+          "ambiguous": true
+        },
+        {
+          "start": 7,
+          "end": 16,
+          "original": "Ломоносва",
+          "proposed": "Ломоносва",
+          "proposed_start": 7,
+          "proposed_end": 16,
+          "status": "protected",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [
+        [
+          7,
+          16
+        ]
+      ],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 2,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": true,
+        "recognizer": {
+          "name": "slovnet_ner_news_v1",
+          "embedding": "navec_news_v1_1B_250K_300d_100q",
+          "source": "https://github.com/natasha/slovnet",
+          "sha256": {
+            "slovnet_ner_news_v1.tar": "16c3343a6572ddf0e2b2fc1923113de15a7f5ca5bde90e780dd590418665603e",
+            "navec_news_v1_1B_250K_300d_100q.tar": "f07270833d78523edc5781538d67038e95b43975e4a7ae757c693b687f9cbfca"
+          },
+          "packages": {
+            "slovnet": "0.6.0",
+            "navec": "0.10.0",
+            "numpy": "2.5.3",
+            "razdel": "0.5.0"
+          },
+          "label_mapping": {
+            "PER": "PERSON",
+            "ORG": "ORG",
+            "LOC": "LOC"
+          },
+          "ignored_labels": "Any label not in PER/ORG/LOC is ignored; O is not an entity.",
+          "execution": "Offline CPU inference, pretrained weights unchanged"
+        }
+      },
+      "initial_entities": [
+        {
+          "start": 7,
+          "end": 16,
+          "text": "Ломоносва",
+          "type": "PERSON",
+          "model_label": "PER",
+          "method": "pretrained_model"
+        }
+      ],
+      "initial_entity_positions": "original_text",
+      "entities": [
+        {
+          "start": 7,
+          "end": 16,
+          "text": "Ломоносва",
+          "type": "PERSON",
+          "model_label": "PER",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_16",
+      "original_text": "Исследования Пафнутия Чебышёва.",
+      "proposed_text": "Исследования Пафнутия Чебышёва.",
+      "changes": [],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 12,
+          "original": "Исследования",
+          "proposed": "Исследования",
+          "proposed_start": 0,
+          "proposed_end": 12,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 13,
+          "end": 21,
+          "original": "Пафнутия",
+          "proposed": "Пафнутия",
+          "proposed_start": 13,
+          "proposed_end": 21,
+          "status": "protected",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 22,
+          "end": 30,
+          "original": "Чебышёва",
+          "proposed": "Чебышёва",
+          "proposed_start": 22,
+          "proposed_end": 30,
+          "status": "protected",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [
+        [
+          13,
+          30
+        ]
+      ],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 2,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": true,
+        "recognizer": {
+          "name": "slovnet_ner_news_v1",
+          "embedding": "navec_news_v1_1B_250K_300d_100q",
+          "source": "https://github.com/natasha/slovnet",
+          "sha256": {
+            "slovnet_ner_news_v1.tar": "16c3343a6572ddf0e2b2fc1923113de15a7f5ca5bde90e780dd590418665603e",
+            "navec_news_v1_1B_250K_300d_100q.tar": "f07270833d78523edc5781538d67038e95b43975e4a7ae757c693b687f9cbfca"
+          },
+          "packages": {
+            "slovnet": "0.6.0",
+            "navec": "0.10.0",
+            "numpy": "2.5.3",
+            "razdel": "0.5.0"
+          },
+          "label_mapping": {
+            "PER": "PERSON",
+            "ORG": "ORG",
+            "LOC": "LOC"
+          },
+          "ignored_labels": "Any label not in PER/ORG/LOC is ignored; O is not an entity.",
+          "execution": "Offline CPU inference, pretrained weights unchanged"
+        }
+      },
+      "initial_entities": [
+        {
+          "start": 13,
+          "end": 30,
+          "text": "Пафнутия Чебышёва",
+          "type": "PERSON",
+          "model_label": "PER",
+          "method": "pretrained_model"
+        }
+      ],
+      "initial_entity_positions": "original_text",
+      "entities": [
+        {
+          "start": 13,
+          "end": 30,
+          "text": "Пафнутия Чебышёва",
+          "type": "PERSON",
+          "model_label": "PER",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_17",
+      "original_text": "Труды Софьи Ковалевской.",
+      "proposed_text": "Труда Софьи Ковалевской.",
+      "changes": [
+        {
+          "start": 0,
+          "end": 5,
+          "old": "Труды",
+          "new": "Труда",
+          "proposed_start": 0,
+          "proposed_end": 5,
+          "distance": 1,
+          "candidates": [
+            {
+              "key": "труда",
+              "text": "Труда",
+              "distance": 1,
+              "frequency": 2,
+              "case_rule": "titlecase"
+            },
+            {
+              "key": "орды",
+              "text": "Орды",
+              "distance": 2,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            }
+          ],
+          "alternatives": [
+            {
+              "key": "орды",
+              "text": "Орды",
+              "distance": 2,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            }
+          ],
+          "candidate_count": 2,
+          "ambiguous": true,
+          "case_rule": "titlecase"
+        }
+      ],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 5,
+          "original": "Труды",
+          "proposed": "Труда",
+          "proposed_start": 0,
+          "proposed_end": 5,
+          "status": "replaced",
+          "candidates": [
+            {
+              "key": "труда",
+              "text": "Труда",
+              "distance": 1,
+              "frequency": 2,
+              "case_rule": "titlecase"
+            },
+            {
+              "key": "орды",
+              "text": "Орды",
+              "distance": 2,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            }
+          ],
+          "candidate_count": 2,
+          "ambiguous": true
+        },
+        {
+          "start": 6,
+          "end": 11,
+          "original": "Софьи",
+          "proposed": "Софьи",
+          "proposed_start": 6,
+          "proposed_end": 11,
+          "status": "protected",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 12,
+          "end": 23,
+          "original": "Ковалевской",
+          "proposed": "Ковалевской",
+          "proposed_start": 12,
+          "proposed_end": 23,
+          "status": "protected",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [
+        [
+          6,
+          23
+        ]
+      ],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 2,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": true,
+        "recognizer": {
+          "name": "slovnet_ner_news_v1",
+          "embedding": "navec_news_v1_1B_250K_300d_100q",
+          "source": "https://github.com/natasha/slovnet",
+          "sha256": {
+            "slovnet_ner_news_v1.tar": "16c3343a6572ddf0e2b2fc1923113de15a7f5ca5bde90e780dd590418665603e",
+            "navec_news_v1_1B_250K_300d_100q.tar": "f07270833d78523edc5781538d67038e95b43975e4a7ae757c693b687f9cbfca"
+          },
+          "packages": {
+            "slovnet": "0.6.0",
+            "navec": "0.10.0",
+            "numpy": "2.5.3",
+            "razdel": "0.5.0"
+          },
+          "label_mapping": {
+            "PER": "PERSON",
+            "ORG": "ORG",
+            "LOC": "LOC"
+          },
+          "ignored_labels": "Any label not in PER/ORG/LOC is ignored; O is not an entity.",
+          "execution": "Offline CPU inference, pretrained weights unchanged"
+        }
+      },
+      "initial_entities": [
+        {
+          "start": 6,
+          "end": 23,
+          "text": "Софьи Ковалевской",
+          "type": "PERSON",
+          "model_label": "PER",
+          "method": "pretrained_model"
+        }
+      ],
+      "initial_entity_positions": "original_text",
+      "entities": [
+        {
+          "start": 0,
+          "end": 23,
+          "text": "Труда Софьи Ковалевской",
+          "type": "LOC",
+          "model_label": "LOC",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_18",
+      "original_text": "Постройки Осипа Бове.",
+      "proposed_text": "Постройки Осипа Бове.",
+      "changes": [],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 9,
+          "original": "Постройки",
+          "proposed": "Постройки",
+          "proposed_start": 0,
+          "proposed_end": 9,
+          "status": "no_candidates",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 10,
+          "end": 15,
+          "original": "Осипа",
+          "proposed": "Осипа",
+          "proposed_start": 10,
+          "proposed_end": 15,
+          "status": "protected",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 16,
+          "end": 20,
+          "original": "Бове",
+          "proposed": "Бове",
+          "proposed_start": 16,
+          "proposed_end": 20,
+          "status": "protected",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [
+        [
+          10,
+          20
+        ]
+      ],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 2,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": true,
+        "recognizer": {
+          "name": "slovnet_ner_news_v1",
+          "embedding": "navec_news_v1_1B_250K_300d_100q",
+          "source": "https://github.com/natasha/slovnet",
+          "sha256": {
+            "slovnet_ner_news_v1.tar": "16c3343a6572ddf0e2b2fc1923113de15a7f5ca5bde90e780dd590418665603e",
+            "navec_news_v1_1B_250K_300d_100q.tar": "f07270833d78523edc5781538d67038e95b43975e4a7ae757c693b687f9cbfca"
+          },
+          "packages": {
+            "slovnet": "0.6.0",
+            "navec": "0.10.0",
+            "numpy": "2.5.3",
+            "razdel": "0.5.0"
+          },
+          "label_mapping": {
+            "PER": "PERSON",
+            "ORG": "ORG",
+            "LOC": "LOC"
+          },
+          "ignored_labels": "Any label not in PER/ORG/LOC is ignored; O is not an entity.",
+          "execution": "Offline CPU inference, pretrained weights unchanged"
+        }
+      },
+      "initial_entities": [
+        {
+          "start": 10,
+          "end": 20,
+          "text": "Осипа Бове",
+          "type": "PERSON",
+          "model_label": "PER",
+          "method": "pretrained_model"
+        }
+      ],
+      "initial_entity_positions": "original_text",
+      "entities": [
+        {
+          "start": 10,
+          "end": 20,
+          "text": "Осипа Бове",
+          "type": "PERSON",
+          "model_label": "PER",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_19",
+      "original_text": "Путеводитель по Устюжне.",
+      "proposed_text": "Путеводитель по Устюжне.",
+      "changes": [],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 12,
+          "original": "Путеводитель",
+          "proposed": "Путеводитель",
+          "proposed_start": 0,
+          "proposed_end": 12,
+          "status": "no_candidates",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 13,
+          "end": 15,
+          "original": "по",
+          "proposed": "по",
+          "proposed_start": 13,
+          "proposed_end": 15,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 16,
+          "end": 23,
+          "original": "Устюжне",
+          "proposed": "Устюжне",
+          "proposed_start": 16,
+          "proposed_end": 23,
+          "status": "protected",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [
+        [
+          16,
+          23
+        ]
+      ],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 2,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": true,
+        "recognizer": {
+          "name": "slovnet_ner_news_v1",
+          "embedding": "navec_news_v1_1B_250K_300d_100q",
+          "source": "https://github.com/natasha/slovnet",
+          "sha256": {
+            "slovnet_ner_news_v1.tar": "16c3343a6572ddf0e2b2fc1923113de15a7f5ca5bde90e780dd590418665603e",
+            "navec_news_v1_1B_250K_300d_100q.tar": "f07270833d78523edc5781538d67038e95b43975e4a7ae757c693b687f9cbfca"
+          },
+          "packages": {
+            "slovnet": "0.6.0",
+            "navec": "0.10.0",
+            "numpy": "2.5.3",
+            "razdel": "0.5.0"
+          },
+          "label_mapping": {
+            "PER": "PERSON",
+            "ORG": "ORG",
+            "LOC": "LOC"
+          },
+          "ignored_labels": "Any label not in PER/ORG/LOC is ignored; O is not an entity.",
+          "execution": "Offline CPU inference, pretrained weights unchanged"
+        }
+      },
+      "initial_entities": [
+        {
+          "start": 16,
+          "end": 23,
+          "text": "Устюжне",
+          "type": "LOC",
+          "model_label": "LOC",
+          "method": "pretrained_model"
+        }
+      ],
+      "initial_entity_positions": "original_text",
+      "entities": [
+        {
+          "start": 16,
+          "end": 23,
+          "text": "Устюжне",
+          "type": "LOC",
+          "model_label": "LOC",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_20",
+      "original_text": "Музеи Торжка.",
+      "proposed_text": "Музеи Торжка.",
+      "changes": [],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 5,
+          "original": "Музеи",
+          "proposed": "Музеи",
+          "proposed_start": 0,
+          "proposed_end": 5,
+          "status": "protected",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 6,
+          "end": 12,
+          "original": "Торжка",
+          "proposed": "Торжка",
+          "proposed_start": 6,
+          "proposed_end": 12,
+          "status": "protected",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [
+        [
+          0,
+          5
+        ],
+        [
+          6,
+          12
+        ]
+      ],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 2,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": true,
+        "recognizer": {
+          "name": "slovnet_ner_news_v1",
+          "embedding": "navec_news_v1_1B_250K_300d_100q",
+          "source": "https://github.com/natasha/slovnet",
+          "sha256": {
+            "slovnet_ner_news_v1.tar": "16c3343a6572ddf0e2b2fc1923113de15a7f5ca5bde90e780dd590418665603e",
+            "navec_news_v1_1B_250K_300d_100q.tar": "f07270833d78523edc5781538d67038e95b43975e4a7ae757c693b687f9cbfca"
+          },
+          "packages": {
+            "slovnet": "0.6.0",
+            "navec": "0.10.0",
+            "numpy": "2.5.3",
+            "razdel": "0.5.0"
+          },
+          "label_mapping": {
+            "PER": "PERSON",
+            "ORG": "ORG",
+            "LOC": "LOC"
+          },
+          "ignored_labels": "Any label not in PER/ORG/LOC is ignored; O is not an entity.",
+          "execution": "Offline CPU inference, pretrained weights unchanged"
+        }
+      },
+      "initial_entities": [
+        {
+          "start": 0,
+          "end": 5,
+          "text": "Музеи",
+          "type": "ORG",
+          "model_label": "ORG",
+          "method": "pretrained_model"
+        },
+        {
+          "start": 6,
+          "end": 12,
+          "text": "Торжка",
+          "type": "LOC",
+          "model_label": "LOC",
+          "method": "pretrained_model"
+        }
+      ],
+      "initial_entity_positions": "original_text",
+      "entities": [
+        {
+          "start": 0,
+          "end": 5,
+          "text": "Музеи",
+          "type": "ORG",
+          "model_label": "ORG",
+          "method": "pretrained_model"
+        },
+        {
+          "start": 6,
+          "end": 12,
+          "text": "Торжка",
+          "type": "LOC",
+          "model_label": "LOC",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "proposed_text"
+    }
+  ],
+  "metrics": {
+    "queries": 20,
+    "spelling": {
+      "corrected_typos": 2,
+      "typo_tokens": 10,
+      "damaged_correct_tokens": 7,
+      "correct_tokens": 58,
+      "top3_hits": 2,
+      "correction_rate": 0.2,
+      "false_change_rate": 0.1206896551724138,
+      "top3_rate": 0.2
+    },
+    "ner": {
+      "tp": 18,
+      "fp": 3,
+      "fn": 2,
+      "precision": 0.8571428571428571,
+      "recall": 0.9,
+      "f1": 0.8780487804878048
+    },
+    "ner_by_type": {
+      "PERSON": {
+        "tp": 8,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1": 0.888888888888889
+      },
+      "ORG": {
+        "tp": 3,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571
+      },
+      "LOC": {
+        "tp": 7,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.7777777777777778,
+        "recall": 1.0,
+        "f1": 0.8750000000000001
+      }
+    },
+    "transfer_failure_count": 0,
+    "by_group": {
+      "clean": {
+        "queries": 5,
+        "spelling": {
+          "corrected_typos": 0,
+          "typo_tokens": 0,
+          "damaged_correct_tokens": 2,
+          "correct_tokens": 20,
+          "top3_hits": 0,
+          "correction_rate": 0.0,
+          "false_change_rate": 0.1,
+          "top3_rate": 0.0
+        },
+        "ner": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1": 0.888888888888889
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          },
+          "ORG": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "LOC": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "transfer_failure_count": 0
+      },
+      "entity_typo": {
+        "queries": 5,
+        "spelling": {
+          "corrected_typos": 0,
+          "typo_tokens": 5,
+          "damaged_correct_tokens": 3,
+          "correct_tokens": 9,
+          "top3_hits": 0,
+          "correction_rate": 0.0,
+          "false_change_rate": 0.3333333333333333,
+          "top3_rate": 0.0
+        },
+        "ner": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "ORG": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "LOC": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "transfer_failure_count": 0
+      },
+      "ordinary_typo": {
+        "queries": 5,
+        "spelling": {
+          "corrected_typos": 2,
+          "typo_tokens": 5,
+          "damaged_correct_tokens": 1,
+          "correct_tokens": 15,
+          "top3_hits": 2,
+          "correction_rate": 0.4,
+          "false_change_rate": 0.06666666666666667,
+          "top3_rate": 0.4
+        },
+        "ner": {
+          "tp": 5,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.8333333333333334,
+          "recall": 1.0,
+          "f1": 0.9090909090909091
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "ORG": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "LOC": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          }
+        },
+        "transfer_failure_count": 0
+      },
+      "rare_correct": {
+        "queries": 5,
+        "spelling": {
+          "corrected_typos": 0,
+          "typo_tokens": 0,
+          "damaged_correct_tokens": 1,
+          "correct_tokens": 14,
+          "top3_hits": 0,
+          "correction_rate": 0.0,
+          "false_change_rate": 0.07142857142857142,
+          "top3_rate": 0.0
+        },
+        "ner": {
+          "tp": 4,
+          "fp": 2,
+          "fn": 1,
+          "precision": 0.6666666666666666,
+          "recall": 0.8,
+          "f1": 0.7272727272727272
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.6666666666666666,
+            "f1": 0.8
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "LOC": {
+            "tp": 2,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1": 0.8
+          }
+        },
+        "transfer_failure_count": 0
+      }
+    },
+    "query_details": [
+      {
+        "id": "dev_01",
+        "group": "clean",
+        "spelling_counts": {
+          "corrected_typos": 0,
+          "typo_tokens": 0,
+          "damaged_correct_tokens": 0,
+          "correct_tokens": 3,
+          "top3_hits": 0
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 10,
+            "end": 28,
+            "type": "PERSON",
+            "text": "Михаила Ломоносова"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_02",
+        "group": "clean",
+        "spelling_counts": {
+          "corrected_typos": 0,
+          "typo_tokens": 0,
+          "damaged_correct_tokens": 1,
+          "correct_tokens": 5,
+          "top3_hits": 0
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 14,
+            "end": 52,
+            "type": "ORG",
+            "text": "Московский государственный университет"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_03",
+        "group": "clean",
+        "spelling_counts": {
+          "corrected_typos": 0,
+          "typo_tokens": 0,
+          "damaged_correct_tokens": 0,
+          "correct_tokens": 3,
+          "top3_hits": 0
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 8,
+            "end": 25,
+            "type": "LOC",
+            "text": "Нижнего Новгорода"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_04",
+        "group": "clean",
+        "spelling_counts": {
+          "corrected_typos": 0,
+          "typo_tokens": 0,
+          "damaged_correct_tokens": 1,
+          "correct_tokens": 5,
+          "top3_hits": 0
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 6,
+            "end": 19,
+            "type": "PERSON",
+            "text": "Юрия Гагарина"
+          },
+          {
+            "start": 22,
+            "end": 29,
+            "type": "LOC",
+            "text": "Москвой"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_05",
+        "group": "clean",
+        "spelling_counts": {
+          "corrected_typos": 0,
+          "typo_tokens": 0,
+          "damaged_correct_tokens": 0,
+          "correct_tokens": 4,
+          "top3_hits": 0
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_06",
+        "group": "ordinary_typo",
+        "spelling_counts": {
+          "corrected_typos": 0,
+          "typo_tokens": 1,
+          "damaged_correct_tokens": 0,
+          "correct_tokens": 2,
+          "top3_hits": 0
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 9,
+            "end": 27,
+            "type": "PERSON",
+            "text": "Дмитрия Менделеева"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_07",
+        "group": "ordinary_typo",
+        "spelling_counts": {
+          "corrected_typos": 1,
+          "typo_tokens": 1,
+          "damaged_correct_tokens": 0,
+          "correct_tokens": 3,
+          "top3_hits": 1
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 8,
+            "end": 32,
+            "type": "ORG",
+            "text": "Российской академии наук"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_08",
+        "group": "ordinary_typo",
+        "spelling_counts": {
+          "corrected_typos": 1,
+          "typo_tokens": 1,
+          "damaged_correct_tokens": 0,
+          "correct_tokens": 3,
+          "top3_hits": 1
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 17,
+            "end": 32,
+            "type": "PERSON",
+            "text": "Сергея Королёва"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_09",
+        "group": "ordinary_typo",
+        "spelling_counts": {
+          "corrected_typos": 0,
+          "typo_tokens": 1,
+          "damaged_correct_tokens": 0,
+          "correct_tokens": 3,
+          "top3_hits": 0
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 11,
+            "end": 30,
+            "type": "PERSON",
+            "text": "Николай Лобачевский"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_10",
+        "group": "ordinary_typo",
+        "spelling_counts": {
+          "corrected_typos": 0,
+          "typo_tokens": 1,
+          "damaged_correct_tokens": 1,
+          "correct_tokens": 4,
+          "top3_hits": 0
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 26,
+            "end": 32,
+            "type": "LOC",
+            "text": "Казани"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_11",
+        "group": "entity_typo",
+        "spelling_counts": {
+          "corrected_typos": 0,
+          "typo_tokens": 1,
+          "damaged_correct_tokens": 1,
+          "correct_tokens": 2,
+          "top3_hits": 0
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 7,
+            "end": 13,
+            "type": "LOC",
+            "text": "Маскве"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_12",
+        "group": "entity_typo",
+        "spelling_counts": {
+          "corrected_typos": 0,
+          "typo_tokens": 1,
+          "damaged_correct_tokens": 0,
+          "correct_tokens": 1,
+          "top3_hits": 0
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 10,
+            "end": 16,
+            "type": "PERSON",
+            "text": "Пушкна"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_13",
+        "group": "entity_typo",
+        "spelling_counts": {
+          "corrected_typos": 0,
+          "typo_tokens": 1,
+          "damaged_correct_tokens": 0,
+          "correct_tokens": 2,
+          "top3_hits": 0
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 15,
+            "end": 19,
+            "type": "ORG",
+            "text": "МГГУ"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_14",
+        "group": "entity_typo",
+        "spelling_counts": {
+          "corrected_typos": 0,
+          "typo_tokens": 1,
+          "damaged_correct_tokens": 1,
+          "correct_tokens": 3,
+          "top3_hits": 0
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 13,
+            "end": 28,
+            "type": "LOC",
+            "text": "Нижний Новгроод"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_15",
+        "group": "entity_typo",
+        "spelling_counts": {
+          "corrected_typos": 0,
+          "typo_tokens": 1,
+          "damaged_correct_tokens": 1,
+          "correct_tokens": 1,
+          "top3_hits": 0
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 7,
+            "end": 16,
+            "type": "PERSON",
+            "text": "Ломоносва"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_16",
+        "group": "rare_correct",
+        "spelling_counts": {
+          "corrected_typos": 0,
+          "typo_tokens": 0,
+          "damaged_correct_tokens": 0,
+          "correct_tokens": 3,
+          "top3_hits": 0
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 13,
+            "end": 30,
+            "type": "PERSON",
+            "text": "Пафнутия Чебышёва"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_17",
+        "group": "rare_correct",
+        "spelling_counts": {
+          "corrected_typos": 0,
+          "typo_tokens": 0,
+          "damaged_correct_tokens": 1,
+          "correct_tokens": 3,
+          "top3_hits": 0
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 6,
+            "end": 23,
+            "type": "PERSON",
+            "text": "Софьи Ковалевской"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_18",
+        "group": "rare_correct",
+        "spelling_counts": {
+          "corrected_typos": 0,
+          "typo_tokens": 0,
+          "damaged_correct_tokens": 0,
+          "correct_tokens": 3,
+          "top3_hits": 0
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 10,
+            "end": 20,
+            "type": "PERSON",
+            "text": "Осипа Бове"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_19",
+        "group": "rare_correct",
+        "spelling_counts": {
+          "corrected_typos": 0,
+          "typo_tokens": 0,
+          "damaged_correct_tokens": 0,
+          "correct_tokens": 3,
+          "top3_hits": 0
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 16,
+            "end": 23,
+            "type": "LOC",
+            "text": "Устюжне"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_20",
+        "group": "rare_correct",
+        "spelling_counts": {
+          "corrected_typos": 0,
+          "typo_tokens": 0,
+          "damaged_correct_tokens": 0,
+          "correct_tokens": 2,
+          "top3_hits": 0
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 6,
+            "end": 12,
+            "type": "LOC",
+            "text": "Торжка"
+          }
+        ],
+        "transfer_failures": []
+      }
+    ],
+    "zero_denominator_value": 0,
+    "entity_match": "exact transferred original-gold boundaries and type; spelling scored separately"
+  }
+}

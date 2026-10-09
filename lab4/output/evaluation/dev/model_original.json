@@ -1,0 +1,1165 @@
+{
+  "config": {
+    "recognizer": "model",
+    "order": null
+  },
+  "recognizer_metadata": {
+    "name": "slovnet_ner_news_v1",
+    "embedding": "navec_news_v1_1B_250K_300d_100q",
+    "source": "https://github.com/natasha/slovnet",
+    "sha256": {
+      "slovnet_ner_news_v1.tar": "16c3343a6572ddf0e2b2fc1923113de15a7f5ca5bde90e780dd590418665603e",
+      "navec_news_v1_1B_250K_300d_100q.tar": "f07270833d78523edc5781538d67038e95b43975e4a7ae757c693b687f9cbfca"
+    },
+    "packages": {
+      "slovnet": "0.6.0",
+      "navec": "0.10.0",
+      "numpy": "2.5.3",
+      "razdel": "0.5.0"
+    },
+    "label_mapping": {
+      "PER": "PERSON",
+      "ORG": "ORG",
+      "LOC": "LOC"
+    },
+    "ignored_labels": "Any label not in PER/ORG/LOC is ignored; O is not an entity.",
+    "execution": "Offline CPU inference, pretrained weights unchanged"
+  },
+  "results": [
+    {
+      "id": "dev_01",
+      "original_text": "Биография Михаила Ломоносова.",
+      "entities": [
+        {
+          "start": 10,
+          "end": 28,
+          "text": "Михаила Ломоносова",
+          "type": "PERSON",
+          "model_label": "PER",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_02",
+      "original_text": "Где находится Московский государственный университет?",
+      "entities": [
+        {
+          "start": 14,
+          "end": 52,
+          "text": "Московский государственный университет",
+          "type": "ORG",
+          "model_label": "ORG",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_03",
+      "original_text": "История Нижнего Новгорода.",
+      "entities": [
+        {
+          "start": 8,
+          "end": 25,
+          "text": "Нижнего Новгорода",
+          "type": "LOC",
+          "model_label": "LOC",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_04",
+      "original_text": "Связь Юрия Гагарина с Москвой.",
+      "entities": [
+        {
+          "start": 6,
+          "end": 19,
+          "text": "Юрия Гагарина",
+          "type": "PERSON",
+          "model_label": "PER",
+          "method": "pretrained_model"
+        },
+        {
+          "start": 22,
+          "end": 29,
+          "text": "Москвой",
+          "type": "LOC",
+          "model_label": "LOC",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_05",
+      "original_text": "Как устроено высшее образование?",
+      "entities": [],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_06",
+      "original_text": "Биогрфия Дмитрия Менделеева.",
+      "entities": [
+        {
+          "start": 0,
+          "end": 8,
+          "text": "Биогрфия",
+          "type": "LOC",
+          "model_label": "LOC",
+          "method": "pretrained_model"
+        },
+        {
+          "start": 9,
+          "end": 27,
+          "text": "Дмитрия Менделеева",
+          "type": "PERSON",
+          "model_label": "PER",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_07",
+      "original_text": "Исторрия Российской академии наук.",
+      "entities": [
+        {
+          "start": 9,
+          "end": 33,
+          "text": "Российской академии наук",
+          "type": "ORG",
+          "model_label": "ORG",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_08",
+      "original_text": "Научные открвтия Сергея Королёва.",
+      "entities": [
+        {
+          "start": 17,
+          "end": 32,
+          "text": "Сергея Королёва",
+          "type": "PERSON",
+          "model_label": "PER",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_09",
+      "original_text": "Где учлися Николай Лобачевский?",
+      "entities": [
+        {
+          "start": 11,
+          "end": 30,
+          "text": "Николай Лобачевский",
+          "type": "PERSON",
+          "model_label": "PER",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_10",
+      "original_text": "Расскажи об образовнии в Казани.",
+      "entities": [
+        {
+          "start": 25,
+          "end": 31,
+          "text": "Казани",
+          "type": "LOC",
+          "model_label": "LOC",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_11",
+      "original_text": "Наука в Маскве.",
+      "entities": [
+        {
+          "start": 8,
+          "end": 14,
+          "text": "Маскве",
+          "type": "LOC",
+          "model_label": "LOC",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_12",
+      "original_text": "Биография Пушкна.",
+      "entities": [
+        {
+          "start": 10,
+          "end": 16,
+          "text": "Пушкна",
+          "type": "PERSON",
+          "model_label": "PER",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_13",
+      "original_text": "Где расположен МГГУ?",
+      "entities": [
+        {
+          "start": 15,
+          "end": 19,
+          "text": "МГГУ",
+          "type": "ORG",
+          "model_label": "ORG",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_14",
+      "original_text": "Когда основан Нижний Новгроод?",
+      "entities": [
+        {
+          "start": 14,
+          "end": 29,
+          "text": "Нижний Новгроод",
+          "type": "LOC",
+          "model_label": "LOC",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_15",
+      "original_text": "Работы Ломоносва.",
+      "entities": [
+        {
+          "start": 7,
+          "end": 16,
+          "text": "Ломоносва",
+          "type": "PERSON",
+          "model_label": "PER",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_16",
+      "original_text": "Исследования Пафнутия Чебышёва.",
+      "entities": [
+        {
+          "start": 13,
+          "end": 30,
+          "text": "Пафнутия Чебышёва",
+          "type": "PERSON",
+          "model_label": "PER",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_17",
+      "original_text": "Труды Софьи Ковалевской.",
+      "entities": [
+        {
+          "start": 6,
+          "end": 23,
+          "text": "Софьи Ковалевской",
+          "type": "PERSON",
+          "model_label": "PER",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_18",
+      "original_text": "Постройки Осипа Бове.",
+      "entities": [
+        {
+          "start": 10,
+          "end": 20,
+          "text": "Осипа Бове",
+          "type": "PERSON",
+          "model_label": "PER",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_19",
+      "original_text": "Путеводитель по Устюжне.",
+      "entities": [
+        {
+          "start": 16,
+          "end": 23,
+          "text": "Устюжне",
+          "type": "LOC",
+          "model_label": "LOC",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_20",
+      "original_text": "Музеи Торжка.",
+      "entities": [
+        {
+          "start": 0,
+          "end": 5,
+          "text": "Музеи",
+          "type": "ORG",
+          "model_label": "ORG",
+          "method": "pretrained_model"
+        },
+        {
+          "start": 6,
+          "end": 12,
+          "text": "Торжка",
+          "type": "LOC",
+          "model_label": "LOC",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "original_text"
+    }
+  ],
+  "metrics": {
+    "queries": 20,
+    "spelling": null,
+    "ner": {
+      "tp": 20,
+      "fp": 2,
+      "fn": 0,
+      "precision": 0.9090909090909091,
+      "recall": 1.0,
+      "f1": 0.9523809523809523
+    },
+    "ner_by_type": {
+      "PERSON": {
+        "tp": 10,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "ORG": {
+        "tp": 3,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571
+      },
+      "LOC": {
+        "tp": 7,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.875,
+        "recall": 1.0,
+        "f1": 0.9333333333333333
+      }
+    },
+    "transfer_failure_count": 0,
+    "by_group": {
+      "clean": {
+        "queries": 5,
+        "spelling": null,
+        "ner": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "ORG": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "LOC": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "transfer_failure_count": 0
+      },
+      "entity_typo": {
+        "queries": 5,
+        "spelling": null,
+        "ner": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "ORG": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "LOC": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "transfer_failure_count": 0
+      },
+      "ordinary_typo": {
+        "queries": 5,
+        "spelling": null,
+        "ner": {
+          "tp": 5,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.8333333333333334,
+          "recall": 1.0,
+          "f1": 0.9090909090909091
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "ORG": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "LOC": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          }
+        },
+        "transfer_failure_count": 0
+      },
+      "rare_correct": {
+        "queries": 5,
+        "spelling": null,
+        "ner": {
+          "tp": 5,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.8333333333333334,
+          "recall": 1.0,
+          "f1": 0.9090909090909091
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "LOC": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "transfer_failure_count": 0
+      }
+    },
+    "query_details": [
+      {
+        "id": "dev_01",
+        "group": "clean",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 10,
+            "end": 28,
+            "type": "PERSON",
+            "text": "Михаила Ломоносова"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_02",
+        "group": "clean",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 14,
+            "end": 52,
+            "type": "ORG",
+            "text": "Московский государственный университет"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_03",
+        "group": "clean",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 8,
+            "end": 25,
+            "type": "LOC",
+            "text": "Нижнего Новгорода"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_04",
+        "group": "clean",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 6,
+            "end": 19,
+            "type": "PERSON",
+            "text": "Юрия Гагарина"
+          },
+          {
+            "start": 22,
+            "end": 29,
+            "type": "LOC",
+            "text": "Москвой"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_05",
+        "group": "clean",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_06",
+        "group": "ordinary_typo",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 9,
+            "end": 27,
+            "type": "PERSON",
+            "text": "Дмитрия Менделеева"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_07",
+        "group": "ordinary_typo",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 9,
+            "end": 33,
+            "type": "ORG",
+            "text": "Российской академии наук"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_08",
+        "group": "ordinary_typo",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 17,
+            "end": 32,
+            "type": "PERSON",
+            "text": "Сергея Королёва"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_09",
+        "group": "ordinary_typo",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 11,
+            "end": 30,
+            "type": "PERSON",
+            "text": "Николай Лобачевский"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_10",
+        "group": "ordinary_typo",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 25,
+            "end": 31,
+            "type": "LOC",
+            "text": "Казани"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_11",
+        "group": "entity_typo",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 8,
+            "end": 14,
+            "type": "LOC",
+            "text": "Маскве"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_12",
+        "group": "entity_typo",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 10,
+            "end": 16,
+            "type": "PERSON",
+            "text": "Пушкна"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_13",
+        "group": "entity_typo",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 15,
+            "end": 19,
+            "type": "ORG",
+            "text": "МГГУ"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_14",
+        "group": "entity_typo",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 14,
+            "end": 29,
+            "type": "LOC",
+            "text": "Нижний Новгроод"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_15",
+        "group": "entity_typo",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 7,
+            "end": 16,
+            "type": "PERSON",
+            "text": "Ломоносва"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_16",
+        "group": "rare_correct",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 13,
+            "end": 30,
+            "type": "PERSON",
+            "text": "Пафнутия Чебышёва"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_17",
+        "group": "rare_correct",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 6,
+            "end": 23,
+            "type": "PERSON",
+            "text": "Софьи Ковалевской"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_18",
+        "group": "rare_correct",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 10,
+            "end": 20,
+            "type": "PERSON",
+            "text": "Осипа Бове"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_19",
+        "group": "rare_correct",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 16,
+            "end": 23,
+            "type": "LOC",
+            "text": "Устюжне"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_20",
+        "group": "rare_correct",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 6,
+            "end": 12,
+            "type": "LOC",
+            "text": "Торжка"
+          }
+        ],
+        "transfer_failures": []
+      }
+    ],
+    "zero_denominator_value": 0,
+    "entity_match": "exact transferred original-gold boundaries and type; spelling scored separately"
+  }
+}

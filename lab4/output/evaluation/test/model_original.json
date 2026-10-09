@@ -1,0 +1,1157 @@
+{
+  "config": {
+    "recognizer": "model",
+    "order": null
+  },
+  "recognizer_metadata": {
+    "name": "slovnet_ner_news_v1",
+    "embedding": "navec_news_v1_1B_250K_300d_100q",
+    "source": "https://github.com/natasha/slovnet",
+    "sha256": {
+      "slovnet_ner_news_v1.tar": "16c3343a6572ddf0e2b2fc1923113de15a7f5ca5bde90e780dd590418665603e",
+      "navec_news_v1_1B_250K_300d_100q.tar": "f07270833d78523edc5781538d67038e95b43975e4a7ae757c693b687f9cbfca"
+    },
+    "packages": {
+      "slovnet": "0.6.0",
+      "navec": "0.10.0",
+      "numpy": "2.5.3",
+      "razdel": "0.5.0"
+    },
+    "label_mapping": {
+      "PER": "PERSON",
+      "ORG": "ORG",
+      "LOC": "LOC"
+    },
+    "ignored_labels": "Any label not in PER/ORG/LOC is ignored; O is not an entity.",
+    "execution": "Offline CPU inference, pretrained weights unchanged"
+  },
+  "results": [
+    {
+      "id": "test_01",
+      "original_text": "Достижения Сергея Павловича Королёва.",
+      "entities": [
+        {
+          "start": 11,
+          "end": 36,
+          "text": "Сергея Павловича Королёва",
+          "type": "PERSON",
+          "model_label": "PER",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "test_02",
+      "original_text": "Когда основан Санкт-Петербургский государственный университет?",
+      "entities": [
+        {
+          "start": 14,
+          "end": 61,
+          "text": "Санкт-Петербургский государственный университет",
+          "type": "ORG",
+          "model_label": "ORG",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "test_03",
+      "original_text": "Университеты Казани.",
+      "entities": [
+        {
+          "start": 13,
+          "end": 19,
+          "text": "Казани",
+          "type": "LOC",
+          "model_label": "LOC",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "test_04",
+      "original_text": "Русское географическое общество в Санкт-Петербурге.",
+      "entities": [
+        {
+          "start": 0,
+          "end": 31,
+          "text": "Русское географическое общество",
+          "type": "ORG",
+          "model_label": "ORG",
+          "method": "pretrained_model"
+        },
+        {
+          "start": 34,
+          "end": 50,
+          "text": "Санкт-Петербурге",
+          "type": "LOC",
+          "model_label": "LOC",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "test_05",
+      "original_text": "Какие бывают научные открытия?",
+      "entities": [],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "test_06",
+      "original_text": "История Новосибирска и его универсиетов.",
+      "entities": [
+        {
+          "start": 8,
+          "end": 20,
+          "text": "Новосибирска",
+          "type": "LOC",
+          "model_label": "LOC",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "test_07",
+      "original_text": "Книиги об Александре Пушкине.",
+      "entities": [
+        {
+          "start": 10,
+          "end": 28,
+          "text": "Александре Пушкине",
+          "type": "PERSON",
+          "model_label": "PER",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "test_08",
+      "original_text": "Коллекцеи Государственного Эрмитажа.",
+      "entities": [
+        {
+          "start": 10,
+          "end": 35,
+          "text": "Государственного Эрмитажа",
+          "type": "ORG",
+          "model_label": "ORG",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "test_09",
+      "original_text": "Адерс института в Дубне.",
+      "entities": [
+        {
+          "start": 0,
+          "end": 15,
+          "text": "Адерс института",
+          "type": "ORG",
+          "model_label": "ORG",
+          "method": "pretrained_model"
+        },
+        {
+          "start": 18,
+          "end": 23,
+          "text": "Дубне",
+          "type": "LOC",
+          "model_label": "LOC",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "test_10",
+      "original_text": "Экспериметы по физике.",
+      "entities": [
+        {
+          "start": 0,
+          "end": 11,
+          "text": "Экспериметы",
+          "type": "PERSON",
+          "model_label": "PER",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "test_11",
+      "original_text": "Первый полёт Юрия Гагарена.",
+      "entities": [
+        {
+          "start": 0,
+          "end": 12,
+          "text": "Первый полёт",
+          "type": "ORG",
+          "model_label": "ORG",
+          "method": "pretrained_model"
+        },
+        {
+          "start": 13,
+          "end": 26,
+          "text": "Юрия Гагарена",
+          "type": "PERSON",
+          "model_label": "PER",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "test_12",
+      "original_text": "Проекты Объединённого институа ядерных исследований.",
+      "entities": [
+        {
+          "start": 8,
+          "end": 51,
+          "text": "Объединённого институа ядерных исследований",
+          "type": "ORG",
+          "model_label": "ORG",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "test_13",
+      "original_text": "Карта Новоссибирска.",
+      "entities": [],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "test_14",
+      "original_text": "Периодический закон Менделееав.",
+      "entities": [
+        {
+          "start": 20,
+          "end": 30,
+          "text": "Менделееав",
+          "type": "PERSON",
+          "model_label": "PER",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "test_15",
+      "original_text": "Факультеты Казаского федерального университета.",
+      "entities": [
+        {
+          "start": 11,
+          "end": 46,
+          "text": "Казаского федерального университета",
+          "type": "ORG",
+          "model_label": "ORG",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "test_16",
+      "original_text": "Биография Александра Чижевского.",
+      "entities": [
+        {
+          "start": 10,
+          "end": 31,
+          "text": "Александра Чижевского",
+          "type": "PERSON",
+          "model_label": "PER",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "test_17",
+      "original_text": "Лингвистические работы Фёдора Буслаева.",
+      "entities": [
+        {
+          "start": 23,
+          "end": 38,
+          "text": "Фёдора Буслаева",
+          "type": "PERSON",
+          "model_label": "PER",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "test_18",
+      "original_text": "Наследие Николая Лобачевского.",
+      "entities": [
+        {
+          "start": 9,
+          "end": 29,
+          "text": "Николая Лобачевского",
+          "type": "PERSON",
+          "model_label": "PER",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "test_19",
+      "original_text": "Старинные здания Переславля-Залесского.",
+      "entities": [
+        {
+          "start": 17,
+          "end": 38,
+          "text": "Переславля-Залесского",
+          "type": "LOC",
+          "model_label": "LOC",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "test_20",
+      "original_text": "Краеведческий музей в городе Мезень.",
+      "entities": [
+        {
+          "start": 0,
+          "end": 19,
+          "text": "Краеведческий музей",
+          "type": "ORG",
+          "model_label": "ORG",
+          "method": "pretrained_model"
+        },
+        {
+          "start": 29,
+          "end": 35,
+          "text": "Мезень",
+          "type": "LOC",
+          "model_label": "LOC",
+          "method": "pretrained_model"
+        }
+      ],
+      "entity_positions": "original_text"
+    }
+  ],
+  "metrics": {
+    "queries": 20,
+    "spelling": null,
+    "ner": {
+      "tp": 18,
+      "fp": 4,
+      "fn": 1,
+      "precision": 0.8181818181818182,
+      "recall": 0.9473684210526315,
+      "f1": 0.8780487804878049
+    },
+    "ner_by_type": {
+      "PERSON": {
+        "tp": 7,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.875,
+        "recall": 1.0,
+        "f1": 0.9333333333333333
+      },
+      "ORG": {
+        "tp": 5,
+        "fp": 3,
+        "fn": 0,
+        "precision": 0.625,
+        "recall": 1.0,
+        "f1": 0.7692307692307693
+      },
+      "LOC": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.8571428571428571,
+        "f1": 0.923076923076923
+      }
+    },
+    "transfer_failure_count": 0,
+    "by_group": {
+      "clean": {
+        "queries": 5,
+        "spelling": null,
+        "ner": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "ORG": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "LOC": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "transfer_failure_count": 0
+      },
+      "entity_typo": {
+        "queries": 5,
+        "spelling": null,
+        "ner": {
+          "tp": 4,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.8,
+          "recall": 0.8,
+          "f1": 0.8000000000000002
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "ORG": {
+            "tp": 2,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1": 0.8
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        },
+        "transfer_failure_count": 0
+      },
+      "ordinary_typo": {
+        "queries": 5,
+        "spelling": null,
+        "ner": {
+          "tp": 4,
+          "fp": 2,
+          "fn": 0,
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1": 0.8
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          },
+          "ORG": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          },
+          "LOC": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "transfer_failure_count": 0
+      },
+      "rare_correct": {
+        "queries": 5,
+        "spelling": null,
+        "ner": {
+          "tp": 5,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.8333333333333334,
+          "recall": 1.0,
+          "f1": 0.9090909090909091
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "LOC": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "transfer_failure_count": 0
+      }
+    },
+    "query_details": [
+      {
+        "id": "test_01",
+        "group": "clean",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 11,
+            "end": 36,
+            "type": "PERSON",
+            "text": "Сергея Павловича Королёва"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "test_02",
+        "group": "clean",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 14,
+            "end": 61,
+            "type": "ORG",
+            "text": "Санкт-Петербургский государственный университет"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "test_03",
+        "group": "clean",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 13,
+            "end": 19,
+            "type": "LOC",
+            "text": "Казани"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "test_04",
+        "group": "clean",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 0,
+            "end": 31,
+            "type": "ORG",
+            "text": "Русское географическое общество"
+          },
+          {
+            "start": 34,
+            "end": 50,
+            "type": "LOC",
+            "text": "Санкт-Петербурге"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "test_05",
+        "group": "clean",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [],
+        "transfer_failures": []
+      },
+      {
+        "id": "test_06",
+        "group": "ordinary_typo",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 8,
+            "end": 20,
+            "type": "LOC",
+            "text": "Новосибирска"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "test_07",
+        "group": "ordinary_typo",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 10,
+            "end": 28,
+            "type": "PERSON",
+            "text": "Александре Пушкине"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "test_08",
+        "group": "ordinary_typo",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 10,
+            "end": 35,
+            "type": "ORG",
+            "text": "Государственного Эрмитажа"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "test_09",
+        "group": "ordinary_typo",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 18,
+            "end": 23,
+            "type": "LOC",
+            "text": "Дубне"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "test_10",
+        "group": "ordinary_typo",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [],
+        "transfer_failures": []
+      },
+      {
+        "id": "test_11",
+        "group": "entity_typo",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 13,
+            "end": 26,
+            "type": "PERSON",
+            "text": "Юрия Гагарена"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "test_12",
+        "group": "entity_typo",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 8,
+            "end": 51,
+            "type": "ORG",
+            "text": "Объединённого институа ядерных исследований"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "test_13",
+        "group": "entity_typo",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 6,
+            "end": 19,
+            "type": "LOC",
+            "text": "Новоссибирска"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "test_14",
+        "group": "entity_typo",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 20,
+            "end": 30,
+            "type": "PERSON",
+            "text": "Менделееав"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "test_15",
+        "group": "entity_typo",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 11,
+            "end": 46,
+            "type": "ORG",
+            "text": "Казаского федерального университета"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "test_16",
+        "group": "rare_correct",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 10,
+            "end": 31,
+            "type": "PERSON",
+            "text": "Александра Чижевского"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "test_17",
+        "group": "rare_correct",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 23,
+            "end": 38,
+            "type": "PERSON",
+            "text": "Фёдора Буслаева"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "test_18",
+        "group": "rare_correct",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 9,
+            "end": 29,
+            "type": "PERSON",
+            "text": "Николая Лобачевского"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "test_19",
+        "group": "rare_correct",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 17,
+            "end": 38,
+            "type": "LOC",
+            "text": "Переславля-Залесского"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "test_20",
+        "group": "rare_correct",
+        "spelling_counts": null,
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 29,
+            "end": 35,
+            "type": "LOC",
+            "text": "Мезень"
+          }
+        ],
+        "transfer_failures": []
+      }
+    ],
+    "zero_denominator_value": 0,
+    "entity_match": "exact transferred original-gold boundaries and type; spelling scored separately"
+  }
+}

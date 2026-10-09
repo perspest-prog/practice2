@@ -1,0 +1,6608 @@
+{
+  "split": "dev",
+  "queries": 20,
+  "runs": {
+    "dictionary_original": {
+      "config": {
+        "recognizer": "dictionary",
+        "order": null
+      },
+      "metrics": {
+        "queries": 20,
+        "spelling": null,
+        "ner": {
+          "tp": 15,
+          "fp": 0,
+          "fn": 5,
+          "precision": 1.0,
+          "recall": 0.75,
+          "f1": 0.8571428571428571
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 8,
+            "fp": 0,
+            "fn": 2,
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1": 0.888888888888889
+          },
+          "ORG": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.6666666666666666,
+            "f1": 0.8
+          },
+          "LOC": {
+            "tp": 5,
+            "fp": 0,
+            "fn": 2,
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1": 0.8333333333333333
+          }
+        },
+        "transfer_failure_count": 0,
+        "by_group": {
+          "clean": {
+            "queries": 5,
+            "spelling": null,
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "entity_typo": {
+            "queries": 5,
+            "spelling": null,
+            "ner": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 5,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 2,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "ORG": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 1,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "LOC": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 2,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "ordinary_typo": {
+            "queries": 5,
+            "spelling": null,
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "rare_correct": {
+            "queries": 5,
+            "spelling": null,
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          }
+        },
+        "zero_denominator_value": 0,
+        "entity_match": "exact transferred original-gold boundaries and type; spelling scored separately"
+      }
+    },
+    "dictionary_A_d1_freq1_protect0": {
+      "config": {
+        "recognizer": "dictionary",
+        "order": "A",
+        "threshold": 1,
+        "use_frequencies": true,
+        "protection": false
+      },
+      "metrics": {
+        "queries": 20,
+        "spelling": {
+          "corrected_typos": 6,
+          "typo_tokens": 10,
+          "damaged_correct_tokens": 15,
+          "correct_tokens": 58,
+          "top3_hits": 6,
+          "correction_rate": 0.6,
+          "false_change_rate": 0.25862068965517243,
+          "top3_rate": 0.6
+        },
+        "ner": {
+          "tp": 17,
+          "fp": 1,
+          "fn": 3,
+          "precision": 0.9444444444444444,
+          "recall": 0.85,
+          "f1": 0.8947368421052632
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 9,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.9,
+            "recall": 0.9,
+            "f1": 0.9
+          },
+          "ORG": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "LOC": {
+            "tp": 5,
+            "fp": 0,
+            "fn": 2,
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1": 0.8333333333333333
+          }
+        },
+        "transfer_failure_count": 0,
+        "by_group": {
+          "clean": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 3,
+              "correct_tokens": 20,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.15,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.888888888888889
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "entity_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 4,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 2,
+              "correct_tokens": 9,
+              "top3_hits": 4,
+              "correction_rate": 0.8,
+              "false_change_rate": 0.2222222222222222,
+              "top3_rate": 0.8
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.888888888888889
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "ordinary_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 2,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 5,
+              "correct_tokens": 15,
+              "top3_hits": 2,
+              "correction_rate": 0.4,
+              "false_change_rate": 0.3333333333333333,
+              "top3_rate": 0.4
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "rare_correct": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 5,
+              "correct_tokens": 14,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.35714285714285715,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 1,
+              "fn": 1,
+              "precision": 0.8,
+              "recall": 0.8,
+              "f1": 0.8000000000000002
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 1,
+                "fn": 1,
+                "precision": 0.6666666666666666,
+                "recall": 0.6666666666666666,
+                "f1": 0.6666666666666666
+              },
+              "ORG": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          }
+        },
+        "zero_denominator_value": 0,
+        "entity_match": "exact transferred original-gold boundaries and type; spelling scored separately"
+      }
+    },
+    "dictionary_B_d1_freq1_protect1": {
+      "config": {
+        "recognizer": "dictionary",
+        "order": "B",
+        "threshold": 1,
+        "use_frequencies": true,
+        "protection": true
+      },
+      "metrics": {
+        "queries": 20,
+        "spelling": {
+          "corrected_typos": 6,
+          "typo_tokens": 10,
+          "damaged_correct_tokens": 7,
+          "correct_tokens": 58,
+          "top3_hits": 6,
+          "correction_rate": 0.6,
+          "false_change_rate": 0.1206896551724138,
+          "top3_rate": 0.6
+        },
+        "ner": {
+          "tp": 19,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.95,
+          "f1": 0.9743589743589743
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 10,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "ORG": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "LOC": {
+            "tp": 6,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.8571428571428571,
+            "f1": 0.923076923076923
+          }
+        },
+        "transfer_failure_count": 0,
+        "by_group": {
+          "clean": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 2,
+              "correct_tokens": 20,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.1,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "entity_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 4,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 2,
+              "correct_tokens": 9,
+              "top3_hits": 4,
+              "correction_rate": 0.8,
+              "false_change_rate": 0.2222222222222222,
+              "top3_rate": 0.8
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.888888888888889
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "ordinary_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 2,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 1,
+              "correct_tokens": 15,
+              "top3_hits": 2,
+              "correction_rate": 0.4,
+              "false_change_rate": 0.06666666666666667,
+              "top3_rate": 0.4
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "rare_correct": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 2,
+              "correct_tokens": 14,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.14285714285714285,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          }
+        },
+        "zero_denominator_value": 0,
+        "entity_match": "exact transferred original-gold boundaries and type; spelling scored separately"
+      }
+    },
+    "dictionary_B_d1_freq1_protect0": {
+      "config": {
+        "recognizer": "dictionary",
+        "order": "B",
+        "threshold": 1,
+        "use_frequencies": true,
+        "protection": false
+      },
+      "metrics": {
+        "queries": 20,
+        "spelling": {
+          "corrected_typos": 6,
+          "typo_tokens": 10,
+          "damaged_correct_tokens": 15,
+          "correct_tokens": 58,
+          "top3_hits": 6,
+          "correction_rate": 0.6,
+          "false_change_rate": 0.25862068965517243,
+          "top3_rate": 0.6
+        },
+        "ner": {
+          "tp": 17,
+          "fp": 1,
+          "fn": 3,
+          "precision": 0.9444444444444444,
+          "recall": 0.85,
+          "f1": 0.8947368421052632
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 9,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.9,
+            "recall": 0.9,
+            "f1": 0.9
+          },
+          "ORG": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "LOC": {
+            "tp": 5,
+            "fp": 0,
+            "fn": 2,
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1": 0.8333333333333333
+          }
+        },
+        "transfer_failure_count": 0,
+        "by_group": {
+          "clean": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 3,
+              "correct_tokens": 20,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.15,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.888888888888889
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "entity_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 4,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 2,
+              "correct_tokens": 9,
+              "top3_hits": 4,
+              "correction_rate": 0.8,
+              "false_change_rate": 0.2222222222222222,
+              "top3_rate": 0.8
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.888888888888889
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "ordinary_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 2,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 5,
+              "correct_tokens": 15,
+              "top3_hits": 2,
+              "correction_rate": 0.4,
+              "false_change_rate": 0.3333333333333333,
+              "top3_rate": 0.4
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "rare_correct": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 5,
+              "correct_tokens": 14,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.35714285714285715,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 1,
+              "fn": 1,
+              "precision": 0.8,
+              "recall": 0.8,
+              "f1": 0.8000000000000002
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 1,
+                "fn": 1,
+                "precision": 0.6666666666666666,
+                "recall": 0.6666666666666666,
+                "f1": 0.6666666666666666
+              },
+              "ORG": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          }
+        },
+        "zero_denominator_value": 0,
+        "entity_match": "exact transferred original-gold boundaries and type; spelling scored separately"
+      }
+    },
+    "dictionary_A_d1_freq0_protect0": {
+      "config": {
+        "recognizer": "dictionary",
+        "order": "A",
+        "threshold": 1,
+        "use_frequencies": false,
+        "protection": false
+      },
+      "metrics": {
+        "queries": 20,
+        "spelling": {
+          "corrected_typos": 6,
+          "typo_tokens": 10,
+          "damaged_correct_tokens": 15,
+          "correct_tokens": 58,
+          "top3_hits": 6,
+          "correction_rate": 0.6,
+          "false_change_rate": 0.25862068965517243,
+          "top3_rate": 0.6
+        },
+        "ner": {
+          "tp": 17,
+          "fp": 1,
+          "fn": 3,
+          "precision": 0.9444444444444444,
+          "recall": 0.85,
+          "f1": 0.8947368421052632
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 9,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.9,
+            "recall": 0.9,
+            "f1": 0.9
+          },
+          "ORG": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "LOC": {
+            "tp": 5,
+            "fp": 0,
+            "fn": 2,
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1": 0.8333333333333333
+          }
+        },
+        "transfer_failure_count": 0,
+        "by_group": {
+          "clean": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 3,
+              "correct_tokens": 20,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.15,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.888888888888889
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "entity_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 4,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 2,
+              "correct_tokens": 9,
+              "top3_hits": 4,
+              "correction_rate": 0.8,
+              "false_change_rate": 0.2222222222222222,
+              "top3_rate": 0.8
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.888888888888889
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "ordinary_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 2,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 5,
+              "correct_tokens": 15,
+              "top3_hits": 2,
+              "correction_rate": 0.4,
+              "false_change_rate": 0.3333333333333333,
+              "top3_rate": 0.4
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "rare_correct": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 5,
+              "correct_tokens": 14,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.35714285714285715,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 1,
+              "fn": 1,
+              "precision": 0.8,
+              "recall": 0.8,
+              "f1": 0.8000000000000002
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 1,
+                "fn": 1,
+                "precision": 0.6666666666666666,
+                "recall": 0.6666666666666666,
+                "f1": 0.6666666666666666
+              },
+              "ORG": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          }
+        },
+        "zero_denominator_value": 0,
+        "entity_match": "exact transferred original-gold boundaries and type; spelling scored separately"
+      }
+    },
+    "dictionary_B_d1_freq0_protect1": {
+      "config": {
+        "recognizer": "dictionary",
+        "order": "B",
+        "threshold": 1,
+        "use_frequencies": false,
+        "protection": true
+      },
+      "metrics": {
+        "queries": 20,
+        "spelling": {
+          "corrected_typos": 6,
+          "typo_tokens": 10,
+          "damaged_correct_tokens": 7,
+          "correct_tokens": 58,
+          "top3_hits": 6,
+          "correction_rate": 0.6,
+          "false_change_rate": 0.1206896551724138,
+          "top3_rate": 0.6
+        },
+        "ner": {
+          "tp": 19,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.95,
+          "f1": 0.9743589743589743
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 10,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "ORG": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "LOC": {
+            "tp": 6,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.8571428571428571,
+            "f1": 0.923076923076923
+          }
+        },
+        "transfer_failure_count": 0,
+        "by_group": {
+          "clean": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 2,
+              "correct_tokens": 20,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.1,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "entity_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 4,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 2,
+              "correct_tokens": 9,
+              "top3_hits": 4,
+              "correction_rate": 0.8,
+              "false_change_rate": 0.2222222222222222,
+              "top3_rate": 0.8
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.888888888888889
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "ordinary_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 2,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 1,
+              "correct_tokens": 15,
+              "top3_hits": 2,
+              "correction_rate": 0.4,
+              "false_change_rate": 0.06666666666666667,
+              "top3_rate": 0.4
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "rare_correct": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 2,
+              "correct_tokens": 14,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.14285714285714285,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          }
+        },
+        "zero_denominator_value": 0,
+        "entity_match": "exact transferred original-gold boundaries and type; spelling scored separately"
+      }
+    },
+    "dictionary_B_d1_freq0_protect0": {
+      "config": {
+        "recognizer": "dictionary",
+        "order": "B",
+        "threshold": 1,
+        "use_frequencies": false,
+        "protection": false
+      },
+      "metrics": {
+        "queries": 20,
+        "spelling": {
+          "corrected_typos": 6,
+          "typo_tokens": 10,
+          "damaged_correct_tokens": 15,
+          "correct_tokens": 58,
+          "top3_hits": 6,
+          "correction_rate": 0.6,
+          "false_change_rate": 0.25862068965517243,
+          "top3_rate": 0.6
+        },
+        "ner": {
+          "tp": 17,
+          "fp": 1,
+          "fn": 3,
+          "precision": 0.9444444444444444,
+          "recall": 0.85,
+          "f1": 0.8947368421052632
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 9,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.9,
+            "recall": 0.9,
+            "f1": 0.9
+          },
+          "ORG": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "LOC": {
+            "tp": 5,
+            "fp": 0,
+            "fn": 2,
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1": 0.8333333333333333
+          }
+        },
+        "transfer_failure_count": 0,
+        "by_group": {
+          "clean": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 3,
+              "correct_tokens": 20,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.15,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.888888888888889
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "entity_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 4,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 2,
+              "correct_tokens": 9,
+              "top3_hits": 4,
+              "correction_rate": 0.8,
+              "false_change_rate": 0.2222222222222222,
+              "top3_rate": 0.8
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.888888888888889
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "ordinary_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 2,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 5,
+              "correct_tokens": 15,
+              "top3_hits": 2,
+              "correction_rate": 0.4,
+              "false_change_rate": 0.3333333333333333,
+              "top3_rate": 0.4
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "rare_correct": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 5,
+              "correct_tokens": 14,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.35714285714285715,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 1,
+              "fn": 1,
+              "precision": 0.8,
+              "recall": 0.8,
+              "f1": 0.8000000000000002
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 1,
+                "fn": 1,
+                "precision": 0.6666666666666666,
+                "recall": 0.6666666666666666,
+                "f1": 0.6666666666666666
+              },
+              "ORG": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          }
+        },
+        "zero_denominator_value": 0,
+        "entity_match": "exact transferred original-gold boundaries and type; spelling scored separately"
+      }
+    },
+    "dictionary_A_d2_freq1_protect0": {
+      "config": {
+        "recognizer": "dictionary",
+        "order": "A",
+        "threshold": 2,
+        "use_frequencies": true,
+        "protection": false
+      },
+      "metrics": {
+        "queries": 20,
+        "spelling": {
+          "corrected_typos": 7,
+          "typo_tokens": 10,
+          "damaged_correct_tokens": 21,
+          "correct_tokens": 58,
+          "top3_hits": 7,
+          "correction_rate": 0.7,
+          "false_change_rate": 0.3620689655172414,
+          "top3_rate": 0.7
+        },
+        "ner": {
+          "tp": 18,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.9,
+          "f1": 0.9473684210526316
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 9,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.9,
+            "f1": 0.9473684210526316
+          },
+          "ORG": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "LOC": {
+            "tp": 6,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.8571428571428571,
+            "f1": 0.923076923076923
+          }
+        },
+        "transfer_failure_count": 0,
+        "by_group": {
+          "clean": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 5,
+              "correct_tokens": 20,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.25,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.888888888888889
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "entity_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 5,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 3,
+              "correct_tokens": 9,
+              "top3_hits": 5,
+              "correction_rate": 1.0,
+              "false_change_rate": 0.3333333333333333,
+              "top3_rate": 1.0
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "ordinary_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 2,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 5,
+              "correct_tokens": 15,
+              "top3_hits": 2,
+              "correction_rate": 0.4,
+              "false_change_rate": 0.3333333333333333,
+              "top3_rate": 0.4
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "rare_correct": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 8,
+              "correct_tokens": 14,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.5714285714285714,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.888888888888889
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.6666666666666666,
+                "f1": 0.8
+              },
+              "ORG": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          }
+        },
+        "zero_denominator_value": 0,
+        "entity_match": "exact transferred original-gold boundaries and type; spelling scored separately"
+      }
+    },
+    "dictionary_B_d2_freq1_protect1": {
+      "config": {
+        "recognizer": "dictionary",
+        "order": "B",
+        "threshold": 2,
+        "use_frequencies": true,
+        "protection": true
+      },
+      "metrics": {
+        "queries": 20,
+        "spelling": {
+          "corrected_typos": 7,
+          "typo_tokens": 10,
+          "damaged_correct_tokens": 8,
+          "correct_tokens": 58,
+          "top3_hits": 7,
+          "correction_rate": 0.7,
+          "false_change_rate": 0.13793103448275862,
+          "top3_rate": 0.7
+        },
+        "ner": {
+          "tp": 20,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 10,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "ORG": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "LOC": {
+            "tp": 7,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "transfer_failure_count": 0,
+        "by_group": {
+          "clean": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 2,
+              "correct_tokens": 20,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.1,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "entity_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 5,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 3,
+              "correct_tokens": 9,
+              "top3_hits": 5,
+              "correction_rate": 1.0,
+              "false_change_rate": 0.3333333333333333,
+              "top3_rate": 1.0
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "ordinary_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 2,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 1,
+              "correct_tokens": 15,
+              "top3_hits": 2,
+              "correction_rate": 0.4,
+              "false_change_rate": 0.06666666666666667,
+              "top3_rate": 0.4
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "rare_correct": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 2,
+              "correct_tokens": 14,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.14285714285714285,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          }
+        },
+        "zero_denominator_value": 0,
+        "entity_match": "exact transferred original-gold boundaries and type; spelling scored separately"
+      }
+    },
+    "dictionary_B_d2_freq1_protect0": {
+      "config": {
+        "recognizer": "dictionary",
+        "order": "B",
+        "threshold": 2,
+        "use_frequencies": true,
+        "protection": false
+      },
+      "metrics": {
+        "queries": 20,
+        "spelling": {
+          "corrected_typos": 7,
+          "typo_tokens": 10,
+          "damaged_correct_tokens": 21,
+          "correct_tokens": 58,
+          "top3_hits": 7,
+          "correction_rate": 0.7,
+          "false_change_rate": 0.3620689655172414,
+          "top3_rate": 0.7
+        },
+        "ner": {
+          "tp": 18,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.9,
+          "f1": 0.9473684210526316
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 9,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.9,
+            "f1": 0.9473684210526316
+          },
+          "ORG": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "LOC": {
+            "tp": 6,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.8571428571428571,
+            "f1": 0.923076923076923
+          }
+        },
+        "transfer_failure_count": 0,
+        "by_group": {
+          "clean": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 5,
+              "correct_tokens": 20,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.25,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.888888888888889
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "entity_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 5,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 3,
+              "correct_tokens": 9,
+              "top3_hits": 5,
+              "correction_rate": 1.0,
+              "false_change_rate": 0.3333333333333333,
+              "top3_rate": 1.0
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "ordinary_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 2,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 5,
+              "correct_tokens": 15,
+              "top3_hits": 2,
+              "correction_rate": 0.4,
+              "false_change_rate": 0.3333333333333333,
+              "top3_rate": 0.4
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "rare_correct": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 8,
+              "correct_tokens": 14,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.5714285714285714,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.888888888888889
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.6666666666666666,
+                "f1": 0.8
+              },
+              "ORG": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          }
+        },
+        "zero_denominator_value": 0,
+        "entity_match": "exact transferred original-gold boundaries and type; spelling scored separately"
+      }
+    },
+    "dictionary_A_d2_freq0_protect0": {
+      "config": {
+        "recognizer": "dictionary",
+        "order": "A",
+        "threshold": 2,
+        "use_frequencies": false,
+        "protection": false
+      },
+      "metrics": {
+        "queries": 20,
+        "spelling": {
+          "corrected_typos": 7,
+          "typo_tokens": 10,
+          "damaged_correct_tokens": 21,
+          "correct_tokens": 58,
+          "top3_hits": 7,
+          "correction_rate": 0.7,
+          "false_change_rate": 0.3620689655172414,
+          "top3_rate": 0.7
+        },
+        "ner": {
+          "tp": 18,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.9,
+          "f1": 0.9473684210526316
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 9,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.9,
+            "f1": 0.9473684210526316
+          },
+          "ORG": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "LOC": {
+            "tp": 6,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.8571428571428571,
+            "f1": 0.923076923076923
+          }
+        },
+        "transfer_failure_count": 0,
+        "by_group": {
+          "clean": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 5,
+              "correct_tokens": 20,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.25,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.888888888888889
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "entity_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 5,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 3,
+              "correct_tokens": 9,
+              "top3_hits": 5,
+              "correction_rate": 1.0,
+              "false_change_rate": 0.3333333333333333,
+              "top3_rate": 1.0
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "ordinary_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 2,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 5,
+              "correct_tokens": 15,
+              "top3_hits": 2,
+              "correction_rate": 0.4,
+              "false_change_rate": 0.3333333333333333,
+              "top3_rate": 0.4
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "rare_correct": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 8,
+              "correct_tokens": 14,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.5714285714285714,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.888888888888889
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.6666666666666666,
+                "f1": 0.8
+              },
+              "ORG": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          }
+        },
+        "zero_denominator_value": 0,
+        "entity_match": "exact transferred original-gold boundaries and type; spelling scored separately"
+      }
+    },
+    "dictionary_B_d2_freq0_protect1": {
+      "config": {
+        "recognizer": "dictionary",
+        "order": "B",
+        "threshold": 2,
+        "use_frequencies": false,
+        "protection": true
+      },
+      "metrics": {
+        "queries": 20,
+        "spelling": {
+          "corrected_typos": 7,
+          "typo_tokens": 10,
+          "damaged_correct_tokens": 8,
+          "correct_tokens": 58,
+          "top3_hits": 7,
+          "correction_rate": 0.7,
+          "false_change_rate": 0.13793103448275862,
+          "top3_rate": 0.7
+        },
+        "ner": {
+          "tp": 20,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 10,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "ORG": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "LOC": {
+            "tp": 7,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "transfer_failure_count": 0,
+        "by_group": {
+          "clean": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 2,
+              "correct_tokens": 20,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.1,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "entity_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 5,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 3,
+              "correct_tokens": 9,
+              "top3_hits": 5,
+              "correction_rate": 1.0,
+              "false_change_rate": 0.3333333333333333,
+              "top3_rate": 1.0
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "ordinary_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 2,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 1,
+              "correct_tokens": 15,
+              "top3_hits": 2,
+              "correction_rate": 0.4,
+              "false_change_rate": 0.06666666666666667,
+              "top3_rate": 0.4
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "rare_correct": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 2,
+              "correct_tokens": 14,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.14285714285714285,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          }
+        },
+        "zero_denominator_value": 0,
+        "entity_match": "exact transferred original-gold boundaries and type; spelling scored separately"
+      }
+    },
+    "dictionary_B_d2_freq0_protect0": {
+      "config": {
+        "recognizer": "dictionary",
+        "order": "B",
+        "threshold": 2,
+        "use_frequencies": false,
+        "protection": false
+      },
+      "metrics": {
+        "queries": 20,
+        "spelling": {
+          "corrected_typos": 7,
+          "typo_tokens": 10,
+          "damaged_correct_tokens": 21,
+          "correct_tokens": 58,
+          "top3_hits": 7,
+          "correction_rate": 0.7,
+          "false_change_rate": 0.3620689655172414,
+          "top3_rate": 0.7
+        },
+        "ner": {
+          "tp": 18,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.9,
+          "f1": 0.9473684210526316
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 9,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.9,
+            "f1": 0.9473684210526316
+          },
+          "ORG": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "LOC": {
+            "tp": 6,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.8571428571428571,
+            "f1": 0.923076923076923
+          }
+        },
+        "transfer_failure_count": 0,
+        "by_group": {
+          "clean": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 5,
+              "correct_tokens": 20,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.25,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.888888888888889
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "entity_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 5,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 3,
+              "correct_tokens": 9,
+              "top3_hits": 5,
+              "correction_rate": 1.0,
+              "false_change_rate": 0.3333333333333333,
+              "top3_rate": 1.0
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "ordinary_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 2,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 5,
+              "correct_tokens": 15,
+              "top3_hits": 2,
+              "correction_rate": 0.4,
+              "false_change_rate": 0.3333333333333333,
+              "top3_rate": 0.4
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "rare_correct": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 8,
+              "correct_tokens": 14,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.5714285714285714,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.888888888888889
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.6666666666666666,
+                "f1": 0.8
+              },
+              "ORG": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          }
+        },
+        "zero_denominator_value": 0,
+        "entity_match": "exact transferred original-gold boundaries and type; spelling scored separately"
+      }
+    },
+    "model_original": {
+      "config": {
+        "recognizer": "model",
+        "order": null
+      },
+      "metrics": {
+        "queries": 20,
+        "spelling": null,
+        "ner": {
+          "tp": 20,
+          "fp": 2,
+          "fn": 0,
+          "precision": 0.9090909090909091,
+          "recall": 1.0,
+          "f1": 0.9523809523809523
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 10,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "ORG": {
+            "tp": 3,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.75,
+            "recall": 1.0,
+            "f1": 0.8571428571428571
+          },
+          "LOC": {
+            "tp": 7,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.875,
+            "recall": 1.0,
+            "f1": 0.9333333333333333
+          }
+        },
+        "transfer_failure_count": 0,
+        "by_group": {
+          "clean": {
+            "queries": 5,
+            "spelling": null,
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "entity_typo": {
+            "queries": 5,
+            "spelling": null,
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "ordinary_typo": {
+            "queries": 5,
+            "spelling": null,
+            "ner": {
+              "tp": 5,
+              "fp": 1,
+              "fn": 0,
+              "precision": 0.8333333333333334,
+              "recall": 1.0,
+              "f1": 0.9090909090909091
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.5,
+                "recall": 1.0,
+                "f1": 0.6666666666666666
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "rare_correct": {
+            "queries": 5,
+            "spelling": null,
+            "ner": {
+              "tp": 5,
+              "fp": 1,
+              "fn": 0,
+              "precision": 0.8333333333333334,
+              "recall": 1.0,
+              "f1": 0.9090909090909091
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 0,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          }
+        },
+        "zero_denominator_value": 0,
+        "entity_match": "exact transferred original-gold boundaries and type; spelling scored separately"
+      }
+    },
+    "model_A_d1_freq1_protect0": {
+      "config": {
+        "recognizer": "model",
+        "order": "A",
+        "threshold": 1,
+        "use_frequencies": true,
+        "protection": false
+      },
+      "metrics": {
+        "queries": 20,
+        "spelling": {
+          "corrected_typos": 6,
+          "typo_tokens": 10,
+          "damaged_correct_tokens": 15,
+          "correct_tokens": 58,
+          "top3_hits": 6,
+          "correction_rate": 0.6,
+          "false_change_rate": 0.25862068965517243,
+          "top3_rate": 0.6
+        },
+        "ner": {
+          "tp": 16,
+          "fp": 1,
+          "fn": 4,
+          "precision": 0.9411764705882353,
+          "recall": 0.8,
+          "f1": 0.8648648648648648
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 7,
+            "fp": 0,
+            "fn": 3,
+            "precision": 1.0,
+            "recall": 0.7,
+            "f1": 0.8235294117647058
+          },
+          "ORG": {
+            "tp": 3,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.75,
+            "recall": 1.0,
+            "f1": 0.8571428571428571
+          },
+          "LOC": {
+            "tp": 6,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.8571428571428571,
+            "f1": 0.923076923076923
+          }
+        },
+        "transfer_failure_count": 0,
+        "by_group": {
+          "clean": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 3,
+              "correct_tokens": 20,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.15,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.888888888888889
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "entity_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 4,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 2,
+              "correct_tokens": 9,
+              "top3_hits": 4,
+              "correction_rate": 0.8,
+              "false_change_rate": 0.2222222222222222,
+              "top3_rate": 0.8
+            },
+            "ner": {
+              "tp": 3,
+              "fp": 0,
+              "fn": 2,
+              "precision": 1.0,
+              "recall": 0.6,
+              "f1": 0.7499999999999999
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 2,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "ordinary_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 2,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 5,
+              "correct_tokens": 15,
+              "top3_hits": 2,
+              "correction_rate": 0.4,
+              "false_change_rate": 0.3333333333333333,
+              "top3_rate": 0.4
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "rare_correct": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 5,
+              "correct_tokens": 14,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.35714285714285715,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 1,
+              "fn": 1,
+              "precision": 0.8,
+              "recall": 0.8,
+              "f1": 0.8000000000000002
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 0,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              }
+            },
+            "transfer_failure_count": 0
+          }
+        },
+        "zero_denominator_value": 0,
+        "entity_match": "exact transferred original-gold boundaries and type; spelling scored separately"
+      }
+    },
+    "model_B_d1_freq1_protect1": {
+      "config": {
+        "recognizer": "model",
+        "order": "B",
+        "threshold": 1,
+        "use_frequencies": true,
+        "protection": true
+      },
+      "metrics": {
+        "queries": 20,
+        "spelling": {
+          "corrected_typos": 2,
+          "typo_tokens": 10,
+          "damaged_correct_tokens": 6,
+          "correct_tokens": 58,
+          "top3_hits": 2,
+          "correction_rate": 0.2,
+          "false_change_rate": 0.10344827586206896,
+          "top3_rate": 0.2
+        },
+        "ner": {
+          "tp": 18,
+          "fp": 3,
+          "fn": 2,
+          "precision": 0.8571428571428571,
+          "recall": 0.9,
+          "f1": 0.8780487804878048
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 8,
+            "fp": 0,
+            "fn": 2,
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1": 0.888888888888889
+          },
+          "ORG": {
+            "tp": 3,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.75,
+            "recall": 1.0,
+            "f1": 0.8571428571428571
+          },
+          "LOC": {
+            "tp": 7,
+            "fp": 2,
+            "fn": 0,
+            "precision": 0.7777777777777778,
+            "recall": 1.0,
+            "f1": 0.8750000000000001
+          }
+        },
+        "transfer_failure_count": 0,
+        "by_group": {
+          "clean": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 2,
+              "correct_tokens": 20,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.1,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.888888888888889
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "entity_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 2,
+              "correct_tokens": 9,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.2222222222222222,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "ordinary_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 2,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 1,
+              "correct_tokens": 15,
+              "top3_hits": 2,
+              "correction_rate": 0.4,
+              "false_change_rate": 0.06666666666666667,
+              "top3_rate": 0.4
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 1,
+              "fn": 0,
+              "precision": 0.8333333333333334,
+              "recall": 1.0,
+              "f1": 0.9090909090909091
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.5,
+                "recall": 1.0,
+                "f1": 0.6666666666666666
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "rare_correct": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 1,
+              "correct_tokens": 14,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.07142857142857142,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 2,
+              "fn": 1,
+              "precision": 0.6666666666666666,
+              "recall": 0.8,
+              "f1": 0.7272727272727272
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.6666666666666666,
+                "f1": 0.8
+              },
+              "ORG": {
+                "tp": 0,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.6666666666666666,
+                "recall": 1.0,
+                "f1": 0.8
+              }
+            },
+            "transfer_failure_count": 0
+          }
+        },
+        "zero_denominator_value": 0,
+        "entity_match": "exact transferred original-gold boundaries and type; spelling scored separately"
+      }
+    },
+    "model_B_d1_freq1_protect0": {
+      "config": {
+        "recognizer": "model",
+        "order": "B",
+        "threshold": 1,
+        "use_frequencies": true,
+        "protection": false
+      },
+      "metrics": {
+        "queries": 20,
+        "spelling": {
+          "corrected_typos": 6,
+          "typo_tokens": 10,
+          "damaged_correct_tokens": 15,
+          "correct_tokens": 58,
+          "top3_hits": 6,
+          "correction_rate": 0.6,
+          "false_change_rate": 0.25862068965517243,
+          "top3_rate": 0.6
+        },
+        "ner": {
+          "tp": 16,
+          "fp": 1,
+          "fn": 4,
+          "precision": 0.9411764705882353,
+          "recall": 0.8,
+          "f1": 0.8648648648648648
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 7,
+            "fp": 0,
+            "fn": 3,
+            "precision": 1.0,
+            "recall": 0.7,
+            "f1": 0.8235294117647058
+          },
+          "ORG": {
+            "tp": 3,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.75,
+            "recall": 1.0,
+            "f1": 0.8571428571428571
+          },
+          "LOC": {
+            "tp": 6,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.8571428571428571,
+            "f1": 0.923076923076923
+          }
+        },
+        "transfer_failure_count": 0,
+        "by_group": {
+          "clean": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 3,
+              "correct_tokens": 20,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.15,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.888888888888889
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "entity_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 4,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 2,
+              "correct_tokens": 9,
+              "top3_hits": 4,
+              "correction_rate": 0.8,
+              "false_change_rate": 0.2222222222222222,
+              "top3_rate": 0.8
+            },
+            "ner": {
+              "tp": 3,
+              "fp": 0,
+              "fn": 2,
+              "precision": 1.0,
+              "recall": 0.6,
+              "f1": 0.7499999999999999
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 2,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "ordinary_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 2,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 5,
+              "correct_tokens": 15,
+              "top3_hits": 2,
+              "correction_rate": 0.4,
+              "false_change_rate": 0.3333333333333333,
+              "top3_rate": 0.4
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "rare_correct": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 5,
+              "correct_tokens": 14,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.35714285714285715,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 1,
+              "fn": 1,
+              "precision": 0.8,
+              "recall": 0.8,
+              "f1": 0.8000000000000002
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 0,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              }
+            },
+            "transfer_failure_count": 0
+          }
+        },
+        "zero_denominator_value": 0,
+        "entity_match": "exact transferred original-gold boundaries and type; spelling scored separately"
+      }
+    },
+    "model_A_d1_freq0_protect0": {
+      "config": {
+        "recognizer": "model",
+        "order": "A",
+        "threshold": 1,
+        "use_frequencies": false,
+        "protection": false
+      },
+      "metrics": {
+        "queries": 20,
+        "spelling": {
+          "corrected_typos": 6,
+          "typo_tokens": 10,
+          "damaged_correct_tokens": 15,
+          "correct_tokens": 58,
+          "top3_hits": 6,
+          "correction_rate": 0.6,
+          "false_change_rate": 0.25862068965517243,
+          "top3_rate": 0.6
+        },
+        "ner": {
+          "tp": 16,
+          "fp": 1,
+          "fn": 4,
+          "precision": 0.9411764705882353,
+          "recall": 0.8,
+          "f1": 0.8648648648648648
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 7,
+            "fp": 0,
+            "fn": 3,
+            "precision": 1.0,
+            "recall": 0.7,
+            "f1": 0.8235294117647058
+          },
+          "ORG": {
+            "tp": 3,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.75,
+            "recall": 1.0,
+            "f1": 0.8571428571428571
+          },
+          "LOC": {
+            "tp": 6,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.8571428571428571,
+            "f1": 0.923076923076923
+          }
+        },
+        "transfer_failure_count": 0,
+        "by_group": {
+          "clean": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 3,
+              "correct_tokens": 20,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.15,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.888888888888889
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "entity_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 4,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 2,
+              "correct_tokens": 9,
+              "top3_hits": 4,
+              "correction_rate": 0.8,
+              "false_change_rate": 0.2222222222222222,
+              "top3_rate": 0.8
+            },
+            "ner": {
+              "tp": 3,
+              "fp": 0,
+              "fn": 2,
+              "precision": 1.0,
+              "recall": 0.6,
+              "f1": 0.7499999999999999
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 2,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "ordinary_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 2,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 5,
+              "correct_tokens": 15,
+              "top3_hits": 2,
+              "correction_rate": 0.4,
+              "false_change_rate": 0.3333333333333333,
+              "top3_rate": 0.4
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "rare_correct": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 5,
+              "correct_tokens": 14,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.35714285714285715,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 1,
+              "fn": 1,
+              "precision": 0.8,
+              "recall": 0.8,
+              "f1": 0.8000000000000002
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 0,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              }
+            },
+            "transfer_failure_count": 0
+          }
+        },
+        "zero_denominator_value": 0,
+        "entity_match": "exact transferred original-gold boundaries and type; spelling scored separately"
+      }
+    },
+    "model_B_d1_freq0_protect1": {
+      "config": {
+        "recognizer": "model",
+        "order": "B",
+        "threshold": 1,
+        "use_frequencies": false,
+        "protection": true
+      },
+      "metrics": {
+        "queries": 20,
+        "spelling": {
+          "corrected_typos": 2,
+          "typo_tokens": 10,
+          "damaged_correct_tokens": 6,
+          "correct_tokens": 58,
+          "top3_hits": 2,
+          "correction_rate": 0.2,
+          "false_change_rate": 0.10344827586206896,
+          "top3_rate": 0.2
+        },
+        "ner": {
+          "tp": 18,
+          "fp": 3,
+          "fn": 2,
+          "precision": 0.8571428571428571,
+          "recall": 0.9,
+          "f1": 0.8780487804878048
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 8,
+            "fp": 0,
+            "fn": 2,
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1": 0.888888888888889
+          },
+          "ORG": {
+            "tp": 3,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.75,
+            "recall": 1.0,
+            "f1": 0.8571428571428571
+          },
+          "LOC": {
+            "tp": 7,
+            "fp": 2,
+            "fn": 0,
+            "precision": 0.7777777777777778,
+            "recall": 1.0,
+            "f1": 0.8750000000000001
+          }
+        },
+        "transfer_failure_count": 0,
+        "by_group": {
+          "clean": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 2,
+              "correct_tokens": 20,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.1,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.888888888888889
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "entity_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 2,
+              "correct_tokens": 9,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.2222222222222222,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "ordinary_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 2,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 1,
+              "correct_tokens": 15,
+              "top3_hits": 2,
+              "correction_rate": 0.4,
+              "false_change_rate": 0.06666666666666667,
+              "top3_rate": 0.4
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 1,
+              "fn": 0,
+              "precision": 0.8333333333333334,
+              "recall": 1.0,
+              "f1": 0.9090909090909091
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.5,
+                "recall": 1.0,
+                "f1": 0.6666666666666666
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "rare_correct": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 1,
+              "correct_tokens": 14,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.07142857142857142,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 2,
+              "fn": 1,
+              "precision": 0.6666666666666666,
+              "recall": 0.8,
+              "f1": 0.7272727272727272
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.6666666666666666,
+                "f1": 0.8
+              },
+              "ORG": {
+                "tp": 0,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.6666666666666666,
+                "recall": 1.0,
+                "f1": 0.8
+              }
+            },
+            "transfer_failure_count": 0
+          }
+        },
+        "zero_denominator_value": 0,
+        "entity_match": "exact transferred original-gold boundaries and type; spelling scored separately"
+      }
+    },
+    "model_B_d1_freq0_protect0": {
+      "config": {
+        "recognizer": "model",
+        "order": "B",
+        "threshold": 1,
+        "use_frequencies": false,
+        "protection": false
+      },
+      "metrics": {
+        "queries": 20,
+        "spelling": {
+          "corrected_typos": 6,
+          "typo_tokens": 10,
+          "damaged_correct_tokens": 15,
+          "correct_tokens": 58,
+          "top3_hits": 6,
+          "correction_rate": 0.6,
+          "false_change_rate": 0.25862068965517243,
+          "top3_rate": 0.6
+        },
+        "ner": {
+          "tp": 16,
+          "fp": 1,
+          "fn": 4,
+          "precision": 0.9411764705882353,
+          "recall": 0.8,
+          "f1": 0.8648648648648648
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 7,
+            "fp": 0,
+            "fn": 3,
+            "precision": 1.0,
+            "recall": 0.7,
+            "f1": 0.8235294117647058
+          },
+          "ORG": {
+            "tp": 3,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.75,
+            "recall": 1.0,
+            "f1": 0.8571428571428571
+          },
+          "LOC": {
+            "tp": 6,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.8571428571428571,
+            "f1": 0.923076923076923
+          }
+        },
+        "transfer_failure_count": 0,
+        "by_group": {
+          "clean": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 3,
+              "correct_tokens": 20,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.15,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.888888888888889
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "entity_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 4,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 2,
+              "correct_tokens": 9,
+              "top3_hits": 4,
+              "correction_rate": 0.8,
+              "false_change_rate": 0.2222222222222222,
+              "top3_rate": 0.8
+            },
+            "ner": {
+              "tp": 3,
+              "fp": 0,
+              "fn": 2,
+              "precision": 1.0,
+              "recall": 0.6,
+              "f1": 0.7499999999999999
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 2,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "ordinary_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 2,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 5,
+              "correct_tokens": 15,
+              "top3_hits": 2,
+              "correction_rate": 0.4,
+              "false_change_rate": 0.3333333333333333,
+              "top3_rate": 0.4
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "rare_correct": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 5,
+              "correct_tokens": 14,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.35714285714285715,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 1,
+              "fn": 1,
+              "precision": 0.8,
+              "recall": 0.8,
+              "f1": 0.8000000000000002
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 0,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              }
+            },
+            "transfer_failure_count": 0
+          }
+        },
+        "zero_denominator_value": 0,
+        "entity_match": "exact transferred original-gold boundaries and type; spelling scored separately"
+      }
+    },
+    "model_A_d2_freq1_protect0": {
+      "config": {
+        "recognizer": "model",
+        "order": "A",
+        "threshold": 2,
+        "use_frequencies": true,
+        "protection": false
+      },
+      "metrics": {
+        "queries": 20,
+        "spelling": {
+          "corrected_typos": 7,
+          "typo_tokens": 10,
+          "damaged_correct_tokens": 21,
+          "correct_tokens": 58,
+          "top3_hits": 7,
+          "correction_rate": 0.7,
+          "false_change_rate": 0.3620689655172414,
+          "top3_rate": 0.7
+        },
+        "ner": {
+          "tp": 14,
+          "fp": 1,
+          "fn": 6,
+          "precision": 0.9333333333333333,
+          "recall": 0.7,
+          "f1": 0.8
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 6,
+            "fp": 0,
+            "fn": 4,
+            "precision": 1.0,
+            "recall": 0.6,
+            "f1": 0.7499999999999999
+          },
+          "ORG": {
+            "tp": 3,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.75,
+            "recall": 1.0,
+            "f1": 0.8571428571428571
+          },
+          "LOC": {
+            "tp": 5,
+            "fp": 0,
+            "fn": 2,
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1": 0.8333333333333333
+          }
+        },
+        "transfer_failure_count": 0,
+        "by_group": {
+          "clean": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 5,
+              "correct_tokens": 20,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.25,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 3,
+              "fp": 0,
+              "fn": 2,
+              "precision": 1.0,
+              "recall": 0.6,
+              "f1": 0.7499999999999999
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "entity_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 5,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 3,
+              "correct_tokens": 9,
+              "top3_hits": 5,
+              "correction_rate": 1.0,
+              "false_change_rate": 0.3333333333333333,
+              "top3_rate": 1.0
+            },
+            "ner": {
+              "tp": 3,
+              "fp": 0,
+              "fn": 2,
+              "precision": 1.0,
+              "recall": 0.6,
+              "f1": 0.7499999999999999
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 2,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "ordinary_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 2,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 5,
+              "correct_tokens": 15,
+              "top3_hits": 2,
+              "correction_rate": 0.4,
+              "false_change_rate": 0.3333333333333333,
+              "top3_rate": 0.4
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "rare_correct": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 8,
+              "correct_tokens": 14,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.5714285714285714,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 3,
+              "fp": 1,
+              "fn": 2,
+              "precision": 0.75,
+              "recall": 0.6,
+              "f1": 0.6666666666666665
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.6666666666666666,
+                "f1": 0.8
+              },
+              "ORG": {
+                "tp": 0,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              }
+            },
+            "transfer_failure_count": 0
+          }
+        },
+        "zero_denominator_value": 0,
+        "entity_match": "exact transferred original-gold boundaries and type; spelling scored separately"
+      }
+    },
+    "model_B_d2_freq1_protect1": {
+      "config": {
+        "recognizer": "model",
+        "order": "B",
+        "threshold": 2,
+        "use_frequencies": true,
+        "protection": true
+      },
+      "metrics": {
+        "queries": 20,
+        "spelling": {
+          "corrected_typos": 2,
+          "typo_tokens": 10,
+          "damaged_correct_tokens": 7,
+          "correct_tokens": 58,
+          "top3_hits": 2,
+          "correction_rate": 0.2,
+          "false_change_rate": 0.1206896551724138,
+          "top3_rate": 0.2
+        },
+        "ner": {
+          "tp": 18,
+          "fp": 3,
+          "fn": 2,
+          "precision": 0.8571428571428571,
+          "recall": 0.9,
+          "f1": 0.8780487804878048
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 8,
+            "fp": 0,
+            "fn": 2,
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1": 0.888888888888889
+          },
+          "ORG": {
+            "tp": 3,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.75,
+            "recall": 1.0,
+            "f1": 0.8571428571428571
+          },
+          "LOC": {
+            "tp": 7,
+            "fp": 2,
+            "fn": 0,
+            "precision": 0.7777777777777778,
+            "recall": 1.0,
+            "f1": 0.8750000000000001
+          }
+        },
+        "transfer_failure_count": 0,
+        "by_group": {
+          "clean": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 2,
+              "correct_tokens": 20,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.1,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.888888888888889
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "entity_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 3,
+              "correct_tokens": 9,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.3333333333333333,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "ordinary_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 2,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 1,
+              "correct_tokens": 15,
+              "top3_hits": 2,
+              "correction_rate": 0.4,
+              "false_change_rate": 0.06666666666666667,
+              "top3_rate": 0.4
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 1,
+              "fn": 0,
+              "precision": 0.8333333333333334,
+              "recall": 1.0,
+              "f1": 0.9090909090909091
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.5,
+                "recall": 1.0,
+                "f1": 0.6666666666666666
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "rare_correct": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 1,
+              "correct_tokens": 14,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.07142857142857142,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 2,
+              "fn": 1,
+              "precision": 0.6666666666666666,
+              "recall": 0.8,
+              "f1": 0.7272727272727272
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.6666666666666666,
+                "f1": 0.8
+              },
+              "ORG": {
+                "tp": 0,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.6666666666666666,
+                "recall": 1.0,
+                "f1": 0.8
+              }
+            },
+            "transfer_failure_count": 0
+          }
+        },
+        "zero_denominator_value": 0,
+        "entity_match": "exact transferred original-gold boundaries and type; spelling scored separately"
+      }
+    },
+    "model_B_d2_freq1_protect0": {
+      "config": {
+        "recognizer": "model",
+        "order": "B",
+        "threshold": 2,
+        "use_frequencies": true,
+        "protection": false
+      },
+      "metrics": {
+        "queries": 20,
+        "spelling": {
+          "corrected_typos": 7,
+          "typo_tokens": 10,
+          "damaged_correct_tokens": 21,
+          "correct_tokens": 58,
+          "top3_hits": 7,
+          "correction_rate": 0.7,
+          "false_change_rate": 0.3620689655172414,
+          "top3_rate": 0.7
+        },
+        "ner": {
+          "tp": 14,
+          "fp": 1,
+          "fn": 6,
+          "precision": 0.9333333333333333,
+          "recall": 0.7,
+          "f1": 0.8
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 6,
+            "fp": 0,
+            "fn": 4,
+            "precision": 1.0,
+            "recall": 0.6,
+            "f1": 0.7499999999999999
+          },
+          "ORG": {
+            "tp": 3,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.75,
+            "recall": 1.0,
+            "f1": 0.8571428571428571
+          },
+          "LOC": {
+            "tp": 5,
+            "fp": 0,
+            "fn": 2,
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1": 0.8333333333333333
+          }
+        },
+        "transfer_failure_count": 0,
+        "by_group": {
+          "clean": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 5,
+              "correct_tokens": 20,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.25,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 3,
+              "fp": 0,
+              "fn": 2,
+              "precision": 1.0,
+              "recall": 0.6,
+              "f1": 0.7499999999999999
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "entity_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 5,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 3,
+              "correct_tokens": 9,
+              "top3_hits": 5,
+              "correction_rate": 1.0,
+              "false_change_rate": 0.3333333333333333,
+              "top3_rate": 1.0
+            },
+            "ner": {
+              "tp": 3,
+              "fp": 0,
+              "fn": 2,
+              "precision": 1.0,
+              "recall": 0.6,
+              "f1": 0.7499999999999999
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 2,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "ordinary_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 2,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 5,
+              "correct_tokens": 15,
+              "top3_hits": 2,
+              "correction_rate": 0.4,
+              "false_change_rate": 0.3333333333333333,
+              "top3_rate": 0.4
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "rare_correct": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 8,
+              "correct_tokens": 14,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.5714285714285714,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 3,
+              "fp": 1,
+              "fn": 2,
+              "precision": 0.75,
+              "recall": 0.6,
+              "f1": 0.6666666666666665
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.6666666666666666,
+                "f1": 0.8
+              },
+              "ORG": {
+                "tp": 0,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              }
+            },
+            "transfer_failure_count": 0
+          }
+        },
+        "zero_denominator_value": 0,
+        "entity_match": "exact transferred original-gold boundaries and type; spelling scored separately"
+      }
+    },
+    "model_A_d2_freq0_protect0": {
+      "config": {
+        "recognizer": "model",
+        "order": "A",
+        "threshold": 2,
+        "use_frequencies": false,
+        "protection": false
+      },
+      "metrics": {
+        "queries": 20,
+        "spelling": {
+          "corrected_typos": 7,
+          "typo_tokens": 10,
+          "damaged_correct_tokens": 21,
+          "correct_tokens": 58,
+          "top3_hits": 7,
+          "correction_rate": 0.7,
+          "false_change_rate": 0.3620689655172414,
+          "top3_rate": 0.7
+        },
+        "ner": {
+          "tp": 14,
+          "fp": 1,
+          "fn": 6,
+          "precision": 0.9333333333333333,
+          "recall": 0.7,
+          "f1": 0.8
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 6,
+            "fp": 0,
+            "fn": 4,
+            "precision": 1.0,
+            "recall": 0.6,
+            "f1": 0.7499999999999999
+          },
+          "ORG": {
+            "tp": 3,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.75,
+            "recall": 1.0,
+            "f1": 0.8571428571428571
+          },
+          "LOC": {
+            "tp": 5,
+            "fp": 0,
+            "fn": 2,
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1": 0.8333333333333333
+          }
+        },
+        "transfer_failure_count": 0,
+        "by_group": {
+          "clean": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 5,
+              "correct_tokens": 20,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.25,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 3,
+              "fp": 0,
+              "fn": 2,
+              "precision": 1.0,
+              "recall": 0.6,
+              "f1": 0.7499999999999999
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "entity_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 5,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 3,
+              "correct_tokens": 9,
+              "top3_hits": 5,
+              "correction_rate": 1.0,
+              "false_change_rate": 0.3333333333333333,
+              "top3_rate": 1.0
+            },
+            "ner": {
+              "tp": 3,
+              "fp": 0,
+              "fn": 2,
+              "precision": 1.0,
+              "recall": 0.6,
+              "f1": 0.7499999999999999
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 2,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "ordinary_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 2,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 5,
+              "correct_tokens": 15,
+              "top3_hits": 2,
+              "correction_rate": 0.4,
+              "false_change_rate": 0.3333333333333333,
+              "top3_rate": 0.4
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "rare_correct": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 8,
+              "correct_tokens": 14,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.5714285714285714,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 3,
+              "fp": 1,
+              "fn": 2,
+              "precision": 0.75,
+              "recall": 0.6,
+              "f1": 0.6666666666666665
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.6666666666666666,
+                "f1": 0.8
+              },
+              "ORG": {
+                "tp": 0,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              }
+            },
+            "transfer_failure_count": 0
+          }
+        },
+        "zero_denominator_value": 0,
+        "entity_match": "exact transferred original-gold boundaries and type; spelling scored separately"
+      }
+    },
+    "model_B_d2_freq0_protect1": {
+      "config": {
+        "recognizer": "model",
+        "order": "B",
+        "threshold": 2,
+        "use_frequencies": false,
+        "protection": true
+      },
+      "metrics": {
+        "queries": 20,
+        "spelling": {
+          "corrected_typos": 2,
+          "typo_tokens": 10,
+          "damaged_correct_tokens": 7,
+          "correct_tokens": 58,
+          "top3_hits": 2,
+          "correction_rate": 0.2,
+          "false_change_rate": 0.1206896551724138,
+          "top3_rate": 0.2
+        },
+        "ner": {
+          "tp": 18,
+          "fp": 3,
+          "fn": 2,
+          "precision": 0.8571428571428571,
+          "recall": 0.9,
+          "f1": 0.8780487804878048
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 8,
+            "fp": 0,
+            "fn": 2,
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1": 0.888888888888889
+          },
+          "ORG": {
+            "tp": 3,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.75,
+            "recall": 1.0,
+            "f1": 0.8571428571428571
+          },
+          "LOC": {
+            "tp": 7,
+            "fp": 2,
+            "fn": 0,
+            "precision": 0.7777777777777778,
+            "recall": 1.0,
+            "f1": 0.8750000000000001
+          }
+        },
+        "transfer_failure_count": 0,
+        "by_group": {
+          "clean": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 2,
+              "correct_tokens": 20,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.1,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.888888888888889
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "entity_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 3,
+              "correct_tokens": 9,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.3333333333333333,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "ordinary_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 2,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 1,
+              "correct_tokens": 15,
+              "top3_hits": 2,
+              "correction_rate": 0.4,
+              "false_change_rate": 0.06666666666666667,
+              "top3_rate": 0.4
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 1,
+              "fn": 0,
+              "precision": 0.8333333333333334,
+              "recall": 1.0,
+              "f1": 0.9090909090909091
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.5,
+                "recall": 1.0,
+                "f1": 0.6666666666666666
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "rare_correct": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 1,
+              "correct_tokens": 14,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.07142857142857142,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 4,
+              "fp": 2,
+              "fn": 1,
+              "precision": 0.6666666666666666,
+              "recall": 0.8,
+              "f1": 0.7272727272727272
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.6666666666666666,
+                "f1": 0.8
+              },
+              "ORG": {
+                "tp": 0,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.6666666666666666,
+                "recall": 1.0,
+                "f1": 0.8
+              }
+            },
+            "transfer_failure_count": 0
+          }
+        },
+        "zero_denominator_value": 0,
+        "entity_match": "exact transferred original-gold boundaries and type; spelling scored separately"
+      }
+    },
+    "model_B_d2_freq0_protect0": {
+      "config": {
+        "recognizer": "model",
+        "order": "B",
+        "threshold": 2,
+        "use_frequencies": false,
+        "protection": false
+      },
+      "metrics": {
+        "queries": 20,
+        "spelling": {
+          "corrected_typos": 7,
+          "typo_tokens": 10,
+          "damaged_correct_tokens": 21,
+          "correct_tokens": 58,
+          "top3_hits": 7,
+          "correction_rate": 0.7,
+          "false_change_rate": 0.3620689655172414,
+          "top3_rate": 0.7
+        },
+        "ner": {
+          "tp": 14,
+          "fp": 1,
+          "fn": 6,
+          "precision": 0.9333333333333333,
+          "recall": 0.7,
+          "f1": 0.8
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 6,
+            "fp": 0,
+            "fn": 4,
+            "precision": 1.0,
+            "recall": 0.6,
+            "f1": 0.7499999999999999
+          },
+          "ORG": {
+            "tp": 3,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.75,
+            "recall": 1.0,
+            "f1": 0.8571428571428571
+          },
+          "LOC": {
+            "tp": 5,
+            "fp": 0,
+            "fn": 2,
+            "precision": 1.0,
+            "recall": 0.7142857142857143,
+            "f1": 0.8333333333333333
+          }
+        },
+        "transfer_failure_count": 0,
+        "by_group": {
+          "clean": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 5,
+              "correct_tokens": 20,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.25,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 3,
+              "fp": 0,
+              "fn": 2,
+              "precision": 1.0,
+              "recall": 0.6,
+              "f1": 0.7499999999999999
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "entity_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 5,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 3,
+              "correct_tokens": 9,
+              "top3_hits": 5,
+              "correction_rate": 1.0,
+              "false_change_rate": 0.3333333333333333,
+              "top3_rate": 1.0
+            },
+            "ner": {
+              "tp": 3,
+              "fp": 0,
+              "fn": 2,
+              "precision": 1.0,
+              "recall": 0.6,
+              "f1": 0.7499999999999999
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 2,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "ordinary_typo": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 2,
+              "typo_tokens": 5,
+              "damaged_correct_tokens": 5,
+              "correct_tokens": 15,
+              "top3_hits": 2,
+              "correction_rate": 0.4,
+              "false_change_rate": 0.3333333333333333,
+              "top3_rate": 0.4
+            },
+            "ner": {
+              "tp": 5,
+              "fp": 0,
+              "fn": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "ORG": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+              }
+            },
+            "transfer_failure_count": 0
+          },
+          "rare_correct": {
+            "queries": 5,
+            "spelling": {
+              "corrected_typos": 0,
+              "typo_tokens": 0,
+              "damaged_correct_tokens": 8,
+              "correct_tokens": 14,
+              "top3_hits": 0,
+              "correction_rate": 0.0,
+              "false_change_rate": 0.5714285714285714,
+              "top3_rate": 0.0
+            },
+            "ner": {
+              "tp": 3,
+              "fp": 1,
+              "fn": 2,
+              "precision": 0.75,
+              "recall": 0.6,
+              "f1": 0.6666666666666665
+            },
+            "ner_by_type": {
+              "PERSON": {
+                "tp": 2,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.6666666666666666,
+                "f1": 0.8
+              },
+              "ORG": {
+                "tp": 0,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0
+              },
+              "LOC": {
+                "tp": 1,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+              }
+            },
+            "transfer_failure_count": 0
+          }
+        },
+        "zero_denominator_value": 0,
+        "entity_match": "exact transferred original-gold boundaries and type; spelling scored separately"
+      }
+    }
+  },
+  "one_factor_comparisons": [
+    {
+      "factor": "threshold",
+      "before": "dictionary_A_d1_freq1_protect0",
+      "after": "dictionary_A_d2_freq1_protect0",
+      "corrected_typos_delta": 1,
+      "damaged_tokens_delta": 6,
+      "ner_f1_delta": 0.052631578947368474
+    },
+    {
+      "factor": "frequencies",
+      "before": "dictionary_A_d1_freq1_protect0",
+      "after": "dictionary_A_d1_freq0_protect0",
+      "corrected_typos_delta": 0,
+      "damaged_tokens_delta": 0,
+      "ner_f1_delta": 0.0
+    },
+    {
+      "factor": "threshold",
+      "before": "dictionary_B_d1_freq1_protect1",
+      "after": "dictionary_B_d2_freq1_protect1",
+      "corrected_typos_delta": 1,
+      "damaged_tokens_delta": 1,
+      "ner_f1_delta": 0.02564102564102566
+    },
+    {
+      "factor": "frequencies",
+      "before": "dictionary_B_d1_freq1_protect1",
+      "after": "dictionary_B_d1_freq0_protect1",
+      "corrected_typos_delta": 0,
+      "damaged_tokens_delta": 0,
+      "ner_f1_delta": 0.0
+    },
+    {
+      "factor": "protection",
+      "before": "dictionary_B_d1_freq1_protect1",
+      "after": "dictionary_B_d1_freq1_protect0",
+      "corrected_typos_delta": 0,
+      "damaged_tokens_delta": 8,
+      "ner_f1_delta": -0.07962213225371118
+    },
+    {
+      "factor": "threshold",
+      "before": "model_A_d1_freq1_protect0",
+      "after": "model_A_d2_freq1_protect0",
+      "corrected_typos_delta": 1,
+      "damaged_tokens_delta": 6,
+      "ner_f1_delta": -0.06486486486486476
+    },
+    {
+      "factor": "frequencies",
+      "before": "model_A_d1_freq1_protect0",
+      "after": "model_A_d1_freq0_protect0",
+      "corrected_typos_delta": 0,
+      "damaged_tokens_delta": 0,
+      "ner_f1_delta": 0.0
+    },
+    {
+      "factor": "threshold",
+      "before": "model_B_d1_freq1_protect1",
+      "after": "model_B_d2_freq1_protect1",
+      "corrected_typos_delta": 0,
+      "damaged_tokens_delta": 1,
+      "ner_f1_delta": 0.0
+    },
+    {
+      "factor": "frequencies",
+      "before": "model_B_d1_freq1_protect1",
+      "after": "model_B_d1_freq0_protect1",
+      "corrected_typos_delta": 0,
+      "damaged_tokens_delta": 0,
+      "ner_f1_delta": 0.0
+    },
+    {
+      "factor": "protection",
+      "before": "model_B_d1_freq1_protect1",
+      "after": "model_B_d1_freq1_protect0",
+      "corrected_typos_delta": 4,
+      "damaged_tokens_delta": 9,
+      "ner_f1_delta": -0.013183915622939968
+    }
+  ],
+  "selection_rule": "Common settings for four pipelines: minimize mean dev false-change rate, then maximize mean exact typo correction rate, then mean entity F1; ties prefer threshold 1 and frequencies.",
+  "candidates": [
+    {
+      "threshold": 1,
+      "use_frequencies": true,
+      "mean_false_change_rate": 0.1853448275862069,
+      "mean_correction_rate": 0.5,
+      "mean_entity_f1": 0.9030023654542267
+    },
+    {
+      "threshold": 1,
+      "use_frequencies": false,
+      "mean_false_change_rate": 0.1853448275862069,
+      "mean_correction_rate": 0.5,
+      "mean_entity_f1": 0.9030023654542267
+    },
+    {
+      "threshold": 2,
+      "use_frequencies": true,
+      "mean_false_change_rate": 0.24568965517241378,
+      "mean_correction_rate": 0.575,
+      "mean_entity_f1": 0.9063543003851091
+    },
+    {
+      "threshold": 2,
+      "use_frequencies": false,
+      "mean_false_change_rate": 0.24568965517241378,
+      "mean_correction_rate": 0.575,
+      "mean_entity_f1": 0.9063543003851091
+    }
+  ],
+  "chosen": {
+    "threshold": 1,
+    "use_frequencies": true,
+    "mean_false_change_rate": 0.1853448275862069,
+    "mean_correction_rate": 0.5,
+    "mean_entity_f1": 0.9030023654542267
+  }
+}

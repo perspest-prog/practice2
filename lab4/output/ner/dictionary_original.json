@@ -1,0 +1,272 @@
+{
+  "stage": "dev_demonstration",
+  "evaluation_run": false,
+  "test_used": false,
+  "config": {
+    "recognizer": {
+      "name": "dictionary_and_rules",
+      "context_rules": true,
+      "source_sha256": "71c3e682d37da7e52f946c2860a41487273250aaaa1428c0159a5c6eefd67e6f",
+      "rule": "город/города/городу/городом/городе + capitalized one-word city name, including hyphens",
+      "limitation": "Does not handle unknown multiword names or lowercase city names; may classify a capitalized common word or a typo as LOC."
+    },
+    "threshold": 1,
+    "use_frequencies": true
+  },
+  "results": [
+    {
+      "id": "dev_01",
+      "original_text": "Биография Михаила Ломоносова.",
+      "entities": [
+        {
+          "start": 10,
+          "end": 28,
+          "text": "Михаила Ломоносова",
+          "type": "PERSON",
+          "entity_id": "person_01",
+          "method": "dictionary"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_02",
+      "original_text": "Где находится Московский государственный университет?",
+      "entities": [
+        {
+          "start": 14,
+          "end": 52,
+          "text": "Московский государственный университет",
+          "type": "ORG",
+          "entity_id": "org_01",
+          "method": "dictionary"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_03",
+      "original_text": "История Нижнего Новгорода.",
+      "entities": [
+        {
+          "start": 8,
+          "end": 25,
+          "text": "Нижнего Новгорода",
+          "type": "LOC",
+          "entity_id": "loc_05",
+          "method": "dictionary"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_04",
+      "original_text": "Связь Юрия Гагарина с Москвой.",
+      "entities": [
+        {
+          "start": 6,
+          "end": 19,
+          "text": "Юрия Гагарина",
+          "type": "PERSON",
+          "entity_id": "person_05",
+          "method": "dictionary"
+        },
+        {
+          "start": 22,
+          "end": 29,
+          "text": "Москвой",
+          "type": "LOC",
+          "entity_id": "loc_01",
+          "method": "dictionary"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_05",
+      "original_text": "Как устроено высшее образование?",
+      "entities": [],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_06",
+      "original_text": "Биогрфия Дмитрия Менделеева.",
+      "entities": [
+        {
+          "start": 9,
+          "end": 27,
+          "text": "Дмитрия Менделеева",
+          "type": "PERSON",
+          "entity_id": "person_02",
+          "method": "dictionary"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_07",
+      "original_text": "Исторрия Российской академии наук.",
+      "entities": [
+        {
+          "start": 9,
+          "end": 33,
+          "text": "Российской академии наук",
+          "type": "ORG",
+          "entity_id": "org_05",
+          "method": "dictionary"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_08",
+      "original_text": "Научные открвтия Сергея Королёва.",
+      "entities": [
+        {
+          "start": 17,
+          "end": 32,
+          "text": "Сергея Королёва",
+          "type": "PERSON",
+          "entity_id": "person_04",
+          "method": "dictionary"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_09",
+      "original_text": "Где учлися Николай Лобачевский?",
+      "entities": [
+        {
+          "start": 11,
+          "end": 30,
+          "text": "Николай Лобачевский",
+          "type": "PERSON",
+          "entity_id": "person_07",
+          "method": "dictionary"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_10",
+      "original_text": "Расскажи об образовнии в Казани.",
+      "entities": [
+        {
+          "start": 25,
+          "end": 31,
+          "text": "Казани",
+          "type": "LOC",
+          "entity_id": "loc_03",
+          "method": "dictionary"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_11",
+      "original_text": "Наука в Маскве.",
+      "entities": [],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_12",
+      "original_text": "Биография Пушкна.",
+      "entities": [],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_13",
+      "original_text": "Где расположен МГГУ?",
+      "entities": [],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_14",
+      "original_text": "Когда основан Нижний Новгроод?",
+      "entities": [],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_15",
+      "original_text": "Работы Ломоносва.",
+      "entities": [],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_16",
+      "original_text": "Исследования Пафнутия Чебышёва.",
+      "entities": [
+        {
+          "start": 13,
+          "end": 30,
+          "text": "Пафнутия Чебышёва",
+          "type": "PERSON",
+          "entity_id": "person_08",
+          "method": "dictionary"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_17",
+      "original_text": "Труды Софьи Ковалевской.",
+      "entities": [
+        {
+          "start": 6,
+          "end": 23,
+          "text": "Софьи Ковалевской",
+          "type": "PERSON",
+          "entity_id": "person_06",
+          "method": "dictionary"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_18",
+      "original_text": "Постройки Осипа Бове.",
+      "entities": [
+        {
+          "start": 10,
+          "end": 20,
+          "text": "Осипа Бове",
+          "type": "PERSON",
+          "entity_id": "person_09",
+          "method": "dictionary"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_19",
+      "original_text": "Путеводитель по Устюжне.",
+      "entities": [
+        {
+          "start": 16,
+          "end": 23,
+          "text": "Устюжне",
+          "type": "LOC",
+          "entity_id": "loc_09",
+          "method": "dictionary"
+        }
+      ],
+      "entity_positions": "original_text"
+    },
+    {
+      "id": "dev_20",
+      "original_text": "Музеи Торжка.",
+      "entities": [
+        {
+          "start": 6,
+          "end": 12,
+          "text": "Торжка",
+          "type": "LOC",
+          "entity_id": "loc_10",
+          "method": "dictionary"
+        }
+      ],
+      "entity_positions": "original_text"
+    }
+  ]
+}

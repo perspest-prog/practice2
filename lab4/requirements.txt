@@ -1,0 +1,4 @@
+navec==0.10.0
+numpy==2.5.3
+razdel==0.5.0
+slovnet==0.6.0

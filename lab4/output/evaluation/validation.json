@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "saved_test_results_checked": 120,
+  "inference_rerun": false,
+  "frozen_source_hashes_match": true,
+  "gold_entity_count": 19,
+  "typo_tokens": 10,
+  "correct_tokens": 65,
+  "transfer_failures": 0,
+  "frequency_comparison_changed_text_counts": [
+    2,
+    2,
+    2,
+    2
+  ],
+  "checks": [
+    "entity text ranges",
+    "replacement original/proposed ranges",
+    "independent exact-match confusion recount",
+    "gold totals",
+    "summary consistency",
+    "frozen source hashes"
+  ]
+}

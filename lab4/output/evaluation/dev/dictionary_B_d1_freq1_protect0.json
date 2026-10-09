@@ -1,0 +1,3508 @@
+{
+  "config": {
+    "recognizer": "dictionary",
+    "order": "B",
+    "threshold": 1,
+    "use_frequencies": true,
+    "protection": false
+  },
+  "recognizer_metadata": {
+    "name": "dictionary_and_rules",
+    "context_rules": true,
+    "source_sha256": "71c3e682d37da7e52f946c2860a41487273250aaaa1428c0159a5c6eefd67e6f",
+    "rule": "город/города/городу/городом/городе + capitalized one-word city name, including hyphens",
+    "limitation": "Does not handle unknown multiword names or lowercase city names; may classify a capitalized common word or a typo as LOC."
+  },
+  "results": [
+    {
+      "id": "dev_01",
+      "original_text": "Биография Михаила Ломоносова.",
+      "proposed_text": "Биография Михаила Ломоносова.",
+      "changes": [],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 9,
+          "original": "Биография",
+          "proposed": "Биография",
+          "proposed_start": 0,
+          "proposed_end": 9,
+          "status": "no_candidates",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 10,
+          "end": 17,
+          "original": "Михаила",
+          "proposed": "Михаила",
+          "proposed_start": 10,
+          "proposed_end": 17,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 18,
+          "end": 28,
+          "original": "Ломоносова",
+          "proposed": "Ломоносова",
+          "proposed_start": 18,
+          "proposed_end": 28,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 1,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": false,
+        "recognizer": {
+          "name": "dictionary_and_rules",
+          "context_rules": true,
+          "source_sha256": "71c3e682d37da7e52f946c2860a41487273250aaaa1428c0159a5c6eefd67e6f",
+          "rule": "город/города/городу/городом/городе + capitalized one-word city name, including hyphens",
+          "limitation": "Does not handle unknown multiword names or lowercase city names; may classify a capitalized common word or a typo as LOC."
+        }
+      },
+      "initial_entities": [
+        {
+          "start": 10,
+          "end": 28,
+          "text": "Михаила Ломоносова",
+          "type": "PERSON",
+          "entity_id": "person_01",
+          "method": "dictionary"
+        }
+      ],
+      "initial_entity_positions": "original_text",
+      "entities": [
+        {
+          "start": 10,
+          "end": 28,
+          "text": "Михаила Ломоносова",
+          "type": "PERSON",
+          "entity_id": "person_01",
+          "method": "dictionary"
+        }
+      ],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_02",
+      "original_text": "Где находится Московский государственный университет?",
+      "proposed_text": "Где находятся Московский государственный университет?",
+      "changes": [
+        {
+          "start": 4,
+          "end": 13,
+          "old": "находится",
+          "new": "находятся",
+          "proposed_start": 4,
+          "proposed_end": 13,
+          "distance": 1,
+          "candidates": [
+            {
+              "key": "находятся",
+              "text": "находятся",
+              "distance": 1,
+              "frequency": 4,
+              "case_rule": "lowercase"
+            },
+            {
+              "key": "находился",
+              "text": "находился",
+              "distance": 1,
+              "frequency": 2,
+              "case_rule": "lowercase"
+            }
+          ],
+          "alternatives": [
+            {
+              "key": "находился",
+              "text": "находился",
+              "distance": 1,
+              "frequency": 2,
+              "case_rule": "lowercase"
+            }
+          ],
+          "candidate_count": 2,
+          "ambiguous": true,
+          "case_rule": "lowercase"
+        }
+      ],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 3,
+          "original": "Где",
+          "proposed": "Где",
+          "proposed_start": 0,
+          "proposed_end": 3,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 4,
+          "end": 13,
+          "original": "находится",
+          "proposed": "находятся",
+          "proposed_start": 4,
+          "proposed_end": 13,
+          "status": "replaced",
+          "candidates": [
+            {
+              "key": "находятся",
+              "text": "находятся",
+              "distance": 1,
+              "frequency": 4,
+              "case_rule": "lowercase"
+            },
+            {
+              "key": "находился",
+              "text": "находился",
+              "distance": 1,
+              "frequency": 2,
+              "case_rule": "lowercase"
+            }
+          ],
+          "candidate_count": 2,
+          "ambiguous": true
+        },
+        {
+          "start": 14,
+          "end": 24,
+          "original": "Московский",
+          "proposed": "Московский",
+          "proposed_start": 14,
+          "proposed_end": 24,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 25,
+          "end": 40,
+          "original": "государственный",
+          "proposed": "государственный",
+          "proposed_start": 25,
+          "proposed_end": 40,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 41,
+          "end": 52,
+          "original": "университет",
+          "proposed": "университет",
+          "proposed_start": 41,
+          "proposed_end": 52,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 1,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": false,
+        "recognizer": {
+          "name": "dictionary_and_rules",
+          "context_rules": true,
+          "source_sha256": "71c3e682d37da7e52f946c2860a41487273250aaaa1428c0159a5c6eefd67e6f",
+          "rule": "город/города/городу/городом/городе + capitalized one-word city name, including hyphens",
+          "limitation": "Does not handle unknown multiword names or lowercase city names; may classify a capitalized common word or a typo as LOC."
+        }
+      },
+      "initial_entities": [
+        {
+          "start": 14,
+          "end": 52,
+          "text": "Московский государственный университет",
+          "type": "ORG",
+          "entity_id": "org_01",
+          "method": "dictionary"
+        }
+      ],
+      "initial_entity_positions": "original_text",
+      "entities": [
+        {
+          "start": 14,
+          "end": 52,
+          "text": "Московский государственный университет",
+          "type": "ORG",
+          "entity_id": "org_01",
+          "method": "dictionary"
+        }
+      ],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_03",
+      "original_text": "История Нижнего Новгорода.",
+      "proposed_text": "История Нижнего Новгород.",
+      "changes": [
+        {
+          "start": 16,
+          "end": 25,
+          "old": "Новгорода",
+          "new": "Новгород",
+          "proposed_start": 16,
+          "proposed_end": 24,
+          "distance": 1,
+          "candidates": [
+            {
+              "key": "новгород",
+              "text": "Новгород",
+              "distance": 1,
+              "frequency": 6,
+              "case_rule": "titlecase"
+            }
+          ],
+          "alternatives": [],
+          "candidate_count": 1,
+          "ambiguous": false,
+          "case_rule": "titlecase"
+        }
+      ],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 7,
+          "original": "История",
+          "proposed": "История",
+          "proposed_start": 0,
+          "proposed_end": 7,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 8,
+          "end": 15,
+          "original": "Нижнего",
+          "proposed": "Нижнего",
+          "proposed_start": 8,
+          "proposed_end": 15,
+          "status": "no_candidates",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 16,
+          "end": 25,
+          "original": "Новгорода",
+          "proposed": "Новгород",
+          "proposed_start": 16,
+          "proposed_end": 24,
+          "status": "replaced",
+          "candidates": [
+            {
+              "key": "новгород",
+              "text": "Новгород",
+              "distance": 1,
+              "frequency": 6,
+              "case_rule": "titlecase"
+            }
+          ],
+          "candidate_count": 1,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 1,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": false,
+        "recognizer": {
+          "name": "dictionary_and_rules",
+          "context_rules": true,
+          "source_sha256": "71c3e682d37da7e52f946c2860a41487273250aaaa1428c0159a5c6eefd67e6f",
+          "rule": "город/города/городу/городом/городе + capitalized one-word city name, including hyphens",
+          "limitation": "Does not handle unknown multiword names or lowercase city names; may classify a capitalized common word or a typo as LOC."
+        }
+      },
+      "initial_entities": [
+        {
+          "start": 8,
+          "end": 25,
+          "text": "Нижнего Новгорода",
+          "type": "LOC",
+          "entity_id": "loc_05",
+          "method": "dictionary"
+        }
+      ],
+      "initial_entity_positions": "original_text",
+      "entities": [],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_04",
+      "original_text": "Связь Юрия Гагарина с Москвой.",
+      "proposed_text": "Связи Юрия Гагарина с Москвой.",
+      "changes": [
+        {
+          "start": 0,
+          "end": 5,
+          "old": "Связь",
+          "new": "Связи",
+          "proposed_start": 0,
+          "proposed_end": 5,
+          "distance": 1,
+          "candidates": [
+            {
+              "key": "связи",
+              "text": "Связи",
+              "distance": 1,
+              "frequency": 2,
+              "case_rule": "titlecase"
+            }
+          ],
+          "alternatives": [],
+          "candidate_count": 1,
+          "ambiguous": false,
+          "case_rule": "titlecase"
+        }
+      ],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 5,
+          "original": "Связь",
+          "proposed": "Связи",
+          "proposed_start": 0,
+          "proposed_end": 5,
+          "status": "replaced",
+          "candidates": [
+            {
+              "key": "связи",
+              "text": "Связи",
+              "distance": 1,
+              "frequency": 2,
+              "case_rule": "titlecase"
+            }
+          ],
+          "candidate_count": 1,
+          "ambiguous": false
+        },
+        {
+          "start": 6,
+          "end": 10,
+          "original": "Юрия",
+          "proposed": "Юрия",
+          "proposed_start": 6,
+          "proposed_end": 10,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 11,
+          "end": 19,
+          "original": "Гагарина",
+          "proposed": "Гагарина",
+          "proposed_start": 11,
+          "proposed_end": 19,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 20,
+          "end": 21,
+          "original": "с",
+          "proposed": "с",
+          "proposed_start": 20,
+          "proposed_end": 21,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 22,
+          "end": 29,
+          "original": "Москвой",
+          "proposed": "Москвой",
+          "proposed_start": 22,
+          "proposed_end": 29,
+          "status": "no_candidates",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 1,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": false,
+        "recognizer": {
+          "name": "dictionary_and_rules",
+          "context_rules": true,
+          "source_sha256": "71c3e682d37da7e52f946c2860a41487273250aaaa1428c0159a5c6eefd67e6f",
+          "rule": "город/города/городу/городом/городе + capitalized one-word city name, including hyphens",
+          "limitation": "Does not handle unknown multiword names or lowercase city names; may classify a capitalized common word or a typo as LOC."
+        }
+      },
+      "initial_entities": [
+        {
+          "start": 6,
+          "end": 19,
+          "text": "Юрия Гагарина",
+          "type": "PERSON",
+          "entity_id": "person_05",
+          "method": "dictionary"
+        },
+        {
+          "start": 22,
+          "end": 29,
+          "text": "Москвой",
+          "type": "LOC",
+          "entity_id": "loc_01",
+          "method": "dictionary"
+        }
+      ],
+      "initial_entity_positions": "original_text",
+      "entities": [
+        {
+          "start": 6,
+          "end": 19,
+          "text": "Юрия Гагарина",
+          "type": "PERSON",
+          "entity_id": "person_05",
+          "method": "dictionary"
+        },
+        {
+          "start": 22,
+          "end": 29,
+          "text": "Москвой",
+          "type": "LOC",
+          "entity_id": "loc_01",
+          "method": "dictionary"
+        }
+      ],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_05",
+      "original_text": "Как устроено высшее образование?",
+      "proposed_text": "Как устроено высшее образование?",
+      "changes": [],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 3,
+          "original": "Как",
+          "proposed": "Как",
+          "proposed_start": 0,
+          "proposed_end": 3,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 4,
+          "end": 12,
+          "original": "устроено",
+          "proposed": "устроено",
+          "proposed_start": 4,
+          "proposed_end": 12,
+          "status": "no_candidates",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 13,
+          "end": 19,
+          "original": "высшее",
+          "proposed": "высшее",
+          "proposed_start": 13,
+          "proposed_end": 19,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 20,
+          "end": 31,
+          "original": "образование",
+          "proposed": "образование",
+          "proposed_start": 20,
+          "proposed_end": 31,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 1,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": false,
+        "recognizer": {
+          "name": "dictionary_and_rules",
+          "context_rules": true,
+          "source_sha256": "71c3e682d37da7e52f946c2860a41487273250aaaa1428c0159a5c6eefd67e6f",
+          "rule": "город/города/городу/городом/городе + capitalized one-word city name, including hyphens",
+          "limitation": "Does not handle unknown multiword names or lowercase city names; may classify a capitalized common word or a typo as LOC."
+        }
+      },
+      "initial_entities": [],
+      "initial_entity_positions": "original_text",
+      "entities": [],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_06",
+      "original_text": "Биогрфия Дмитрия Менделеева.",
+      "proposed_text": "Биогрфия Дмитрий Менделеев.",
+      "changes": [
+        {
+          "start": 9,
+          "end": 16,
+          "old": "Дмитрия",
+          "new": "Дмитрий",
+          "proposed_start": 9,
+          "proposed_end": 16,
+          "distance": 1,
+          "candidates": [
+            {
+              "key": "дмитрий",
+              "text": "Дмитрий",
+              "distance": 1,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            }
+          ],
+          "alternatives": [],
+          "candidate_count": 1,
+          "ambiguous": false,
+          "case_rule": "titlecase"
+        },
+        {
+          "start": 17,
+          "end": 27,
+          "old": "Менделеева",
+          "new": "Менделеев",
+          "proposed_start": 17,
+          "proposed_end": 26,
+          "distance": 1,
+          "candidates": [
+            {
+              "key": "менделеев",
+              "text": "Менделеев",
+              "distance": 1,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            }
+          ],
+          "alternatives": [],
+          "candidate_count": 1,
+          "ambiguous": false,
+          "case_rule": "titlecase"
+        }
+      ],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 8,
+          "original": "Биогрфия",
+          "proposed": "Биогрфия",
+          "proposed_start": 0,
+          "proposed_end": 8,
+          "status": "no_candidates",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 9,
+          "end": 16,
+          "original": "Дмитрия",
+          "proposed": "Дмитрий",
+          "proposed_start": 9,
+          "proposed_end": 16,
+          "status": "replaced",
+          "candidates": [
+            {
+              "key": "дмитрий",
+              "text": "Дмитрий",
+              "distance": 1,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            }
+          ],
+          "candidate_count": 1,
+          "ambiguous": false
+        },
+        {
+          "start": 17,
+          "end": 27,
+          "original": "Менделеева",
+          "proposed": "Менделеев",
+          "proposed_start": 17,
+          "proposed_end": 26,
+          "status": "replaced",
+          "candidates": [
+            {
+              "key": "менделеев",
+              "text": "Менделеев",
+              "distance": 1,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            }
+          ],
+          "candidate_count": 1,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 1,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": false,
+        "recognizer": {
+          "name": "dictionary_and_rules",
+          "context_rules": true,
+          "source_sha256": "71c3e682d37da7e52f946c2860a41487273250aaaa1428c0159a5c6eefd67e6f",
+          "rule": "город/города/городу/городом/городе + capitalized one-word city name, including hyphens",
+          "limitation": "Does not handle unknown multiword names or lowercase city names; may classify a capitalized common word or a typo as LOC."
+        }
+      },
+      "initial_entities": [
+        {
+          "start": 9,
+          "end": 27,
+          "text": "Дмитрия Менделеева",
+          "type": "PERSON",
+          "entity_id": "person_02",
+          "method": "dictionary"
+        }
+      ],
+      "initial_entity_positions": "original_text",
+      "entities": [
+        {
+          "start": 9,
+          "end": 26,
+          "text": "Дмитрий Менделеев",
+          "type": "PERSON",
+          "entity_id": "person_02",
+          "method": "dictionary"
+        }
+      ],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_07",
+      "original_text": "Исторрия Российской академии наук.",
+      "proposed_text": "История Российской академии наук.",
+      "changes": [
+        {
+          "start": 0,
+          "end": 8,
+          "old": "Исторрия",
+          "new": "История",
+          "proposed_start": 0,
+          "proposed_end": 7,
+          "distance": 1,
+          "candidates": [
+            {
+              "key": "история",
+              "text": "История",
+              "distance": 1,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            }
+          ],
+          "alternatives": [],
+          "candidate_count": 1,
+          "ambiguous": false,
+          "case_rule": "titlecase"
+        }
+      ],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 8,
+          "original": "Исторрия",
+          "proposed": "История",
+          "proposed_start": 0,
+          "proposed_end": 7,
+          "status": "replaced",
+          "candidates": [
+            {
+              "key": "история",
+              "text": "История",
+              "distance": 1,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            }
+          ],
+          "candidate_count": 1,
+          "ambiguous": false
+        },
+        {
+          "start": 9,
+          "end": 19,
+          "original": "Российской",
+          "proposed": "Российской",
+          "proposed_start": 8,
+          "proposed_end": 18,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 20,
+          "end": 28,
+          "original": "академии",
+          "proposed": "академии",
+          "proposed_start": 19,
+          "proposed_end": 27,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 29,
+          "end": 33,
+          "original": "наук",
+          "proposed": "наук",
+          "proposed_start": 28,
+          "proposed_end": 32,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 1,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": false,
+        "recognizer": {
+          "name": "dictionary_and_rules",
+          "context_rules": true,
+          "source_sha256": "71c3e682d37da7e52f946c2860a41487273250aaaa1428c0159a5c6eefd67e6f",
+          "rule": "город/города/городу/городом/городе + capitalized one-word city name, including hyphens",
+          "limitation": "Does not handle unknown multiword names or lowercase city names; may classify a capitalized common word or a typo as LOC."
+        }
+      },
+      "initial_entities": [
+        {
+          "start": 9,
+          "end": 33,
+          "text": "Российской академии наук",
+          "type": "ORG",
+          "entity_id": "org_05",
+          "method": "dictionary"
+        }
+      ],
+      "initial_entity_positions": "original_text",
+      "entities": [
+        {
+          "start": 8,
+          "end": 32,
+          "text": "Российской академии наук",
+          "type": "ORG",
+          "entity_id": "org_05",
+          "method": "dictionary"
+        }
+      ],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_08",
+      "original_text": "Научные открвтия Сергея Королёва.",
+      "proposed_text": "Научные открытия Сергей Королёв.",
+      "changes": [
+        {
+          "start": 8,
+          "end": 16,
+          "old": "открвтия",
+          "new": "открытия",
+          "proposed_start": 8,
+          "proposed_end": 16,
+          "distance": 1,
+          "candidates": [
+            {
+              "key": "открытия",
+              "text": "открытия",
+              "distance": 1,
+              "frequency": 2,
+              "case_rule": "lowercase"
+            }
+          ],
+          "alternatives": [],
+          "candidate_count": 1,
+          "ambiguous": false,
+          "case_rule": "lowercase"
+        },
+        {
+          "start": 17,
+          "end": 23,
+          "old": "Сергея",
+          "new": "Сергей",
+          "proposed_start": 17,
+          "proposed_end": 23,
+          "distance": 1,
+          "candidates": [
+            {
+              "key": "сергей",
+              "text": "Сергей",
+              "distance": 1,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            }
+          ],
+          "alternatives": [],
+          "candidate_count": 1,
+          "ambiguous": false,
+          "case_rule": "titlecase"
+        },
+        {
+          "start": 24,
+          "end": 32,
+          "old": "Королёва",
+          "new": "Королёв",
+          "proposed_start": 24,
+          "proposed_end": 31,
+          "distance": 1,
+          "candidates": [
+            {
+              "key": "королев",
+              "text": "Королёв",
+              "distance": 1,
+              "frequency": 3,
+              "case_rule": "titlecase"
+            }
+          ],
+          "alternatives": [],
+          "candidate_count": 1,
+          "ambiguous": false,
+          "case_rule": "titlecase"
+        }
+      ],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 7,
+          "original": "Научные",
+          "proposed": "Научные",
+          "proposed_start": 0,
+          "proposed_end": 7,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 8,
+          "end": 16,
+          "original": "открвтия",
+          "proposed": "открытия",
+          "proposed_start": 8,
+          "proposed_end": 16,
+          "status": "replaced",
+          "candidates": [
+            {
+              "key": "открытия",
+              "text": "открытия",
+              "distance": 1,
+              "frequency": 2,
+              "case_rule": "lowercase"
+            }
+          ],
+          "candidate_count": 1,
+          "ambiguous": false
+        },
+        {
+          "start": 17,
+          "end": 23,
+          "original": "Сергея",
+          "proposed": "Сергей",
+          "proposed_start": 17,
+          "proposed_end": 23,
+          "status": "replaced",
+          "candidates": [
+            {
+              "key": "сергей",
+              "text": "Сергей",
+              "distance": 1,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            }
+          ],
+          "candidate_count": 1,
+          "ambiguous": false
+        },
+        {
+          "start": 24,
+          "end": 32,
+          "original": "Королёва",
+          "proposed": "Королёв",
+          "proposed_start": 24,
+          "proposed_end": 31,
+          "status": "replaced",
+          "candidates": [
+            {
+              "key": "королев",
+              "text": "Королёв",
+              "distance": 1,
+              "frequency": 3,
+              "case_rule": "titlecase"
+            }
+          ],
+          "candidate_count": 1,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 1,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": false,
+        "recognizer": {
+          "name": "dictionary_and_rules",
+          "context_rules": true,
+          "source_sha256": "71c3e682d37da7e52f946c2860a41487273250aaaa1428c0159a5c6eefd67e6f",
+          "rule": "город/города/городу/городом/городе + capitalized one-word city name, including hyphens",
+          "limitation": "Does not handle unknown multiword names or lowercase city names; may classify a capitalized common word or a typo as LOC."
+        }
+      },
+      "initial_entities": [
+        {
+          "start": 17,
+          "end": 32,
+          "text": "Сергея Королёва",
+          "type": "PERSON",
+          "entity_id": "person_04",
+          "method": "dictionary"
+        }
+      ],
+      "initial_entity_positions": "original_text",
+      "entities": [
+        {
+          "start": 17,
+          "end": 31,
+          "text": "Сергей Королёв",
+          "type": "PERSON",
+          "entity_id": "person_04",
+          "method": "dictionary"
+        }
+      ],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_09",
+      "original_text": "Где учлися Николай Лобачевский?",
+      "proposed_text": "Где учлися Николай Лобачевский?",
+      "changes": [],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 3,
+          "original": "Где",
+          "proposed": "Где",
+          "proposed_start": 0,
+          "proposed_end": 3,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 4,
+          "end": 10,
+          "original": "учлися",
+          "proposed": "учлися",
+          "proposed_start": 4,
+          "proposed_end": 10,
+          "status": "no_candidates",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 11,
+          "end": 18,
+          "original": "Николай",
+          "proposed": "Николай",
+          "proposed_start": 11,
+          "proposed_end": 18,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 19,
+          "end": 30,
+          "original": "Лобачевский",
+          "proposed": "Лобачевский",
+          "proposed_start": 19,
+          "proposed_end": 30,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 1,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": false,
+        "recognizer": {
+          "name": "dictionary_and_rules",
+          "context_rules": true,
+          "source_sha256": "71c3e682d37da7e52f946c2860a41487273250aaaa1428c0159a5c6eefd67e6f",
+          "rule": "город/города/городу/городом/городе + capitalized one-word city name, including hyphens",
+          "limitation": "Does not handle unknown multiword names or lowercase city names; may classify a capitalized common word or a typo as LOC."
+        }
+      },
+      "initial_entities": [
+        {
+          "start": 11,
+          "end": 30,
+          "text": "Николай Лобачевский",
+          "type": "PERSON",
+          "entity_id": "person_07",
+          "method": "dictionary"
+        }
+      ],
+      "initial_entity_positions": "original_text",
+      "entities": [
+        {
+          "start": 11,
+          "end": 30,
+          "text": "Николай Лобачевский",
+          "type": "PERSON",
+          "entity_id": "person_07",
+          "method": "dictionary"
+        }
+      ],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_10",
+      "original_text": "Расскажи об образовнии в Казани.",
+      "proposed_text": "Расскажи от образовнии в Казани.",
+      "changes": [
+        {
+          "start": 9,
+          "end": 11,
+          "old": "об",
+          "new": "от",
+          "proposed_start": 9,
+          "proposed_end": 11,
+          "distance": 1,
+          "candidates": [
+            {
+              "key": "от",
+              "text": "от",
+              "distance": 1,
+              "frequency": 9,
+              "case_rule": "lowercase"
+            },
+            {
+              "key": "о",
+              "text": "о",
+              "distance": 1,
+              "frequency": 7,
+              "case_rule": "lowercase"
+            },
+            {
+              "key": "он",
+              "text": "он",
+              "distance": 1,
+              "frequency": 7,
+              "case_rule": "lowercase"
+            }
+          ],
+          "alternatives": [
+            {
+              "key": "о",
+              "text": "о",
+              "distance": 1,
+              "frequency": 7,
+              "case_rule": "lowercase"
+            },
+            {
+              "key": "он",
+              "text": "он",
+              "distance": 1,
+              "frequency": 7,
+              "case_rule": "lowercase"
+            }
+          ],
+          "candidate_count": 4,
+          "ambiguous": true,
+          "case_rule": "lowercase"
+        }
+      ],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 8,
+          "original": "Расскажи",
+          "proposed": "Расскажи",
+          "proposed_start": 0,
+          "proposed_end": 8,
+          "status": "no_candidates",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 9,
+          "end": 11,
+          "original": "об",
+          "proposed": "от",
+          "proposed_start": 9,
+          "proposed_end": 11,
+          "status": "replaced",
+          "candidates": [
+            {
+              "key": "от",
+              "text": "от",
+              "distance": 1,
+              "frequency": 9,
+              "case_rule": "lowercase"
+            },
+            {
+              "key": "о",
+              "text": "о",
+              "distance": 1,
+              "frequency": 7,
+              "case_rule": "lowercase"
+            },
+            {
+              "key": "он",
+              "text": "он",
+              "distance": 1,
+              "frequency": 7,
+              "case_rule": "lowercase"
+            }
+          ],
+          "candidate_count": 4,
+          "ambiguous": true
+        },
+        {
+          "start": 12,
+          "end": 22,
+          "original": "образовнии",
+          "proposed": "образовнии",
+          "proposed_start": 12,
+          "proposed_end": 22,
+          "status": "no_candidates",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 23,
+          "end": 24,
+          "original": "в",
+          "proposed": "в",
+          "proposed_start": 23,
+          "proposed_end": 24,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 25,
+          "end": 31,
+          "original": "Казани",
+          "proposed": "Казани",
+          "proposed_start": 25,
+          "proposed_end": 31,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 1,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": false,
+        "recognizer": {
+          "name": "dictionary_and_rules",
+          "context_rules": true,
+          "source_sha256": "71c3e682d37da7e52f946c2860a41487273250aaaa1428c0159a5c6eefd67e6f",
+          "rule": "город/города/городу/городом/городе + capitalized one-word city name, including hyphens",
+          "limitation": "Does not handle unknown multiword names or lowercase city names; may classify a capitalized common word or a typo as LOC."
+        }
+      },
+      "initial_entities": [
+        {
+          "start": 25,
+          "end": 31,
+          "text": "Казани",
+          "type": "LOC",
+          "entity_id": "loc_03",
+          "method": "dictionary"
+        }
+      ],
+      "initial_entity_positions": "original_text",
+      "entities": [
+        {
+          "start": 25,
+          "end": 31,
+          "text": "Казани",
+          "type": "LOC",
+          "entity_id": "loc_03",
+          "method": "dictionary"
+        }
+      ],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_11",
+      "original_text": "Наука в Маскве.",
+      "proposed_text": "Наук в Москве.",
+      "changes": [
+        {
+          "start": 0,
+          "end": 5,
+          "old": "Наука",
+          "new": "Наук",
+          "proposed_start": 0,
+          "proposed_end": 4,
+          "distance": 1,
+          "candidates": [
+            {
+              "key": "наук",
+              "text": "Наук",
+              "distance": 1,
+              "frequency": 30,
+              "case_rule": "titlecase"
+            },
+            {
+              "key": "науки",
+              "text": "Науки",
+              "distance": 1,
+              "frequency": 4,
+              "case_rule": "titlecase"
+            },
+            {
+              "key": "науку",
+              "text": "Науку",
+              "distance": 1,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            }
+          ],
+          "alternatives": [
+            {
+              "key": "науки",
+              "text": "Науки",
+              "distance": 1,
+              "frequency": 4,
+              "case_rule": "titlecase"
+            },
+            {
+              "key": "науку",
+              "text": "Науку",
+              "distance": 1,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            }
+          ],
+          "candidate_count": 3,
+          "ambiguous": true,
+          "case_rule": "titlecase"
+        },
+        {
+          "start": 8,
+          "end": 14,
+          "old": "Маскве",
+          "new": "Москве",
+          "proposed_start": 7,
+          "proposed_end": 13,
+          "distance": 1,
+          "candidates": [
+            {
+              "key": "москве",
+              "text": "Москве",
+              "distance": 1,
+              "frequency": 6,
+              "case_rule": "titlecase"
+            }
+          ],
+          "alternatives": [],
+          "candidate_count": 1,
+          "ambiguous": false,
+          "case_rule": "titlecase"
+        }
+      ],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 5,
+          "original": "Наука",
+          "proposed": "Наук",
+          "proposed_start": 0,
+          "proposed_end": 4,
+          "status": "replaced",
+          "candidates": [
+            {
+              "key": "наук",
+              "text": "Наук",
+              "distance": 1,
+              "frequency": 30,
+              "case_rule": "titlecase"
+            },
+            {
+              "key": "науки",
+              "text": "Науки",
+              "distance": 1,
+              "frequency": 4,
+              "case_rule": "titlecase"
+            },
+            {
+              "key": "науку",
+              "text": "Науку",
+              "distance": 1,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            }
+          ],
+          "candidate_count": 3,
+          "ambiguous": true
+        },
+        {
+          "start": 6,
+          "end": 7,
+          "original": "в",
+          "proposed": "в",
+          "proposed_start": 5,
+          "proposed_end": 6,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 8,
+          "end": 14,
+          "original": "Маскве",
+          "proposed": "Москве",
+          "proposed_start": 7,
+          "proposed_end": 13,
+          "status": "replaced",
+          "candidates": [
+            {
+              "key": "москве",
+              "text": "Москве",
+              "distance": 1,
+              "frequency": 6,
+              "case_rule": "titlecase"
+            }
+          ],
+          "candidate_count": 1,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 1,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": false,
+        "recognizer": {
+          "name": "dictionary_and_rules",
+          "context_rules": true,
+          "source_sha256": "71c3e682d37da7e52f946c2860a41487273250aaaa1428c0159a5c6eefd67e6f",
+          "rule": "город/города/городу/городом/городе + capitalized one-word city name, including hyphens",
+          "limitation": "Does not handle unknown multiword names or lowercase city names; may classify a capitalized common word or a typo as LOC."
+        }
+      },
+      "initial_entities": [],
+      "initial_entity_positions": "original_text",
+      "entities": [
+        {
+          "start": 7,
+          "end": 13,
+          "text": "Москве",
+          "type": "LOC",
+          "entity_id": "loc_01",
+          "method": "dictionary"
+        }
+      ],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_12",
+      "original_text": "Биография Пушкна.",
+      "proposed_text": "Биография Пушкина.",
+      "changes": [
+        {
+          "start": 10,
+          "end": 16,
+          "old": "Пушкна",
+          "new": "Пушкина",
+          "proposed_start": 10,
+          "proposed_end": 17,
+          "distance": 1,
+          "candidates": [
+            {
+              "key": "пушкина",
+              "text": "Пушкина",
+              "distance": 1,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            }
+          ],
+          "alternatives": [],
+          "candidate_count": 1,
+          "ambiguous": false,
+          "case_rule": "titlecase"
+        }
+      ],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 9,
+          "original": "Биография",
+          "proposed": "Биография",
+          "proposed_start": 0,
+          "proposed_end": 9,
+          "status": "no_candidates",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 10,
+          "end": 16,
+          "original": "Пушкна",
+          "proposed": "Пушкина",
+          "proposed_start": 10,
+          "proposed_end": 17,
+          "status": "replaced",
+          "candidates": [
+            {
+              "key": "пушкина",
+              "text": "Пушкина",
+              "distance": 1,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            }
+          ],
+          "candidate_count": 1,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 1,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": false,
+        "recognizer": {
+          "name": "dictionary_and_rules",
+          "context_rules": true,
+          "source_sha256": "71c3e682d37da7e52f946c2860a41487273250aaaa1428c0159a5c6eefd67e6f",
+          "rule": "город/города/городу/городом/городе + capitalized one-word city name, including hyphens",
+          "limitation": "Does not handle unknown multiword names or lowercase city names; may classify a capitalized common word or a typo as LOC."
+        }
+      },
+      "initial_entities": [],
+      "initial_entity_positions": "original_text",
+      "entities": [
+        {
+          "start": 10,
+          "end": 17,
+          "text": "Пушкина",
+          "type": "PERSON",
+          "entity_id": "person_03",
+          "method": "dictionary"
+        }
+      ],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_13",
+      "original_text": "Где расположен МГГУ?",
+      "proposed_text": "Где расположен МГУ?",
+      "changes": [
+        {
+          "start": 15,
+          "end": 19,
+          "old": "МГГУ",
+          "new": "МГУ",
+          "proposed_start": 15,
+          "proposed_end": 18,
+          "distance": 1,
+          "candidates": [
+            {
+              "key": "мгу",
+              "text": "МГУ",
+              "distance": 1,
+              "frequency": 2,
+              "case_rule": "uppercase"
+            }
+          ],
+          "alternatives": [],
+          "candidate_count": 1,
+          "ambiguous": false,
+          "case_rule": "uppercase"
+        }
+      ],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 3,
+          "original": "Где",
+          "proposed": "Где",
+          "proposed_start": 0,
+          "proposed_end": 3,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 4,
+          "end": 14,
+          "original": "расположен",
+          "proposed": "расположен",
+          "proposed_start": 4,
+          "proposed_end": 14,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 15,
+          "end": 19,
+          "original": "МГГУ",
+          "proposed": "МГУ",
+          "proposed_start": 15,
+          "proposed_end": 18,
+          "status": "replaced",
+          "candidates": [
+            {
+              "key": "мгу",
+              "text": "МГУ",
+              "distance": 1,
+              "frequency": 2,
+              "case_rule": "uppercase"
+            }
+          ],
+          "candidate_count": 1,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 1,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": false,
+        "recognizer": {
+          "name": "dictionary_and_rules",
+          "context_rules": true,
+          "source_sha256": "71c3e682d37da7e52f946c2860a41487273250aaaa1428c0159a5c6eefd67e6f",
+          "rule": "город/города/городу/городом/городе + capitalized one-word city name, including hyphens",
+          "limitation": "Does not handle unknown multiword names or lowercase city names; may classify a capitalized common word or a typo as LOC."
+        }
+      },
+      "initial_entities": [],
+      "initial_entity_positions": "original_text",
+      "entities": [
+        {
+          "start": 15,
+          "end": 18,
+          "text": "МГУ",
+          "type": "ORG",
+          "entity_id": "org_01",
+          "method": "dictionary"
+        }
+      ],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_14",
+      "original_text": "Когда основан Нижний Новгроод?",
+      "proposed_text": "Когда основан Нижний Новгроод?",
+      "changes": [],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 5,
+          "original": "Когда",
+          "proposed": "Когда",
+          "proposed_start": 0,
+          "proposed_end": 5,
+          "status": "no_candidates",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 6,
+          "end": 13,
+          "original": "основан",
+          "proposed": "основан",
+          "proposed_start": 6,
+          "proposed_end": 13,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 14,
+          "end": 20,
+          "original": "Нижний",
+          "proposed": "Нижний",
+          "proposed_start": 14,
+          "proposed_end": 20,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 21,
+          "end": 29,
+          "original": "Новгроод",
+          "proposed": "Новгроод",
+          "proposed_start": 21,
+          "proposed_end": 29,
+          "status": "no_candidates",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 1,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": false,
+        "recognizer": {
+          "name": "dictionary_and_rules",
+          "context_rules": true,
+          "source_sha256": "71c3e682d37da7e52f946c2860a41487273250aaaa1428c0159a5c6eefd67e6f",
+          "rule": "город/города/городу/городом/городе + capitalized one-word city name, including hyphens",
+          "limitation": "Does not handle unknown multiword names or lowercase city names; may classify a capitalized common word or a typo as LOC."
+        }
+      },
+      "initial_entities": [],
+      "initial_entity_positions": "original_text",
+      "entities": [],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_15",
+      "original_text": "Работы Ломоносва.",
+      "proposed_text": "Работу Ломоносова.",
+      "changes": [
+        {
+          "start": 0,
+          "end": 6,
+          "old": "Работы",
+          "new": "Работу",
+          "proposed_start": 0,
+          "proposed_end": 6,
+          "distance": 1,
+          "candidates": [
+            {
+              "key": "работу",
+              "text": "Работу",
+              "distance": 1,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            }
+          ],
+          "alternatives": [],
+          "candidate_count": 1,
+          "ambiguous": false,
+          "case_rule": "titlecase"
+        },
+        {
+          "start": 7,
+          "end": 16,
+          "old": "Ломоносва",
+          "new": "Ломоносова",
+          "proposed_start": 7,
+          "proposed_end": 17,
+          "distance": 1,
+          "candidates": [
+            {
+              "key": "ломоносова",
+              "text": "Ломоносова",
+              "distance": 1,
+              "frequency": 3,
+              "case_rule": "titlecase"
+            }
+          ],
+          "alternatives": [],
+          "candidate_count": 1,
+          "ambiguous": false,
+          "case_rule": "titlecase"
+        }
+      ],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 6,
+          "original": "Работы",
+          "proposed": "Работу",
+          "proposed_start": 0,
+          "proposed_end": 6,
+          "status": "replaced",
+          "candidates": [
+            {
+              "key": "работу",
+              "text": "Работу",
+              "distance": 1,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            }
+          ],
+          "candidate_count": 1,
+          "ambiguous": false
+        },
+        {
+          "start": 7,
+          "end": 16,
+          "original": "Ломоносва",
+          "proposed": "Ломоносова",
+          "proposed_start": 7,
+          "proposed_end": 17,
+          "status": "replaced",
+          "candidates": [
+            {
+              "key": "ломоносова",
+              "text": "Ломоносова",
+              "distance": 1,
+              "frequency": 3,
+              "case_rule": "titlecase"
+            }
+          ],
+          "candidate_count": 1,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 1,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": false,
+        "recognizer": {
+          "name": "dictionary_and_rules",
+          "context_rules": true,
+          "source_sha256": "71c3e682d37da7e52f946c2860a41487273250aaaa1428c0159a5c6eefd67e6f",
+          "rule": "город/города/городу/городом/городе + capitalized one-word city name, including hyphens",
+          "limitation": "Does not handle unknown multiword names or lowercase city names; may classify a capitalized common word or a typo as LOC."
+        }
+      },
+      "initial_entities": [],
+      "initial_entity_positions": "original_text",
+      "entities": [
+        {
+          "start": 7,
+          "end": 17,
+          "text": "Ломоносова",
+          "type": "PERSON",
+          "entity_id": "person_01",
+          "method": "dictionary"
+        }
+      ],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_16",
+      "original_text": "Исследования Пафнутия Чебышёва.",
+      "proposed_text": "Исследования Пафнутий Чебышёв.",
+      "changes": [
+        {
+          "start": 13,
+          "end": 21,
+          "old": "Пафнутия",
+          "new": "Пафнутий",
+          "proposed_start": 13,
+          "proposed_end": 21,
+          "distance": 1,
+          "candidates": [
+            {
+              "key": "пафнутий",
+              "text": "Пафнутий",
+              "distance": 1,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            }
+          ],
+          "alternatives": [],
+          "candidate_count": 1,
+          "ambiguous": false,
+          "case_rule": "titlecase"
+        },
+        {
+          "start": 22,
+          "end": 30,
+          "old": "Чебышёва",
+          "new": "Чебышёв",
+          "proposed_start": 22,
+          "proposed_end": 29,
+          "distance": 1,
+          "candidates": [
+            {
+              "key": "чебышев",
+              "text": "Чебышёв",
+              "distance": 1,
+              "frequency": 3,
+              "case_rule": "titlecase"
+            }
+          ],
+          "alternatives": [],
+          "candidate_count": 1,
+          "ambiguous": false,
+          "case_rule": "titlecase"
+        }
+      ],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 12,
+          "original": "Исследования",
+          "proposed": "Исследования",
+          "proposed_start": 0,
+          "proposed_end": 12,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 13,
+          "end": 21,
+          "original": "Пафнутия",
+          "proposed": "Пафнутий",
+          "proposed_start": 13,
+          "proposed_end": 21,
+          "status": "replaced",
+          "candidates": [
+            {
+              "key": "пафнутий",
+              "text": "Пафнутий",
+              "distance": 1,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            }
+          ],
+          "candidate_count": 1,
+          "ambiguous": false
+        },
+        {
+          "start": 22,
+          "end": 30,
+          "original": "Чебышёва",
+          "proposed": "Чебышёв",
+          "proposed_start": 22,
+          "proposed_end": 29,
+          "status": "replaced",
+          "candidates": [
+            {
+              "key": "чебышев",
+              "text": "Чебышёв",
+              "distance": 1,
+              "frequency": 3,
+              "case_rule": "titlecase"
+            }
+          ],
+          "candidate_count": 1,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 1,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": false,
+        "recognizer": {
+          "name": "dictionary_and_rules",
+          "context_rules": true,
+          "source_sha256": "71c3e682d37da7e52f946c2860a41487273250aaaa1428c0159a5c6eefd67e6f",
+          "rule": "город/города/городу/городом/городе + capitalized one-word city name, including hyphens",
+          "limitation": "Does not handle unknown multiword names or lowercase city names; may classify a capitalized common word or a typo as LOC."
+        }
+      },
+      "initial_entities": [
+        {
+          "start": 13,
+          "end": 30,
+          "text": "Пафнутия Чебышёва",
+          "type": "PERSON",
+          "entity_id": "person_08",
+          "method": "dictionary"
+        }
+      ],
+      "initial_entity_positions": "original_text",
+      "entities": [
+        {
+          "start": 13,
+          "end": 29,
+          "text": "Пафнутий Чебышёв",
+          "type": "PERSON",
+          "entity_id": "person_08",
+          "method": "dictionary"
+        }
+      ],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_17",
+      "original_text": "Труды Софьи Ковалевской.",
+      "proposed_text": "Труда Софья Ковалевской.",
+      "changes": [
+        {
+          "start": 0,
+          "end": 5,
+          "old": "Труды",
+          "new": "Труда",
+          "proposed_start": 0,
+          "proposed_end": 5,
+          "distance": 1,
+          "candidates": [
+            {
+              "key": "труда",
+              "text": "Труда",
+              "distance": 1,
+              "frequency": 2,
+              "case_rule": "titlecase"
+            }
+          ],
+          "alternatives": [],
+          "candidate_count": 1,
+          "ambiguous": false,
+          "case_rule": "titlecase"
+        },
+        {
+          "start": 6,
+          "end": 11,
+          "old": "Софьи",
+          "new": "Софья",
+          "proposed_start": 6,
+          "proposed_end": 11,
+          "distance": 1,
+          "candidates": [
+            {
+              "key": "софья",
+              "text": "Софья",
+              "distance": 1,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            }
+          ],
+          "alternatives": [],
+          "candidate_count": 1,
+          "ambiguous": false,
+          "case_rule": "titlecase"
+        }
+      ],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 5,
+          "original": "Труды",
+          "proposed": "Труда",
+          "proposed_start": 0,
+          "proposed_end": 5,
+          "status": "replaced",
+          "candidates": [
+            {
+              "key": "труда",
+              "text": "Труда",
+              "distance": 1,
+              "frequency": 2,
+              "case_rule": "titlecase"
+            }
+          ],
+          "candidate_count": 1,
+          "ambiguous": false
+        },
+        {
+          "start": 6,
+          "end": 11,
+          "original": "Софьи",
+          "proposed": "Софья",
+          "proposed_start": 6,
+          "proposed_end": 11,
+          "status": "replaced",
+          "candidates": [
+            {
+              "key": "софья",
+              "text": "Софья",
+              "distance": 1,
+              "frequency": 1,
+              "case_rule": "titlecase"
+            }
+          ],
+          "candidate_count": 1,
+          "ambiguous": false
+        },
+        {
+          "start": 12,
+          "end": 23,
+          "original": "Ковалевской",
+          "proposed": "Ковалевской",
+          "proposed_start": 12,
+          "proposed_end": 23,
+          "status": "no_candidates",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 1,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": false,
+        "recognizer": {
+          "name": "dictionary_and_rules",
+          "context_rules": true,
+          "source_sha256": "71c3e682d37da7e52f946c2860a41487273250aaaa1428c0159a5c6eefd67e6f",
+          "rule": "город/города/городу/городом/городе + capitalized one-word city name, including hyphens",
+          "limitation": "Does not handle unknown multiword names or lowercase city names; may classify a capitalized common word or a typo as LOC."
+        }
+      },
+      "initial_entities": [
+        {
+          "start": 6,
+          "end": 23,
+          "text": "Софьи Ковалевской",
+          "type": "PERSON",
+          "entity_id": "person_06",
+          "method": "dictionary"
+        }
+      ],
+      "initial_entity_positions": "original_text",
+      "entities": [
+        {
+          "start": 12,
+          "end": 23,
+          "text": "Ковалевской",
+          "type": "PERSON",
+          "entity_id": "person_06",
+          "method": "dictionary"
+        }
+      ],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_18",
+      "original_text": "Постройки Осипа Бове.",
+      "proposed_text": "Постройки Осипа Бове.",
+      "changes": [],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 9,
+          "original": "Постройки",
+          "proposed": "Постройки",
+          "proposed_start": 0,
+          "proposed_end": 9,
+          "status": "no_candidates",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 10,
+          "end": 15,
+          "original": "Осипа",
+          "proposed": "Осипа",
+          "proposed_start": 10,
+          "proposed_end": 15,
+          "status": "no_candidates",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 16,
+          "end": 20,
+          "original": "Бове",
+          "proposed": "Бове",
+          "proposed_start": 16,
+          "proposed_end": 20,
+          "status": "no_candidates",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 1,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": false,
+        "recognizer": {
+          "name": "dictionary_and_rules",
+          "context_rules": true,
+          "source_sha256": "71c3e682d37da7e52f946c2860a41487273250aaaa1428c0159a5c6eefd67e6f",
+          "rule": "город/города/городу/городом/городе + capitalized one-word city name, including hyphens",
+          "limitation": "Does not handle unknown multiword names or lowercase city names; may classify a capitalized common word or a typo as LOC."
+        }
+      },
+      "initial_entities": [
+        {
+          "start": 10,
+          "end": 20,
+          "text": "Осипа Бове",
+          "type": "PERSON",
+          "entity_id": "person_09",
+          "method": "dictionary"
+        }
+      ],
+      "initial_entity_positions": "original_text",
+      "entities": [
+        {
+          "start": 10,
+          "end": 20,
+          "text": "Осипа Бове",
+          "type": "PERSON",
+          "entity_id": "person_09",
+          "method": "dictionary"
+        }
+      ],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_19",
+      "original_text": "Путеводитель по Устюжне.",
+      "proposed_text": "Путеводитель по Устюжне.",
+      "changes": [],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 12,
+          "original": "Путеводитель",
+          "proposed": "Путеводитель",
+          "proposed_start": 0,
+          "proposed_end": 12,
+          "status": "no_candidates",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 13,
+          "end": 15,
+          "original": "по",
+          "proposed": "по",
+          "proposed_start": 13,
+          "proposed_end": 15,
+          "status": "known",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        },
+        {
+          "start": 16,
+          "end": 23,
+          "original": "Устюжне",
+          "proposed": "Устюжне",
+          "proposed_start": 16,
+          "proposed_end": 23,
+          "status": "no_candidates",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 1,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": false,
+        "recognizer": {
+          "name": "dictionary_and_rules",
+          "context_rules": true,
+          "source_sha256": "71c3e682d37da7e52f946c2860a41487273250aaaa1428c0159a5c6eefd67e6f",
+          "rule": "город/города/городу/городом/городе + capitalized one-word city name, including hyphens",
+          "limitation": "Does not handle unknown multiword names or lowercase city names; may classify a capitalized common word or a typo as LOC."
+        }
+      },
+      "initial_entities": [
+        {
+          "start": 16,
+          "end": 23,
+          "text": "Устюжне",
+          "type": "LOC",
+          "entity_id": "loc_09",
+          "method": "dictionary"
+        }
+      ],
+      "initial_entity_positions": "original_text",
+      "entities": [
+        {
+          "start": 16,
+          "end": 23,
+          "text": "Устюжне",
+          "type": "LOC",
+          "entity_id": "loc_09",
+          "method": "dictionary"
+        }
+      ],
+      "entity_positions": "proposed_text"
+    },
+    {
+      "id": "dev_20",
+      "original_text": "Музеи Торжка.",
+      "proposed_text": "Музей Торжка.",
+      "changes": [
+        {
+          "start": 0,
+          "end": 5,
+          "old": "Музеи",
+          "new": "Музей",
+          "proposed_start": 0,
+          "proposed_end": 5,
+          "distance": 1,
+          "candidates": [
+            {
+              "key": "музей",
+              "text": "Музей",
+              "distance": 1,
+              "frequency": 5,
+              "case_rule": "titlecase"
+            },
+            {
+              "key": "музея",
+              "text": "Музея",
+              "distance": 1,
+              "frequency": 3,
+              "case_rule": "titlecase"
+            }
+          ],
+          "alternatives": [
+            {
+              "key": "музея",
+              "text": "Музея",
+              "distance": 1,
+              "frequency": 3,
+              "case_rule": "titlecase"
+            }
+          ],
+          "candidate_count": 2,
+          "ambiguous": true,
+          "case_rule": "titlecase"
+        }
+      ],
+      "tokens": [
+        {
+          "start": 0,
+          "end": 5,
+          "original": "Музеи",
+          "proposed": "Музей",
+          "proposed_start": 0,
+          "proposed_end": 5,
+          "status": "replaced",
+          "candidates": [
+            {
+              "key": "музей",
+              "text": "Музей",
+              "distance": 1,
+              "frequency": 5,
+              "case_rule": "titlecase"
+            },
+            {
+              "key": "музея",
+              "text": "Музея",
+              "distance": 1,
+              "frequency": 3,
+              "case_rule": "titlecase"
+            }
+          ],
+          "candidate_count": 2,
+          "ambiguous": true
+        },
+        {
+          "start": 6,
+          "end": 12,
+          "original": "Торжка",
+          "proposed": "Торжка",
+          "proposed_start": 6,
+          "proposed_end": 12,
+          "status": "no_candidates",
+          "candidates": [],
+          "candidate_count": 0,
+          "ambiguous": false
+        }
+      ],
+      "protected_spans": [],
+      "source_positions": "original_text",
+      "proposed_positions": "proposed_text",
+      "message": "",
+      "config": {
+        "threshold": 1,
+        "use_frequencies": true,
+        "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+        "max_candidates": 3,
+        "order": "B",
+        "protect_entities": false,
+        "recognizer": {
+          "name": "dictionary_and_rules",
+          "context_rules": true,
+          "source_sha256": "71c3e682d37da7e52f946c2860a41487273250aaaa1428c0159a5c6eefd67e6f",
+          "rule": "город/города/городу/городом/городе + capitalized one-word city name, including hyphens",
+          "limitation": "Does not handle unknown multiword names or lowercase city names; may classify a capitalized common word or a typo as LOC."
+        }
+      },
+      "initial_entities": [
+        {
+          "start": 6,
+          "end": 12,
+          "text": "Торжка",
+          "type": "LOC",
+          "entity_id": "loc_10",
+          "method": "dictionary"
+        }
+      ],
+      "initial_entity_positions": "original_text",
+      "entities": [
+        {
+          "start": 6,
+          "end": 12,
+          "text": "Торжка",
+          "type": "LOC",
+          "entity_id": "loc_10",
+          "method": "dictionary"
+        }
+      ],
+      "entity_positions": "proposed_text"
+    }
+  ],
+  "metrics": {
+    "queries": 20,
+    "spelling": {
+      "corrected_typos": 6,
+      "typo_tokens": 10,
+      "damaged_correct_tokens": 15,
+      "correct_tokens": 58,
+      "top3_hits": 6,
+      "correction_rate": 0.6,
+      "false_change_rate": 0.25862068965517243,
+      "top3_rate": 0.6
+    },
+    "ner": {
+      "tp": 17,
+      "fp": 1,
+      "fn": 3,
+      "precision": 0.9444444444444444,
+      "recall": 0.85,
+      "f1": 0.8947368421052632
+    },
+    "ner_by_type": {
+      "PERSON": {
+        "tp": 9,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.9,
+        "recall": 0.9,
+        "f1": 0.9
+      },
+      "ORG": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "LOC": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.7142857142857143,
+        "f1": 0.8333333333333333
+      }
+    },
+    "transfer_failure_count": 0,
+    "by_group": {
+      "clean": {
+        "queries": 5,
+        "spelling": {
+          "corrected_typos": 0,
+          "typo_tokens": 0,
+          "damaged_correct_tokens": 3,
+          "correct_tokens": 20,
+          "top3_hits": 0,
+          "correction_rate": 0.0,
+          "false_change_rate": 0.15,
+          "top3_rate": 0.0
+        },
+        "ner": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1": 0.888888888888889
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "ORG": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "LOC": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          }
+        },
+        "transfer_failure_count": 0
+      },
+      "entity_typo": {
+        "queries": 5,
+        "spelling": {
+          "corrected_typos": 4,
+          "typo_tokens": 5,
+          "damaged_correct_tokens": 2,
+          "correct_tokens": 9,
+          "top3_hits": 4,
+          "correction_rate": 0.8,
+          "false_change_rate": 0.2222222222222222,
+          "top3_rate": 0.8
+        },
+        "ner": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1": 0.888888888888889
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "ORG": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "LOC": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 1,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          }
+        },
+        "transfer_failure_count": 0
+      },
+      "ordinary_typo": {
+        "queries": 5,
+        "spelling": {
+          "corrected_typos": 2,
+          "typo_tokens": 5,
+          "damaged_correct_tokens": 5,
+          "correct_tokens": 15,
+          "top3_hits": 2,
+          "correction_rate": 0.4,
+          "false_change_rate": 0.3333333333333333,
+          "top3_rate": 0.4
+        },
+        "ner": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "ORG": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "LOC": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "transfer_failure_count": 0
+      },
+      "rare_correct": {
+        "queries": 5,
+        "spelling": {
+          "corrected_typos": 0,
+          "typo_tokens": 0,
+          "damaged_correct_tokens": 5,
+          "correct_tokens": 14,
+          "top3_hits": 0,
+          "correction_rate": 0.0,
+          "false_change_rate": 0.35714285714285715,
+          "top3_rate": 0.0
+        },
+        "ner": {
+          "tp": 4,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.8,
+          "recall": 0.8,
+          "f1": 0.8000000000000002
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 2,
+            "fp": 1,
+            "fn": 1,
+            "precision": 0.6666666666666666,
+            "recall": 0.6666666666666666,
+            "f1": 0.6666666666666666
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "LOC": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "transfer_failure_count": 0
+      }
+    },
+    "query_details": [
+      {
+        "id": "dev_01",
+        "group": "clean",
+        "spelling_counts": {
+          "corrected_typos": 0,
+          "typo_tokens": 0,
+          "damaged_correct_tokens": 0,
+          "correct_tokens": 3,
+          "top3_hits": 0
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 10,
+            "end": 28,
+            "type": "PERSON",
+            "text": "Михаила Ломоносова"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_02",
+        "group": "clean",
+        "spelling_counts": {
+          "corrected_typos": 0,
+          "typo_tokens": 0,
+          "damaged_correct_tokens": 1,
+          "correct_tokens": 5,
+          "top3_hits": 0
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 14,
+            "end": 52,
+            "type": "ORG",
+            "text": "Московский государственный университет"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_03",
+        "group": "clean",
+        "spelling_counts": {
+          "corrected_typos": 0,
+          "typo_tokens": 0,
+          "damaged_correct_tokens": 1,
+          "correct_tokens": 3,
+          "top3_hits": 0
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 8,
+            "end": 24,
+            "type": "LOC",
+            "text": "Нижнего Новгород"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_04",
+        "group": "clean",
+        "spelling_counts": {
+          "corrected_typos": 0,
+          "typo_tokens": 0,
+          "damaged_correct_tokens": 1,
+          "correct_tokens": 5,
+          "top3_hits": 0
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 6,
+            "end": 19,
+            "type": "PERSON",
+            "text": "Юрия Гагарина"
+          },
+          {
+            "start": 22,
+            "end": 29,
+            "type": "LOC",
+            "text": "Москвой"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_05",
+        "group": "clean",
+        "spelling_counts": {
+          "corrected_typos": 0,
+          "typo_tokens": 0,
+          "damaged_correct_tokens": 0,
+          "correct_tokens": 4,
+          "top3_hits": 0
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_06",
+        "group": "ordinary_typo",
+        "spelling_counts": {
+          "corrected_typos": 0,
+          "typo_tokens": 1,
+          "damaged_correct_tokens": 2,
+          "correct_tokens": 2,
+          "top3_hits": 0
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 9,
+            "end": 26,
+            "type": "PERSON",
+            "text": "Дмитрий Менделеев"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_07",
+        "group": "ordinary_typo",
+        "spelling_counts": {
+          "corrected_typos": 1,
+          "typo_tokens": 1,
+          "damaged_correct_tokens": 0,
+          "correct_tokens": 3,
+          "top3_hits": 1
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 8,
+            "end": 32,
+            "type": "ORG",
+            "text": "Российской академии наук"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_08",
+        "group": "ordinary_typo",
+        "spelling_counts": {
+          "corrected_typos": 1,
+          "typo_tokens": 1,
+          "damaged_correct_tokens": 2,
+          "correct_tokens": 3,
+          "top3_hits": 1
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 17,
+            "end": 31,
+            "type": "PERSON",
+            "text": "Сергей Королёв"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_09",
+        "group": "ordinary_typo",
+        "spelling_counts": {
+          "corrected_typos": 0,
+          "typo_tokens": 1,
+          "damaged_correct_tokens": 0,
+          "correct_tokens": 3,
+          "top3_hits": 0
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 11,
+            "end": 30,
+            "type": "PERSON",
+            "text": "Николай Лобачевский"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_10",
+        "group": "ordinary_typo",
+        "spelling_counts": {
+          "corrected_typos": 0,
+          "typo_tokens": 1,
+          "damaged_correct_tokens": 1,
+          "correct_tokens": 4,
+          "top3_hits": 0
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 25,
+            "end": 31,
+            "type": "LOC",
+            "text": "Казани"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_11",
+        "group": "entity_typo",
+        "spelling_counts": {
+          "corrected_typos": 1,
+          "typo_tokens": 1,
+          "damaged_correct_tokens": 1,
+          "correct_tokens": 2,
+          "top3_hits": 1
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 7,
+            "end": 13,
+            "type": "LOC",
+            "text": "Москве"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_12",
+        "group": "entity_typo",
+        "spelling_counts": {
+          "corrected_typos": 1,
+          "typo_tokens": 1,
+          "damaged_correct_tokens": 0,
+          "correct_tokens": 1,
+          "top3_hits": 1
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 10,
+            "end": 17,
+            "type": "PERSON",
+            "text": "Пушкина"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_13",
+        "group": "entity_typo",
+        "spelling_counts": {
+          "corrected_typos": 1,
+          "typo_tokens": 1,
+          "damaged_correct_tokens": 0,
+          "correct_tokens": 2,
+          "top3_hits": 1
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 15,
+            "end": 18,
+            "type": "ORG",
+            "text": "МГУ"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_14",
+        "group": "entity_typo",
+        "spelling_counts": {
+          "corrected_typos": 0,
+          "typo_tokens": 1,
+          "damaged_correct_tokens": 0,
+          "correct_tokens": 3,
+          "top3_hits": 0
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 14,
+            "end": 29,
+            "type": "LOC",
+            "text": "Нижний Новгроод"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_15",
+        "group": "entity_typo",
+        "spelling_counts": {
+          "corrected_typos": 1,
+          "typo_tokens": 1,
+          "damaged_correct_tokens": 1,
+          "correct_tokens": 1,
+          "top3_hits": 1
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 7,
+            "end": 17,
+            "type": "PERSON",
+            "text": "Ломоносова"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_16",
+        "group": "rare_correct",
+        "spelling_counts": {
+          "corrected_typos": 0,
+          "typo_tokens": 0,
+          "damaged_correct_tokens": 2,
+          "correct_tokens": 3,
+          "top3_hits": 0
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 13,
+            "end": 29,
+            "type": "PERSON",
+            "text": "Пафнутий Чебышёв"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_17",
+        "group": "rare_correct",
+        "spelling_counts": {
+          "corrected_typos": 0,
+          "typo_tokens": 0,
+          "damaged_correct_tokens": 2,
+          "correct_tokens": 3,
+          "top3_hits": 0
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 1
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 6,
+            "end": 23,
+            "type": "PERSON",
+            "text": "Софья Ковалевской"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_18",
+        "group": "rare_correct",
+        "spelling_counts": {
+          "corrected_typos": 0,
+          "typo_tokens": 0,
+          "damaged_correct_tokens": 0,
+          "correct_tokens": 3,
+          "top3_hits": 0
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 10,
+            "end": 20,
+            "type": "PERSON",
+            "text": "Осипа Бове"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_19",
+        "group": "rare_correct",
+        "spelling_counts": {
+          "corrected_typos": 0,
+          "typo_tokens": 0,
+          "damaged_correct_tokens": 0,
+          "correct_tokens": 3,
+          "top3_hits": 0
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 16,
+            "end": 23,
+            "type": "LOC",
+            "text": "Устюжне"
+          }
+        ],
+        "transfer_failures": []
+      },
+      {
+        "id": "dev_20",
+        "group": "rare_correct",
+        "spelling_counts": {
+          "corrected_typos": 0,
+          "typo_tokens": 0,
+          "damaged_correct_tokens": 1,
+          "correct_tokens": 2,
+          "top3_hits": 0
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [
+          {
+            "start": 6,
+            "end": 12,
+            "type": "LOC",
+            "text": "Торжка"
+          }
+        ],
+        "transfer_failures": []
+      }
+    ],
+    "zero_denominator_value": 0,
+    "entity_match": "exact transferred original-gold boundaries and type; spelling scored separately"
+  }
+}

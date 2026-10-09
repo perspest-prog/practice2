@@ -1,0 +1,194 @@
+{
+  "included_in_final_metrics": false,
+  "reason": "Independent demonstration with an explicit tiny dictionary, not a corpus/test query",
+  "gold": {
+    "id": "demo_realword",
+    "group": "demonstration",
+    "original_text": "Карта пира.",
+    "correct_text": "Карта мира.",
+    "original_entities": [],
+    "typos": [
+      {
+        "start": 6,
+        "end": 10,
+        "wrong": "пира",
+        "correct": "мира"
+      }
+    ]
+  },
+  "result": {
+    "id": "demo_realword",
+    "original_text": "Карта пира.",
+    "proposed_text": "Карта пира.",
+    "changes": [],
+    "tokens": [
+      {
+        "start": 0,
+        "end": 5,
+        "original": "Карта",
+        "proposed": "Карта",
+        "proposed_start": 0,
+        "proposed_end": 5,
+        "status": "known",
+        "candidates": [],
+        "candidate_count": 0,
+        "ambiguous": false
+      },
+      {
+        "start": 6,
+        "end": 10,
+        "original": "пира",
+        "proposed": "пира",
+        "proposed_start": 6,
+        "proposed_end": 10,
+        "status": "known",
+        "candidates": [],
+        "candidate_count": 0,
+        "ambiguous": false
+      }
+    ],
+    "protected_spans": [],
+    "source_positions": "original_text",
+    "proposed_positions": "proposed_text",
+    "message": "",
+    "config": {
+      "threshold": 1,
+      "use_frequencies": true,
+      "normalization": "lowercase; ё=е; U+2010/U+2011=-",
+      "max_candidates": 3
+    },
+    "entities": []
+  },
+  "metrics": {
+    "queries": 1,
+    "spelling": {
+      "corrected_typos": 0,
+      "typo_tokens": 1,
+      "damaged_correct_tokens": 0,
+      "correct_tokens": 1,
+      "top3_hits": 0,
+      "correction_rate": 0.0,
+      "false_change_rate": 0.0,
+      "top3_rate": 0.0
+    },
+    "ner": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "ner_by_type": {
+      "PERSON": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "ORG": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "LOC": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "transfer_failure_count": 0,
+    "by_group": {
+      "demonstration": {
+        "queries": 1,
+        "spelling": {
+          "corrected_typos": 0,
+          "typo_tokens": 1,
+          "damaged_correct_tokens": 0,
+          "correct_tokens": 1,
+          "top3_hits": 0,
+          "correction_rate": 0.0,
+          "false_change_rate": 0.0,
+          "top3_rate": 0.0
+        },
+        "ner": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "ner_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        },
+        "transfer_failure_count": 0
+      }
+    },
+    "query_details": [
+      {
+        "id": "demo_realword",
+        "group": "demonstration",
+        "spelling_counts": {
+          "corrected_typos": 0,
+          "typo_tokens": 1,
+          "damaged_correct_tokens": 0,
+          "correct_tokens": 1,
+          "top3_hits": 0
+        },
+        "entity_counts_by_type": {
+          "PERSON": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "ORG": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "LOC": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "transferred_gold_entities": [],
+        "transfer_failures": []
+      }
+    ],
+    "zero_denominator_value": 0,
+    "entity_match": "exact transferred original-gold boundaries and type; spelling scored separately"
+  }
+}
